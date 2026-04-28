@@ -1,0 +1,223 @@
+BaseCode,BaseName,Description,IsActive,Is1099,IsSubcontractor,FinancialType,SubledgerType,MetricType,CostType,PMType,LaborRevenueType,ExpenseRevenueType,_Ajera_Type
+AJ-1,Accounts Receivable,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-2,Work In Progress- Labor,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-3,Work In Progress - Expenses,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-4,Work In Progress - Consultants,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-5,Accounts Payable,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-7,Client Prepayments,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-8,Sales Tax Payable,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-32,Bank Account - Checking,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-33,Bank Account - PPP,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-34,Petty Cash,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-35,Employee Receivables,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-36,ERTC Receivable,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-37,Allowance for Bad Debt,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-38,Prepaid Expenses,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-39,Short Term Investments,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-40,Other Current Assets,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-41,Land & Improvements,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-42,Building & Improvements,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-43,Vehicles,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-44,Furniture & Fixtures,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-45,Office Equipment,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-46,Technical Equipment,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-47,Software,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-48,Leasehold Improvements,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-49,Accumulated Depreciation - Building,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-50,Accumulated Depreciation - Vehicles,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-51,Accumulated Depreciation - Furniture & Fixtures,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-52,Accumulated Depreciation - Office Equipment,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-53,Accumulated Depreciation - Technical Equipment,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-54,Accumulated Depreciation - Software,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-55,Accumulated Amortization - Leasehold Improvement,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-56,Accumulated Amortization - Goodwill,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-57,Notes Receivable - Long Term,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-58,Goodwill,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-59,Deposits,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-60,Life Insurance - Net Cash,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-61,Long Term Investments,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-62,Other Non-current Assets,,TRUE,,,Asset,,,,,,,Non-current Asset
+AJ-200,Pending Deposits,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-201,Credit Card Payable,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-205,Intercompany Due From,,FALSE,,,Asset,,,,,,,Current Asset
+AJ-206,Intercompany Due To,,FALSE,,,Liability,,,,,,,Current Liability
+AJ-207,Intercompany Other Income,,FALSE,,,Revenue,,,,,,,Other Income
+AJ-223,Bank Account - Savings,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-227,Prepaid Group Insurance,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-237,Liability Insurance,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-238,Prepaid Business Liability Insurance,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-239,Prepaid Software Expense,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-240,Accrued Management Fees WCP,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-242,Prepaid CAM Expense,,TRUE,,,Asset,,,,,,,Current Asset
+AJ-6,Salaries Payable,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-10,Professional Fees Billed,,TRUE,,,Revenue,,,,,,,Income
+AJ-11,Expenses Billed,,TRUE,,,Revenue,,,,,,,Income
+AJ-12,Consultants Billed,,TRUE,,,Revenue,,,,,,,Income
+AJ-13,Unbilled Professional Fees,,TRUE,,,Revenue,,,,,,,Income
+AJ-14,Unbilled Expenses,,TRUE,,,Revenue,,,,,,,Income
+AJ-15,Unbilled Consultants Fees,,TRUE,,,Revenue,,,,,,,Income
+AJ-16,Miscellaneous Revenue,,TRUE,,,Revenue,,,,,,,Income
+AJ-17,Professional Fees Write-off,,TRUE,,,Revenue,,,,,,,Income
+AJ-18,Expenses Write-off,,TRUE,,,Revenue,,,,,,,Income
+AJ-19,Consultants Write-off,,TRUE,,,Revenue,,,,,,,Income
+AJ-20,Billable Salaries - Employee,,TRUE,,,Expense,,,,,,,Billable Cost
+AJ-24,Billable Salaries - Principal,,TRUE,,,Expense,,,,,,,Billable Cost
+AJ-63,Current Portion - Long Term Debt-PNC,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-64,Current Portion - Long Term Debt-EIDL,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-65,Accrued Bonus & Incentives,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-66,Accrued Consultant Expense,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-67,Interest Payable,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-68,Other Current Liabilities,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-69,Notes Payable - Long Term - PNC,,TRUE,,,Liability,,,,,,,Non-current Liability
+AJ-70,Notes Payable - Long Term - PPP,,TRUE,,,Liability,,,,,,,Non-current Liability
+AJ-71,Other Non-current Liabilities,,TRUE,,,Liability,,,,,,,Non-current Liability
+AJ-72,Capital,,TRUE,,,Equity,,,,,,,Equity
+AJ-74,Management Fees-2025,,TRUE,,,Equity,,,,,,,Equity
+AJ-77,Billable Reimbursable Expenses,,TRUE,,,Expense,,,,,,,Billable Cost
+AJ-78,Billable Travel,,TRUE,,,Expense,,,,,,,Billable Cost
+AJ-178,Pref Equity Distribution,,TRUE,,,Equity,,,,,,,Equity
+AJ-179,FVC Loan - 2025,,TRUE,,,Equity,,,,,,,Equity
+AJ-180,FVC LOC - 2025,,TRUE,,,Equity,,,,,,,Equity
+AJ-181,Retained Earnings,,TRUE,,,Equity,,,,,,,Retained Earnings
+AJ-183,Federal Income Tax Withholding,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-184,Federal Social Security Tax,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-185,Federal Unemployment Insurance,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-186,State Income Tax Withholding-OH,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-187,State Income Tax Withholding-IN,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-188,State Unemployment Insurance,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-189,Workers' Compensation Insurance,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-190,Employee Group Insurance,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-191,Employee 401K Plan,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-192,Employee Education,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-193,Other Employee Contributions,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-194,Other Payroll Deductions,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-195,Employee Loan Payable,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-196,Cafeteria Plan Payable,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-204,Finance Charges Billed,,TRUE,,,Revenue,,,,,,,Income
+AJ-213,Cincinnati Withholding,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-220,Other Local Withholding-OH,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-226,State Income Tax Withholding-KY,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-229,Newton Village Withholding,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-231,LOC - PNC,,TRUE,,,Liability,,,,,,,Current Liability
+AJ-79,Billable Reproduction & Printing,,TRUE,,,Expense,,,,,,,Billable Cost
+AJ-80,"Billable Models, Renderings, Photos",,TRUE,,,Expense,,,,,,,Billable Cost
+AJ-81,Billable Telephone,,TRUE,,,Expense,,,,,,,Billable Cost
+AJ-82,"Billable Postage, Shipping, Delivery",,TRUE,,,Expense,,,,,,,Billable Cost
+AJ-83,Billable Consultant Expenses,,TRUE,,,Expense,,,,,,,Billable Cost
+AJ-84,Nonbillable Reimbursable Expenses,,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-85,Nonbillable Travel,,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-86,Nonbillable Reproduction & Printing,,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-87,"Nonbillable Models, Renderings, Photos",,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-88,Nonbillable Telephone,,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-89,"Nonbillable Postage, Shipping, Delivery",,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-90,Nonbillable Consultant Expenses,,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-91,Bonuses & Incentive Payments,,TRUE,,,Expense,,,,,,,Expense
+AJ-96,Employer's FICA Tax,,TRUE,,,Expense,,,,,,,Expense
+AJ-97,Federal Unemployment,,TRUE,,,Expense,,,,,,,Expense
+AJ-98,State Unemployment,,TRUE,,,Expense,,,,,,,Expense
+AJ-99,Workers' Compensation,,TRUE,,,Expense,,,,,,,Expense
+AJ-100,Health Care Insurance,,TRUE,,,Expense,,,,,,,Expense
+AJ-101,Life Insurance,,TRUE,,,Expense,,,,,,,Expense
+AJ-102,Disability Income Protection,,TRUE,,,Expense,,,,,,,Expense
+AJ-103,Other Insurance,,TRUE,,,Expense,,,,,,,Expense
+AJ-127,Telephone,,TRUE,,,Expense,,,,,,,Expense
+AJ-128,Cellular Telephones,,TRUE,,,Expense,,,,,,,Expense
+AJ-129,Fax,,TRUE,,,Expense,,,,,,,Expense
+AJ-130,Internet Access,,TRUE,,,Expense,,,,,,,Expense
+AJ-131,"Postage, Shipping, Delivery",,TRUE,,,Expense,,,,,,,Expense
+AJ-139,Business Insurance,,TRUE,,,Expense,,,,,,,Expense
+AJ-140,Professional Liability Insurance,,TRUE,,,Expense,,,,,,,Expense
+AJ-155,Depreciation - Building,,TRUE,,,Expense,,,,,,,Expense
+AJ-156,Depreciation - Automobiles,,TRUE,,,Expense,,,,,,,Expense
+AJ-157,Depreciation - Furniture & Fixtures,,TRUE,,,Expense,,,,,,,Expense
+AJ-158,Depreciation - Office Equipment,,TRUE,,,Expense,,,,,,,Expense
+AJ-159,Depreciation - Technical Equipment,,TRUE,,,Expense,,,,,,,Expense
+AJ-160,Depreciation - Software,,TRUE,,,Expense,,,,,,,Expense
+AJ-161,Amortization - Leasehold Improvements,,TRUE,,,Expense,,,,,,,Expense
+AJ-162,Political Contributions,,TRUE,,,Expense,,,,,,,Expense
+AJ-163,Charitable Donations,,TRUE,,,Expense,,,,,,,Expense
+AJ-171,Marketing Salaries - Principal,,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-172,Marketing Salaries - Employee,,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-173,Nonbillable Salaries - Principal,,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-174,Nonbillable Salaries - Employee,,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-176,Indirect Salaries - Employee,,TRUE,,,Expense,,,,,,,Expense
+AJ-177,Payroll Variance,,TRUE,,,Expense,,,,,,,Expense
+AJ-197,Vacation and Sick,,TRUE,,,Expense,,,,,,,Expense
+AJ-198,Holiday,,TRUE,,,Expense,,,,,,,Expense
+AJ-199,Paid Medical Leave,,TRUE,,,Expense,,,,,,,Expense
+AJ-208,Billable Meals,,TRUE,,,Expense,,,,,,,Billable Cost
+AJ-209,Nonbillable Meals,,TRUE,,,Expense,,,,,,,Non-billable Cost
+AJ-210,Data Processing,,TRUE,,,Expense,,,,,,,Expense
+AJ-232,LT Care Insurance,,TRUE,,,Expense,,,,,,,Expense
+AJ-104,401K Contribution,,TRUE,,,Expense,,,,,,,Expense
+AJ-105,Profit Sharing Contribution,,TRUE,,,Expense,,,,,,,Expense
+AJ-106,Professional Development,,TRUE,,,Expense,,,,,,,Expense
+AJ-107,Professional Registration & Dues,,TRUE,,,Expense,,,,,,,Expense
+AJ-108,Miscellaneous Payroll Benefits,,TRUE,,,Expense,,,,,,,Expense
+AJ-109,Employee Welfare,,TRUE,,,Expense,,,,,,,Expense
+AJ-110,Recruitment,,TRUE,,,Expense,,,,,,,Expense
+AJ-111,Outside Services,,TRUE,,,Expense,,,,,,,Expense
+AJ-112,Rent,,TRUE,,,Expense,,,,,,,Expense
+AJ-113,Utilities,,TRUE,,,Expense,,,,,,,Expense
+AJ-114,Janitorial Services,,TRUE,,,Expense,,,,,,,Expense
+AJ-115,Repairs & Maintenance,,TRUE,,,Expense,,,,,,,Expense
+AJ-116,Office Supplies,,TRUE,,,Expense,,,,,,,Expense
+AJ-117,Copier Supplies,,TRUE,,,Expense,,,,,,,Expense
+AJ-118,Design Supplies,,TRUE,,,Expense,,,,,,,Expense
+AJ-119,Computer Supplies,,TRUE,,,Expense,,,,,,,Expense
+AJ-120,Miscellaneous Software,,TRUE,,,Expense,,,,,,,Expense
+AJ-121,Miscellaneous Hardware,,TRUE,,,Expense,,,,,,,Expense
+AJ-122,Printing & Reproduction,,TRUE,,,Expense,,,,,,,Expense
+AJ-123,Periodicals & Books,,TRUE,,,Expense,,,,,,,Expense
+AJ-124,Accounting,,TRUE,,,Expense,,,,,,,Expense
+AJ-125,Legal,,TRUE,,,Expense,,,,,,,Expense
+AJ-126,Bank Charges,,TRUE,,,Expense,,,,,,,Expense
+AJ-141,Interest Expense,,TRUE,,,Expense,,,,,,,Expense
+AJ-142,Business Taxes & Fines,,TRUE,,,Expense,,,,,,,Expense
+AJ-143,Federal & State Income Tax,,TRUE,,,Expense,,,,,,,Expense
+AJ-144,Penalties & Fines,,TRUE,,,Expense,,,,,,,Expense
+AJ-145,Advertising,,TRUE,,,Expense,,,,,,,Expense
+AJ-146,Marketing Supplies,,TRUE,,,Expense,,,,,,,Expense
+AJ-147,Specific Client Presentations,,TRUE,,,Expense,,,,,,,Expense
+AJ-148,Website Development & Maintenance,,TRUE,,,Expense,,,,,,,Expense
+AJ-149,Marketing Reproductions,,TRUE,,,Expense,,,,,,,Expense
+AJ-150,Conventions,,TRUE,,,Expense,,,,,,,Expense
+AJ-151,Public Relations,,TRUE,,,Expense,,,,,,,Expense
+AJ-152,Business Meals & Entertainment,,TRUE,,,Expense,,,,,,,Expense
+AJ-153,Marketing Travel,,TRUE,,,Expense,,,,,,,Expense
+AJ-154,Marketing Meals,,TRUE,,,Expense,,,,,,,Expense
+AJ-164,Bad Debt,,TRUE,,,Expense,,,,,,,Expense
+AJ-165,Equipment Rental,,TRUE,,,Expense,,,,,,,Expense
+AJ-211,Business License and Fees,,TRUE,,,Expense,,,,,,,Expense
+AJ-214,Miscellaneous,,TRUE,,,Expense,,,,,,,Expense
+AJ-222,Real Estate Tax,,TRUE,,,Expense,,,,,,,Expense
+AJ-224,Foreign Exchange Rate Adjustment,,TRUE,,,Expense,,,,,,,Expense
+AJ-225,Cincinnati Income Tax,,TRUE,,,Expense,,,,,,,Expense
+AJ-228,Meetings,,TRUE,,,Expense,,,,,,,Expense
+AJ-233,Membership Fees,,TRUE,,,Expense,,,,,,,Expense
+AJ-234,Party Planning Committee Supplies,,TRUE,,,Expense,,,,,,,Expense
+AJ-235,Interest Expense - FVC Loan,,TRUE,,,Expense,,,,,,,Expense
+AJ-236,Interest Expense - FVC LOC,,TRUE,,,Expense,,,,,,,Expense
+AJ-243,CAM Fees,,TRUE,,,Expense,,,,,,,Expense
+AJ-132,Fuel & Maintenance,,TRUE,,,Expense,,,,,,,Expense
+AJ-133,Vehicle Insurance & Registration,,TRUE,,,Expense,,,,,,,Expense
+AJ-134,Parking & Tolls,,TRUE,,,Expense,,,,,,,Expense
+AJ-135,Firm Related Travel - Air & Hotels,,TRUE,,,Expense,,,,,,,Expense
+AJ-136,Meals,,TRUE,,,Expense,,,,,,,Expense
+AJ-137,Mileage,,TRUE,,,Expense,,,,,,,Expense
+AJ-138,Auto Lease & Rentals,,TRUE,,,Expense,,,,,,,Expense
+AJ-166,Interest Income,,TRUE,,,Revenue,,,,,,,Other Income
+AJ-167,Gain/loss Sale of Asset,,TRUE,,,Revenue,,,,,,,Other Income
+AJ-168,Other Non-operating Income,,TRUE,,,Revenue,,,,,,,Other Income
+AJ-169,Other Non-operating expenses,,TRUE,,,Revenue,,,,,,,Other Income
+AJ-182,Vendor Incentive,,TRUE,,,Revenue,,,,,,,Other Income
+AJ-202,Late Charges,,TRUE,,,Expense,,,,,,,Expense
+AJ-203,Interest Charges,,TRUE,,,Expense,,,,,,,Expense
+AJ-212,Payroll Service Fees,,TRUE,,,Expense,,,,,,,Expense
+AJ-215,Real Estate Taxes,,TRUE,,,Equity,,,,,,,Equity
+AJ-216,Cincinnati Income Taxes,,TRUE,,,Equity,,,,,,,Equity
+AJ-217,State Income Taxes,,TRUE,,,Equity,,,,,,,Equity
+AJ-218,Federal Income Taxes,,TRUE,,,Equity,,,,,,,Equity
+AJ-219,Owner's Draw - Other,,TRUE,,,Equity,,,,,,,Equity
+AJ-221,Income Tax,,TRUE,,,Revenue,,,,,,,Other Income
+AJ-241,Management Fees WCP,,TRUE,,,Revenue,,,,,,,Other Income

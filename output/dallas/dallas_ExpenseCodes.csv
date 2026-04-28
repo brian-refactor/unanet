@@ -1,0 +1,115 @@
+ECCode,ECName,ShowInES,IsUnit,UnitTypename,ECTypename,ExpMarkupTypename,Markup,UnitRate,BillStatusname,DirectBaseCode,DirectBasename,OHBaseCode,OHBasename,BilledDirectBaseCode,BilledDirectBasename,BilledMarkupBaseCode,BilledMarkupBasename,UnBilledBaseCode,UnBilledBasename,CurrencyCode,PMCmtRequired,IntCmtRequired,IsNonReim,_IsActive,_QBD_Type
+DAL-EXP-00001,50% Architectural,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00002,Additional Services,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00003,Admin,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00004,Admin 2017,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00005,Admin.,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00006,Architectural Construction Docu,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00007,Architectural Design,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00008,Art Work,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00009,As-Built Drawings,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00010,Bid Process,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00011,Building Survey,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00012,CAD As-Builts,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00013,CADD Specialist,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00014,CEU,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00015,City Comments,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00016,Civil Engineering,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00017,Color Renderings,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00018,Comm Check,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00019,Concept Design,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00020,Construction Administration,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00021,Construction Administration Hr,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00022,Construction Documents,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00023,Construction Services,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00024,Consultant,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00025,Design Development,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00026,Dir. of Design,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00027,Due Diligence,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00028,Due Diligence-IDS4,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00029,E & O Ins.,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00030,EIT Hourly,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00031,EIT MEP Hourly,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00032,EIT Structural Hourly,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00033,Elevations,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00034,Food Service Documentation,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00035,Food Service Documentation:Consultant Food Documentation,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00036,Geotechnical,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00037,Interior Design,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00038,Interior Design Hourly,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00039,Interior Design Hourly 2017,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00040,Irrigation,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00041,Job Captain Arch,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00042,Job Captain Design 2017,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00043,Job Captain Design Services,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00044,Kitchen + Elevation,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00045,Land Survey,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00046,Landscape,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00047,Landscape Irrigation,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00048,Landscaping,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00049,Lunch / Learn,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00050,Marketing,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00051,Material Sample Board,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00052,Meeting,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00053,MEP Documents,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00054,MEP Engineer Hourly,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00055,MEP Rough-In,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00056,MEP Sr. Engineer Hourly 2017,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00057,Pemit Expeditor Hrly-IDS4,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00058,Permitting,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00059,Permitting-IDS4,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00060,Phase 1 Environmental,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00061,Planning & Zoning,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00062,Plans Approval,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00063,Plotting Printing,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00064,Precision Repro,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00065,Preliminary Design,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00066,Presentation Boards,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00067,Principal in Charge,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00068,Program Manager,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00069,Program Manager 2017,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00070,Project Fees,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00071,Project Manager 2017,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00072,Project Manager Hourly,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00073,Prototypical setup,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00074,PTO,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00075,Punch List,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00076,Redesign,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00077,Redlines,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00078,Retainer,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00079,Revisions,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00080,RFI Response,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00081,Schematic Design,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00082,Senior Project Manager,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00083,Sign and Seal Documents,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00084,SIR-IDS4,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00085,Site Investigation,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00086,Site Lighting,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00087,Site Planning,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00088,Site Sketch,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00089,Site Survey,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00090,Site Visit,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00091,Specification and Sourcing,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00092,Structural Engineering,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00093,Structural Engineering:IDS4 - Structural,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00094,Structural Engineering:IDS4 - Structural Engineering,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00095,Structural Engineering:IDS4 - Structural Sr Eng (hrly),TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00096,Structural Engineering Hourly,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00097,Studio Director,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00098,Studio Director 2017,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00099,Submittal Review,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00100,Technical Arch Staff,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00101,Test Fit,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00102,Travel Cost,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00103,Turnover,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00104,Uncollectible Balance,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00105,Value Engineering,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00106,Write-Offs Income,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00107,Write Offs,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+DAL-EXP-00108,10 % reimbursable expenses,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Other Charge
+DAL-EXP-00109,Blue Printing,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Other Charge
+DAL-EXP-00110,Bounce Check Charge,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Other Charge
+DAL-EXP-00111,Credit Card Fees,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Other Charge
+DAL-EXP-00112,Expense Reimbursement,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Other Charge
+DAL-EXP-00113,Postage and Delivery,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Other Charge
+DAL-EXP-00114,Reimbursable Expenses,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Other Charge

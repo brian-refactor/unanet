@@ -1,0 +1,9 @@
+ECCode,ECName,ShowInES,IsUnit,UnitTypename,ECTypename,ExpMarkupTypename,Markup,UnitRate,BillStatusname,DirectBaseCode,DirectBasename,OHBaseCode,OHBasename,BilledDirectBaseCode,BilledDirectBasename,BilledMarkupBaseCode,BilledMarkupBasename,UnBilledBaseCode,UnBilledBasename,CurrencyCode,PMCmtRequired,IntCmtRequired,IsNonReim,_IsActive,_QBD_Type
+ORL-EXP-00001,Accrued Revenue,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+ORL-EXP-00002,Architectural Design,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+ORL-EXP-00003,Art Work,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+ORL-EXP-00004,Civil Engineering,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+ORL-EXP-00005,Structural Engineering,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Service
+ORL-EXP-00006,Blue Printing,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Other Charge
+ORL-EXP-00007,Markup,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Other Charge
+ORL-EXP-00008,Postage and Delivery,TRUE,FALSE,,,,,,,,,,,,,,,,,,,,,TRUE,Other Charge

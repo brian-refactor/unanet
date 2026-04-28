@@ -1,0 +1,203 @@
+BaseCode,BaseName,Description,IsActive,Is1099,IsSubcontractor,FinancialType,SubledgerType,MetricType,CostType,PMType,LaborRevenueType,ExpenseRevenueType,_QBD_FullName,_QBD_AcctType
+Fusion_AE_-_Payroll,Fusion AE - Payroll,,TRUE,,,Asset,,,,,,,Fusion AE - Payroll,Bank
+Fusion_AE_-_FVC_Bank,Fusion AE - FVC Bank,,TRUE,,,Asset,,,,,,,Fusion AE - FVC Bank,Bank
+"ID_Studio4,_LLC_-_Sweep","ID Studio4, LLC - Sweep",,TRUE,,,Asset,,,,,,,"ID Studio4, LLC - Sweep",Bank
+Veritex_Community_Bank_-_MM,Veritex Community Bank - MM,,FALSE,,,Asset,,,,,,,Veritex Community Bank - MM,Bank
+Veritex_Community_Bank_Checking,Veritex Community Bank Checking,,FALSE,,,Asset,,,,,,,Veritex Community Bank Checking,Bank
+ID_Studio_4_LLC_-_Ghost,ID Studio 4 LLC - Ghost,,FALSE,,,Asset,,,,,,,ID Studio 4 LLC - Ghost,Bank
+"ID_Studio_4,_LLC_-_Regions","ID Studio 4, LLC - Regions",,FALSE,,,Asset,,,,,,,"ID Studio 4, LLC - Regions",Bank
+David_Scott_Windle,David Scott Windle,,FALSE,,,Asset,,,,,,,David Scott Windle,Bank
+"ID_Studio4,_LLC","ID Studio4, LLC",,TRUE,,,Asset,,,,,,,"ID Studio4, LLC",Bank
+"ID_Studio4,_LLC_-_Savings","ID Studio4, LLC - Savings",,TRUE,,,Asset,,,,,,,"ID Studio4, LLC - Savings",Bank
+Accounts_Receivable,Accounts Receivable,,TRUE,,,Asset,,,,,,,Accounts Receivable,Accounts Receivable
+Due_from_Reztark,Due from Reztark,,TRUE,,,Asset,,,,,,,Due from Reztark,Other Current Asset
+Due_from_ACI,Due from ACI,,TRUE,,,Asset,,,,,,,Due from ACI,Other Current Asset
+Due_from_Affliate_-_WCP_PE_Hold,Due from Affliate - WCP PE Hold,,TRUE,,,Asset,,,,,,,Due from Affliate - WCP PE Hold,Other Current Asset
+Due_from_SRA,Due from SRA,,TRUE,,,Asset,,,,,,,Due from SRA,Other Current Asset
+Prepaid_Expenses,Prepaid Expenses,,TRUE,,,Asset,,,,,,,Prepaid Expenses,Other Current Asset
+Allowance_for_Doubtful_Accounts,Allowance for Doubtful Accounts,,TRUE,,,Asset,,,,,,,Allowance for Doubtful Accounts,Other Current Asset
+Loans_to_Sareholders,Loans to Sareholders,,FALSE,,,Asset,,,,,,,Loans to Sareholders,Other Current Asset
+Loans_to_Sareholders_Loans_to_SH_-_B_E_Chandler,Loans to SH - B E Chandler,,FALSE,,,Asset,,,,,,,Loans to Sareholders:Loans to SH - B E Chandler,Other Current Asset
+Loans_to_Sareholders_Loans_to_SH_-_D_S_Windle,Loans to SH - D S Windle,,FALSE,,,Asset,,,,,,,Loans to Sareholders:Loans to SH - D S Windle,Other Current Asset
+Loans_to_Sareholders_Loans_to_SH_-_D_C_Steffen,Loans to SH - D C Steffen,,FALSE,,,Asset,,,,,,,Loans to Sareholders:Loans to SH - D C Steffen,Other Current Asset
+Account_for_Credit_Transfer,Account for Credit Transfer,,FALSE,,,Asset,,,,,,,Account for Credit Transfer,Other Current Asset
+Inventory_Asset,Inventory Asset,,TRUE,,,Asset,,,,,,,Inventory Asset,Other Current Asset
+Undeposited_Funds,Undeposited Funds,,TRUE,,,Asset,,,,,,,Undeposited Funds,Other Current Asset
+Furniture_and_Equipment,Furniture and Equipment,,TRUE,,,Asset,,,,,,,Furniture and Equipment,Fixed Asset
+Furniture_and_Equipment_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Binding_Machine,Binding Machine,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Binding Machine,Fixed Asset
+Furniture_and_Equipment_Binding_Machine_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Binding Machine:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Chairs,Chairs,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Chairs,Fixed Asset
+Furniture_and_Equipment_Chairs_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Chairs:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Computer_Equipment,Computer Equipment,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Computer Equipment,Fixed Asset
+Furniture_and_Equipment_Computer_Equipment_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Computer Equipment:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Computer_Software,Computer Software,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Computer Software,Fixed Asset
+Furniture_and_Equipment_Computer_Software_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Computer Software:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Conference_Room_TV,Conference Room TV,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Conference Room TV,Fixed Asset
+Furniture_and_Equipment_Conference_Room_TV_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Conference Room TV:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Desks,Desks,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Desks,Fixed Asset
+Furniture_and_Equipment_Desks_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Desks:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Digital_Web_Cam,Digital Web Cam,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Digital Web Cam,Fixed Asset
+Furniture_and_Equipment_Digital_Web_Cam_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Digital Web Cam:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_File_Cabinet,File Cabinet,,TRUE,,,Asset,,,,,,,Furniture and Equipment:File Cabinet,Fixed Asset
+Furniture_and_Equipment_File_Cabinet_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:File Cabinet:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Laser_Measurers,Laser Measurers,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Laser Measurers,Fixed Asset
+Furniture_and_Equipment_Laser_Measurers_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Laser Measurers:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Office_Decor,Office Decor,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Office Decor,Fixed Asset
+Furniture_and_Equipment_Office_Decor_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Office Decor:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Office_Equipment,Office Equipment,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Office Equipment,Fixed Asset
+Furniture_and_Equipment_Office_Equipment_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Office Equipment:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Projector,Projector,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Projector,Fixed Asset
+Furniture_and_Equipment_Projector_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Projector:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Refrigerator,Refrigerator,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Refrigerator,Fixed Asset
+Furniture_and_Equipment_Refrigerator_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Refrigerator:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Remodel_Leasehold_Improvements,Remodel  Leasehold Improvements,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Remodel  Leasehold Improvements,Fixed Asset
+Furniture_and_Equipment_Remodel_Leasehold_Improvements_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Remodel  Leasehold Improvements:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Shelves,Shelves,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Shelves,Fixed Asset
+Furniture_and_Equipment_Shelves_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Shelves:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Sign,Sign,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Sign,Fixed Asset
+Furniture_and_Equipment_Sign_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Sign:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Tables,Tables,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Tables,Fixed Asset
+Furniture_and_Equipment_Tables_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Tables:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Telephone,Telephone,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Telephone,Fixed Asset
+Furniture_and_Equipment_Telephone_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Telephone:Accumulated Depreciation,Fixed Asset
+Furniture_and_Equipment_Website,Website,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Website,Fixed Asset
+Furniture_and_Equipment_Website_Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Furniture and Equipment:Website:Accumulated Depreciation,Fixed Asset
+Organization_Costs,Organization Costs,,TRUE,,,Asset,,,,,,,Organization Costs,Fixed Asset
+Organization_Costs_Accumulated_Amortization,Accumulated Amortization,,TRUE,,,Asset,,,,,,,Organization Costs:Accumulated Amortization,Fixed Asset
+Investment_in_Reztark_ACi,Investment in Reztark ACi,,TRUE,,,Asset,,,,,,,Investment in Reztark ACi,Other Asset
+Goodwill,Goodwill,,TRUE,,,Asset,,,,,,,Goodwill,Other Asset
+Goodwill_Accumulated_Amortization,Accumulated Amortization,,TRUE,,,Asset,,,,,,,Goodwill:Accumulated Amortization,Other Asset
+Accounts_Payable,Accounts Payable,,TRUE,,,Liability,,,,,,,Accounts Payable,Accounts Payable
+PNC_PINACLE_Visa,PNC PINACLE Visa,,TRUE,,,Liability,,,,,,,PNC PINACLE Visa,Credit Card
+American_Express_Green_Card,American Express Green Card,,TRUE,,,Liability,,,,,,,American Express Green Card,Credit Card
+EB_Reimbursable_Expenses,EB Reimbursable Expenses,,TRUE,,,Liability,,,,,,,EB Reimbursable Expenses,Credit Card
+EB_Reimbursable_Expenses_EB_Non-Reimbursable_Expenses,EB Non-Reimbursable Expenses,,TRUE,,,Liability,,,,,,,EB Reimbursable Expenses:EB Non-Reimbursable Expenses,Credit Card
+American_Express_Business_Plum,American Express Business Plum,,TRUE,,,Liability,,,,,,,American Express Business Plum,Credit Card
+Credit_Card_(3)_PNC_VISA,Credit Card (3) PNC VISA,,TRUE,,,Liability,,,,,,,Credit Card (3) PNC VISA,Credit Card
+Credit_Card_at_American_Expres,Credit Card at American Expres,,FALSE,,,Liability,,,,,,,Credit Card at American Expres,Credit Card
+Credit_Card(2)_at_American_Exp,Credit Card(2) at American Exp,,FALSE,,,Liability,,,,,,,Credit Card(2) at American Exp,Credit Card
+Credit_Card(3)Gold_American_Exp,Credit Card(3)Gold American Exp,,FALSE,,,Liability,,,,,,,Credit Card(3)Gold American Exp,Credit Card
+Accrued_PTO_Balances,Accrued PTO Balances,,TRUE,,,Liability,,,,,,,Accrued PTO Balances,Other Current Liability
+FVCBank_LOC_Revolver,FVCBank LOC Revolver,,TRUE,,,Liability,,,,,,,FVCBank LOC Revolver,Other Current Liability
+NWC_Escrow_-_Reztark,NWC Escrow - Reztark,,TRUE,,,Liability,,,,,,,NWC Escrow - Reztark,Other Current Liability
+NWC_Escrow_-_ACI,NWC Escrow - ACI,,TRUE,,,Liability,,,,,,,NWC Escrow - ACI,Other Current Liability
+ERTC_Credit_Liability,ERTC Credit Liability,,TRUE,,,Liability,,,,,,,ERTC Credit Liability,Other Current Liability
+Accrued_Revenue,Accrued Revenue,,TRUE,,,Liability,,,,,,,Accrued Revenue,Other Current Liability
+AR_Overpayment_Clearing,AR Overpayment Clearing,,TRUE,,,Liability,,,,,,,AR Overpayment Clearing,Other Current Liability
+Client_Retainers,Client Retainers,,TRUE,,,Liability,,,,,,,Client Retainers,Other Current Liability
+Management_Fee_Payable,Management Fee Payable,,TRUE,,,Liability,,,,,,,Management Fee Payable,Other Current Liability
+Dividend_Payable,Dividend Payable,,TRUE,,,Liability,,,,,,,Dividend Payable,Other Current Liability
+Accrued_Payroll,Accrued Payroll,,TRUE,,,Liability,,,,,,,Accrued Payroll,Other Current Liability
+BBVA/SBA_2nd_PPP_Loan_2021,BBVA/SBA 2nd PPP Loan 2021,,TRUE,,,Liability,,,,,,,BBVA/SBA 2nd PPP Loan 2021,Other Current Liability
+Advance_Customer_Payments,Advance Customer Payments,,TRUE,,,Liability,,,,,,,Advance Customer Payments,Other Current Liability
+Compass_Bank_LOC/Note,Compass Bank LOC/Note,,TRUE,,,Liability,,,,,,,Compass Bank LOC/Note,Other Current Liability
+BBVA/SBA_PPP_Ln_(1.014%_24_Mo),BBVA/SBA PPP Ln (1.014% 24 Mo),,TRUE,,,Liability,,,,,,,BBVA/SBA PPP Ln (1.014% 24 Mo),Other Current Liability
+Internal_Loan_from_Partners,Internal Loan from Partners,,FALSE,,,Liability,,,,,,,Internal Loan from Partners,Other Current Liability
+Payroll_Liabilities,Payroll Liabilities,,FALSE,,,Liability,,,,,,,Payroll Liabilities,Other Current Liability
+Sales_Tax_Payable,Sales Tax Payable,,TRUE,,,Liability,,,,,,,Sales Tax Payable,Other Current Liability
+FVCBank_Loan,FVCBank Loan,,TRUE,,,Liability,,,,,,,FVCBank Loan,Long Term Liability
+Distributions_to_Arch_Rollup,Distributions to Arch Rollup,,TRUE,,,Equity,,,,,,,Distributions to Arch Rollup,Equity
+Capital_-_Arch_Rollup,Capital - Arch Rollup,,TRUE,,,Equity,,,,,,,Capital - Arch Rollup,Equity
+Preferred_Dividend,Preferred Dividend,,TRUE,,,Equity,,,,,,,Preferred Dividend,Equity
+Opening_Balance_Equity,Opening Balance Equity,,TRUE,,,Equity,,,,,,,Opening Balance Equity,Equity
+Opening_Balance_Equity_Equity_-_Brian_Chandler,Equity - Brian Chandler,,TRUE,,,Equity,,,,,,,Opening Balance Equity:Equity - Brian Chandler,Equity
+Opening_Balance_Equity_Equity_-_David_Steffen,Equity - David Steffen,,TRUE,,,Equity,,,,,,,Opening Balance Equity:Equity - David Steffen,Equity
+Opening_Balance_Equity_Equity_-_Gordon_Meehl,Equity - Gordon Meehl,,FALSE,,,Equity,,,,,,,Opening Balance Equity:Equity - Gordon Meehl,Equity
+Opening_Balance_Equity_Equity_-_Scott_Windle,Equity - Scott Windle,,TRUE,,,Equity,,,,,,,Opening Balance Equity:Equity - Scott Windle,Equity
+Owner's_Draw,Owner's Draw,,TRUE,,,Equity,,,,,,,Owner's Draw,Equity
+Retained_Earnings,Retained Earnings,,TRUE,,,Equity,,,,,,,Retained Earnings,Equity
+Reimbursed_Expenses-Accrued,Reimbursed Expenses-Accrued,,TRUE,,,Revenue,,,,,,,Reimbursed Expenses-Accrued,Income
+Consulting_Income-Accrued,Consulting Income-Accrued,,TRUE,,,Revenue,,,,,,,Consulting Income-Accrued,Income
+Design_Income-Accrued,Design Income-Accrued,,TRUE,,,Revenue,,,,,,,Design Income-Accrued,Income
+Returned_Check_Charges,Returned Check Charges,,TRUE,,,Revenue,,,,,,,Returned Check Charges,Income
+eBillity_Income,eBillity Income,,TRUE,,,Revenue,,,,,,,eBillity Income,Income
+Write-offs,Write-offs,,TRUE,,,Revenue,,,,,,,Write-offs,Income
+Consulting_Income,Consulting Income,,TRUE,,,Revenue,,,,,,,Consulting Income,Income
+Design_Income,Design Income,,TRUE,,,Revenue,,,,,,,Design Income,Income
+Other_Income,Other Income,,TRUE,,,Revenue,,,,,,,Other Income,Income
+Over_Head,Over Head,,TRUE,,,Revenue,,,,,,,Over Head,Income
+Reimbursed_Expenses,Reimbursed Expenses,,TRUE,,,Revenue,,,,,,,Reimbursed Expenses,Income
+Cost_of_Goods_Sold,Cost of Goods Sold,,TRUE,,,Expense,,,,,,,Cost of Goods Sold,Cost of Goods Sold
+Blueprints_and_Reproduction,Blueprints and Reproduction,,TRUE,,,Expense,,,,,,,Blueprints and Reproduction,Cost of Goods Sold
+Fusion_AE_Platform_Travel,Fusion AE Platform Travel,,TRUE,,,Expense,,,,,,,Fusion AE Platform Travel,Expense
+Merchant_deposit_fees,Merchant deposit fees,,TRUE,,,Expense,,,,,,,Merchant deposit fees,Expense
+Credit_Card_Fees,Credit Card Fees,,TRUE,,,Expense,,,,,,,Credit Card Fees,Expense
+Fusion_AE_Expenses,Fusion AE Expenses,,TRUE,,,Expense,,,,,,,Fusion AE Expenses,Expense
+SRA_Expenses,SRA Expenses,,TRUE,,,Expense,,,,,,,SRA Expenses,Expense
+Bad_Debt,Bad Debt,,TRUE,,,Expense,,,,,,,Bad Debt,Expense
+Amortization_Expense,Amortization Expense,,TRUE,,,Expense,,,,,,,Amortization Expense,Expense
+Architect_Consultant,Architect Consultant,,TRUE,,,Expense,,,,,,,Architect Consultant,Expense
+Automobile_Expense,Automobile Expense,,TRUE,,,Expense,,,,,,,Automobile Expense,Expense
+Bank_Service_Charges,Bank Service Charges,,TRUE,,,Expense,,,,,,,Bank Service Charges,Expense
+Bank_Service_Charges_Insufficient_Charges,Insufficient Charges,,TRUE,,,Expense,,,,,,,Bank Service Charges:Insufficient Charges,Expense
+Business_Licenses_and_Permits,Business Licenses and Permits,,TRUE,,,Expense,,,,,,,Business Licenses and Permits,Expense
+Computer_and_Internet_Expenses,Computer and Internet Expenses,,TRUE,,,Expense,,,,,,,Computer and Internet Expenses,Expense
+Continuing_Education,Continuing Education,,TRUE,,,Expense,,,,,,,Continuing Education,Expense
+Contract_Labor,Contract Labor,,TRUE,,,Expense,,,,,,,Contract Labor,Expense
+Courier,Courier,,TRUE,,,Expense,,,,,,,Courier,Expense
+Depreciation_Expense,Depreciation Expense,,TRUE,,,Expense,,,,,,,Depreciation Expense,Expense
+Depreciation_Expense_Section_179_Deduction,Section 179 Deduction,,TRUE,,,Expense,,,,,,,Depreciation Expense:Section 179 Deduction,Expense
+Donation,Donation,,TRUE,,,Expense,,,,,,,Donation,Expense
+Dues_and_Subscriptions,Dues and Subscriptions,,TRUE,,,Expense,,,,,,,Dues and Subscriptions,Expense
+eBillity_Expense,eBillity Expense,,TRUE,,,Expense,,,,,,,eBillity Expense,Expense
+Employee_Gifts,Employee Gifts,,TRUE,,,Expense,,,,,,,Employee Gifts,Expense
+Engineer_Consultant,Engineer Consultant,,TRUE,,,Expense,,,,,,,Engineer Consultant,Expense
+Entertainment_Expense,Entertainment Expense,,TRUE,,,Expense,,,,,,,Entertainment Expense,Expense
+Equipment_Rental,Equipment Rental,,TRUE,,,Expense,,,,,,,Equipment Rental,Expense
+Insurance_Expense,Insurance Expense,,TRUE,,,Expense,,,,,,,Insurance Expense,Expense
+Insurance_Expense_General_Liability_Insurance,General Liability Insurance,,TRUE,,,Expense,,,,,,,Insurance Expense:General Liability Insurance,Expense
+Insurance_Expense_Health_Insurance,Health Insurance,,TRUE,,,Expense,,,,,,,Insurance Expense:Health Insurance,Expense
+Insurance_Expense_Keyman_Insurance,Keyman Insurance,,TRUE,,,Expense,,,,,,,Insurance Expense:Keyman Insurance,Expense
+Insurance_Expense_Professional_Liability,Professional Liability,,TRUE,,,Expense,,,,,,,Insurance Expense:Professional Liability,Expense
+Interest_Expense,Interest Expense,,TRUE,,,Expense,,,,,,,Interest Expense,Expense
+Interest_Expense_Interest_Expense_-_Allocated,Interest Expense - Allocated,,TRUE,,,Expense,,,,,,,Interest Expense:Interest Expense - Allocated,Expense
+Interior_Design_Consultant,Interior Design Consultant,,TRUE,,,Expense,,,,,,,Interior Design Consultant,Expense
+IT_Support,IT Support,,TRUE,,,Expense,,,,,,,IT Support,Expense
+Kitchen_Consultant,Kitchen Consultant,,TRUE,,,Expense,,,,,,,Kitchen Consultant,Expense
+Marketing,Marketing,,TRUE,,,Expense,,,,,,,Marketing,Expense
+Marketing_Conferences_and_Client_Events,Conferences and Client Events,,TRUE,,,Expense,,,,,,,Marketing:Conferences and Client Events,Expense
+Marketing_Recruiting,Recruiting,,TRUE,,,Expense,,,,,,,Marketing:Recruiting,Expense
+Marketing_Team_Building,Team Building,,TRUE,,,Expense,,,,,,,Marketing:Team Building,Expense
+Marketing_Team_Building_TB_Entertainment,TB Entertainment,,TRUE,,,Expense,,,,,,,Marketing:Team Building:TB Entertainment,Expense
+Marketing_Team_Building_TB_Meals,TB Meals,,TRUE,,,Expense,,,,,,,Marketing:Team Building:TB Meals,Expense
+Meals_and_Entertainment,Meals and Entertainment,,TRUE,,,Expense,,,,,,,Meals and Entertainment,Expense
+Meals_and_Entertainment_M&E_100%,M&E 100%,,TRUE,,,Expense,,,,,,,Meals and Entertainment:M&E 100%,Expense
+Miscellaneous_Expense,Miscellaneous Expense,,TRUE,,,Expense,,,,,,,Miscellaneous Expense,Expense
+Office_Supplies,Office Supplies,,TRUE,,,Expense,,,,,,,Office Supplies,Expense
+Over_Payment_Credit_Back,Over Payment Credit Back,,TRUE,,,Expense,,,,,,,Over Payment Credit Back,Expense
+Payroll_Expenses,Payroll Expenses,,TRUE,,,Expense,,,,,,,Payroll Expenses,Expense
+Payroll_Expenses_ERTC_Credit,ERTC Credit,,TRUE,,,Expense,,,,,,,Payroll Expenses:ERTC Credit,Expense
+Payroll_Expenses_Bonus_Expense,Bonus Expense,,TRUE,,,Expense,,,,,,,Payroll Expenses:Bonus Expense,Expense
+Payroll_Expenses_401K,401K,,TRUE,,,Expense,,,,,,,Payroll Expenses:401K,Expense
+Payroll_Expenses_EE_Benefits,EE Benefits,,TRUE,,,Expense,,,,,,,Payroll Expenses:EE Benefits,Expense
+Payroll_Expenses_Gross_Wages,Gross Wages,,TRUE,,,Expense,,,,,,,Payroll Expenses:Gross Wages,Expense
+Payroll_Expenses_PEO/Admin_Fees,PEO/Admin Fees,,TRUE,,,Expense,,,,,,,Payroll Expenses:PEO/Admin Fees,Expense
+Payroll_Expenses_PR_Taxes,PR Taxes,,TRUE,,,Expense,,,,,,,Payroll Expenses:PR Taxes,Expense
+Payroll_Expenses_Work_Comp,Work Comp,,TRUE,,,Expense,,,,,,,Payroll Expenses:Work Comp,Expense
+Penalties,Penalties,,TRUE,,,Expense,,,,,,,Penalties,Expense
+Permit_Fees,Permit Fees,,TRUE,,,Expense,,,,,,,Permit Fees,Expense
+Postage_Expense,Postage Expense,,TRUE,,,Expense,,,,,,,Postage Expense,Expense
+Printing_and_Plotting,Printing and Plotting,,TRUE,,,Expense,,,,,,,Printing and Plotting,Expense
+Professional_Fees,Professional Fees,,TRUE,,,Expense,,,,,,,Professional Fees,Expense
+Reconciliation_Discrepancies,Reconciliation Discrepancies,,TRUE,,,Expense,,,,,,,Reconciliation Discrepancies,Expense
+Reimbursable_Expense,Reimbursable Expense,,TRUE,,,Expense,,,,,,,Reimbursable Expense,Expense
+Rent_Expense,Rent Expense,,TRUE,,,Expense,,,,,,,Rent Expense,Expense
+Rent_Expense_Triple_Net_Rent_Expense,Triple Net Rent Expense,,TRUE,,,Expense,,,,,,,Rent Expense:Triple Net Rent Expense,Expense
+Repairs_and_Maintenance,Repairs and Maintenance,,TRUE,,,Expense,,,,,,,Repairs and Maintenance,Expense
+Settlement_Payments,Settlement Payments,,TRUE,,,Expense,,,,,,,Settlement Payments,Expense
+State_and_County_Tax,State and County Tax,,TRUE,,,Expense,,,,,,,State and County Tax,Expense
+T1_Internet,T1 Internet,,TRUE,,,Expense,,,,,,,T1 Internet,Expense
+Tax_Preparation,Tax Preparation,,TRUE,,,Expense,,,,,,,Tax Preparation,Expense
+Telephone_Expense,Telephone Expense,,TRUE,,,Expense,,,,,,,Telephone Expense,Expense
+Travel_Expenses,Travel Expenses,,TRUE,,,Expense,,,,,,,Travel Expenses,Expense
+Uncategorized_Expenses,Uncategorized Expenses,,FALSE,,,Expense,,,,,,,Uncategorized Expenses,Expense
+Write_offs,Write offs,,TRUE,,,Expense,,,,,,,Write offs,Expense
+Other_Income_Non_Taxable_PPP_LN,Other Income Non Taxable PPP LN,,TRUE,,,Revenue,,,,,,,Other Income Non Taxable PPP LN,Other Income
+Income_from_Reimbursed_Expenses,Income from Reimbursed Expenses,,TRUE,,,Revenue,,,,,,,Income from Reimbursed Expenses,Other Income
+Interest_Income,Interest Income,,TRUE,,,Revenue,,,,,,,Interest Income,Other Income
+Deal_Transaction_Costs,Deal Transaction Costs,,TRUE,,,Expense,,,,,,,Deal Transaction Costs,Other Expense
+Preferred_Equity_Payments,Preferred Equity Payments,,TRUE,,,Expense,,,,,,,Preferred Equity Payments,Other Expense
+Management_Fee_WCP,Management Fee WCP,,TRUE,,,Expense,,,,,,,Management Fee WCP,Other Expense
+Loss_on_Disposal_of_Assets,Loss on Disposal of Assets,,TRUE,,,Expense,,,,,,,Loss on Disposal of Assets,Other Expense
+Ask_My_Accountant,Ask My Accountant,,TRUE,,,Expense,,,,,,,Ask My Accountant,Other Expense

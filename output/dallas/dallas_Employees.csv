@@ -1,0 +1,253 @@
+EmployeeCode,EmployeeName,PayRate,salaryperpayperiod,PayRateStartDate,PayRateEndDate,IsHourly,OTRate,OTMU,_FirstName,_LastName,_IsActive,_Phone,_Email
+DAL-EMP-00001,Aaron Steward,,,,,,,,Aaron,Steward,FALSE,,asteward@idstudio4.com
+DAL-EMP-00002,Adam Cochran,,,,,,,,Adam,Cochran,FALSE,602.383.4002,acochran@idstudio4.com
+DAL-EMP-00003,Adam Renfroe,,,,,,,,Adam,Renfroe,FALSE,,
+DAL-EMP-00004,Adam Salazar,,,,,,,,Adam,Salazar,TRUE,,
+DAL-EMP-00005,Adrianna Salgado,,,,,,,,Adrianna,Salgado,TRUE,,
+DAL-EMP-00006,Albert Borland,,,,,,,,Albert,Borland,FALSE,,aborland@idstudio4.com
+DAL-EMP-00007,Alex Ramon,,,,,,,,Alex,Ramon,FALSE,602.405.8698,aramon@idstudio4.com
+DAL-EMP-00008,Alex Skorge,,,,,,,,Alex,Skorge,FALSE,,askorge@idstudio4.com
+DAL-EMP-00009,Alexander Staley,,,,,,,,Alexander,Staley,TRUE,,astaley@idstudio4.com
+DAL-EMP-00010,Alfredo Gonzalez,,,,,,,,Alfredo,Gonzalez,FALSE,,agonzalez@idstudio4.com
+DAL-EMP-00011,Alice Pak,,,,,,,,Alice,Pak,FALSE,,apak@idstudio4.com
+DAL-EMP-00012,Alvin George,,,,,,,,Alvin,George,FALSE,845.664.1500,ageorge@idstudio4.com
+DAL-EMP-00013,Amanda M Ingram,,,,,,,,Amanda,M Ingram,FALSE,972.839.4309,aingram@idstudio4.com
+DAL-EMP-00014,Amber Johnson,,,,,,,,Amber,Johnson,FALSE,,ajohnson@idstudio4.com
+DAL-EMP-00015,Ana Ayala Galvan,,,,,,,,Ana,Ayala Galvan,TRUE,,
+DAL-EMP-00016,Andrew Nunez,,,,,,,,Andrew,Nunez,FALSE,,anunez@idstudio4.com
+DAL-EMP-00017,Angela Gay Sam,,,,,,,,Angela,Gay Sam,TRUE,,
+DAL-EMP-00018,Angelina A Pecina,,,,,,,,Angelina,A Pecina,FALSE,,apecina@idstudio4.com
+DAL-EMP-00019,Anica Arias,,,,,,,,Anica,Arias,TRUE,,
+DAL-EMP-00020,Annan Wang,,,,,,,,Annan,Wang,FALSE,,
+DAL-EMP-00021,Arturo Chavez,,,,,,,,Arturo,Chavez,FALSE,915.727.3484,achavez@idstudio4.com
+DAL-EMP-00022,Audrey Jones,,,,,,,,Audrey,Jones,FALSE,,
+DAL-EMP-00023,Augustine Osagie,,,,,,,,Augustine,Osagie,TRUE,972.230.9038,aosagie@idstudio4.com
+DAL-EMP-00024,Austin D Carlisle,,,,,,,,Austin,D Carlisle,FALSE,214.364.1519,
+DAL-EMP-00025,Axel Cifuentes,,,,,,,,Axel,Cifuentes,TRUE,,
+DAL-EMP-00026,Aziz Mohsen,,,,,,,,Aziz,Mohsen,FALSE,817.987.5647,amohsen@idstudio4.com
+DAL-EMP-00027,Baleigh Jones,,,,,,,,Baleigh,Jones,TRUE,,bjones@idstudio4.com
+DAL-EMP-00028,Ban Alali,,,,,,,,Ban,Alali,FALSE,,
+DAL-EMP-00029,Barbara Rystrom,,,,,,,,Barbara,Rystrom,FALSE,,
+DAL-EMP-00030,Ben Wilson,,,,,,,,Ben,Wilson,TRUE,,
+DAL-EMP-00031,Benjamin Ash,,,,,,,,Benjamin,Ash,FALSE,,bash@idstudio4.com
+DAL-EMP-00032,Bill Gelwick,,,,,,,,Bill,Gelwick,TRUE,,bgelwick@idstudio4.com
+DAL-EMP-00033,Bill Pinto,,,,,,,,Bill,Pinto,TRUE,,
+DAL-EMP-00034,Blanche Rizkal,,,,,,,,Blanche,Rizkal,FALSE,817.891.0318,brizkal@idstudio4.com
+DAL-EMP-00035,Bradley Derkach,,,,,,,,Bradley,Derkach,FALSE,972.896.3028,bderkach@idstudio4.com
+DAL-EMP-00036,Brandon Barnett,,,,,,,,Brandon,Barnett,TRUE,,
+DAL-EMP-00037,Brenda Cisneros,,,,,,,,Brenda,Cisneros,TRUE,,
+DAL-EMP-00038,Brenda Ruikka,,,,,,,,Brenda,Ruikka,TRUE,,bruikka@idstudio4.com
+DAL-EMP-00039,Brett Willis,,,,,,,,Brett,Willis,TRUE,,bwillis@idstudio4.com
+DAL-EMP-00040,Brian E Chandler,,,,,,,,Brian,E Chandler,TRUE,817.337.1195,bchandler@idstudio4.com
+DAL-EMP-00041,Brian Herman,,,,,,,,Brian,Herman,TRUE,,
+DAL-EMP-00042,Brian McFadden,,,,,,,,Brian,McFadden,FALSE,469.766.8180,bmcfadden@idstudio4.com
+DAL-EMP-00043,Bridgette A Skogg,,,,,,,,Bridgette,A Skogg,FALSE,626.589.6232,bskogg@idstudio4.com
+DAL-EMP-00044,Brittanie Guerra,,,,,,,,Brittanie,Guerra,TRUE,,
+DAL-EMP-00045,Bryan Clopton,,,,,,,,Bryan,Clopton,TRUE,,
+DAL-EMP-00046,Carlos A Mandujano,,,,,,,,Carlos,A Mandujano,FALSE,817.501.1987,carlosm@idstudio4.com
+DAL-EMP-00047,Carlos Marmolejo,,,,,,,,Carlos,Marmolejo,TRUE,,
+DAL-EMP-00048,Cesar Islas Herrera,,,,,,,,Cesar,Islas Herrera,TRUE,,
+DAL-EMP-00049,Cesar O Salgueiro,,,,,,,,Cesar,O Salgueiro,TRUE,,
+DAL-EMP-00050,Charles A Hoffmann,,,,,,,,Charles,A Hoffmann,FALSE,,
+DAL-EMP-00051,Charles Jordan,,,,,,,,Charles,Jordan,FALSE,,CJordan@idstudio4.com
+DAL-EMP-00052,Chauncey Wynn,,,,,,,,Chauncey,Wynn,TRUE,,
+DAL-EMP-00053,Chenoa Smith,,,,,,,,Chenoa,Smith,FALSE,682.224.5664,
+DAL-EMP-00054,Chris Nguyen,,,,,,,,Chris,Nguyen,FALSE,,cnguyen@idstudio4.com
+DAL-EMP-00055,Chris Partee,,,,,,,,Chris,Partee,FALSE,,cpartee@idstudio4.com
+DAL-EMP-00056,Christopher Dye,,,,,,,,Christopher,Dye,FALSE,817.705.2915,CDye@idstudio4.com
+DAL-EMP-00057,Claudia Y Hernandez,,,,,,,,Claudia,Y Hernandez,FALSE,,CHernandez@idstudio4.com
+DAL-EMP-00058,Clint Ryan,,,,,,,,Clint,Ryan,FALSE,,cryan@idstudio4.com
+DAL-EMP-00059,Cody Bowman,,,,,,,,Cody,Bowman,FALSE,,cbowman@idstudio4.com
+DAL-EMP-00060,Conrad Lovejoy,,,,,,,,Conrad,Lovejoy,FALSE,,clovejoy@idstudio4.com
+DAL-EMP-00061,Corey Graham,,,,,,,,Corey,Graham,TRUE,,
+DAL-EMP-00062,Cristian Aguirre Murillo,,,,,,,,Cristian,Aguirre Murillo,FALSE,,
+DAL-EMP-00063,Damon Anderson,,,,,,,,Damon,Anderson,TRUE,,
+DAL-EMP-00064,Dana Foley,,,,,,,,Dana,Foley,FALSE,,dfoley@idstudio4.com
+DAL-EMP-00065,Daniel Escobar,,,,,,,,Daniel,Escobar,TRUE,,
+DAL-EMP-00066,Daniel L Murphree,,,,,,,,Daniel,L Murphree,FALSE,,dmurphree@idstudio4.com
+DAL-EMP-00067,Daniel O Navarro,,,,,,,,Daniel,O Navarro,FALSE,,dnavarro@idstudio4.com
+DAL-EMP-00068,David C Steffen,,,,,,,,David,C Steffen,TRUE,214.223.1612,dsteffen@idstudio4.com
+DAL-EMP-00069,David G Stovall,,,,,,,,David,G Stovall,TRUE,214.578.2785,dstovall@idstudio4.com
+DAL-EMP-00070,David J Adamski Jr.,,,,,,,,David,J Adamski Jr.,FALSE,,dadamski@idstudio4.com
+DAL-EMP-00071,David L McDonald,,,,,,,,David,L McDonald,TRUE,,
+DAL-EMP-00072,David S Windle,,,,,,,,David,S Windle,TRUE,972.795.4521,scottw@idstudio4.com
+DAL-EMP-00073,David Taylor,,,,,,,,David,Taylor,FALSE,602.751.3681,dtaylor@idstudio4.com
+DAL-EMP-00074,Derek Wilson,,,,,,,,Derek,Wilson,FALSE,480.238.1156,dwilson@idstudio4.com
+DAL-EMP-00075,Diane Rodriguez,,,,,,,,Diane,Rodriguez,TRUE,,
+DAL-EMP-00076,Diep Tran,,,,,,,,Diep,Tran,TRUE,,
+DAL-EMP-00077,Donald P Ness,,,,,,,,Donald,P Ness,FALSE,,
+DAL-EMP-00078,Edgar Ledezma,,,,,,,,Edgar,Ledezma,FALSE,,eledezma@idstudio4.com
+DAL-EMP-00079,Edric Gonzalez,,,,,,,,Edric,Gonzalez,FALSE,,
+DAL-EMP-00080,Edward Kucic,,,,,,,,Edward,Kucic,TRUE,,
+DAL-EMP-00081,Elizabeth Park,,,,,,,,Elizabeth,Park,TRUE,,
+DAL-EMP-00082,Elizabeth Perez,,,,,,,,Elizabeth,Perez,FALSE,,
+DAL-EMP-00083,Elizabeth S Graham,,,,,,,,Elizabeth,S Graham,FALSE,808.392.8969,egraham@idstudio4.com
+DAL-EMP-00084,Emmanuel K Pembele,,,,,,,,Emmanuel,K Pembele,TRUE,214-451-7419,
+DAL-EMP-00085,Eric Hutchens,,,,,,,,Eric,Hutchens,FALSE,,ehutchens@idstudio4.com
+DAL-EMP-00086,Erica Fielding,,,,,,,,Erica,Fielding,TRUE,,
+DAL-EMP-00087,Ernesto F Ramos,,,,,,,,Ernesto,F Ramos,FALSE,214.454.9381,
+DAL-EMP-00088,Eusebio Padilla,,,,,,,,Eusebio,Padilla,TRUE,,
+DAL-EMP-00089,Evangeline Dennie,,,,,,,,Evangeline,Dennie,TRUE,,
+DAL-EMP-00090,Farzan Kholousi,,,,,,,,Farzan,Kholousi,FALSE,,
+DAL-EMP-00091,Forrest . Cardwell,,,,,,,,Forrest,. Cardwell,FALSE,972.977.7031,fcardwell@idstudio4.com
+DAL-EMP-00092,Gabrielle Selna,,,,,,,,Gabrielle,Selna,FALSE,,gselna@idstudio4.com
+DAL-EMP-00093,Gordon Meehl,,,,,,,,Gordon,Meehl,FALSE,,gmeehl@idstudio4.com
+DAL-EMP-00094,Grecia Guerra Garcia,,,,,,,,Grecia,Guerra Garcia,TRUE,,
+DAL-EMP-00095,Greg Taylor,,,,,,,,Greg,Taylor,FALSE,,
+DAL-EMP-00096,Guillermo Mendoza,,,,,,,,Guillermo,Mendoza,FALSE,972.608.9787,Gmendoza@idstudio4.com
+DAL-EMP-00097,Harold M Bernstein,,,,,,,,Harold,M Bernstein,FALSE,,
+DAL-EMP-00098,Holli Eichelberger,,,,,,,,Holli,Eichelberger,FALSE,,heichelberger@idstudio4.com
+DAL-EMP-00099,Hong Wang,,,,,,,,Hong,Wang,FALSE,,
+DAL-EMP-00100,Irving Gatica,,,,,,,,Irving,Gatica,TRUE,,
+DAL-EMP-00101,Iryna Pruitt,,,,,,,,Iryna,Pruitt,FALSE,,Ipruitt@idstudio4.com
+DAL-EMP-00102,Jacob Vaden,,,,,,,,Jacob,Vaden,FALSE,,jvaden@idstudio4.com
+DAL-EMP-00103,Jafar Hasanpoor,,,,,,,,Jafar,Hasanpoor,FALSE,214.235.1549,jhasanpoor@idstudio4.com
+DAL-EMP-00104,James Black,,,,,,,,James,Black,FALSE,,jblack@idstudio4.com
+DAL-EMP-00105,James D Darr,,,,,,,,James,D Darr,FALSE,469.964.1315,ddarr@idstudio4.com
+DAL-EMP-00106,James M Cooksey,,,,,,,,James,M Cooksey,TRUE,972.704.1611,jcooksey@idstudio4.com
+DAL-EMP-00107,Janice Chen,,,,,,,,Janice,Chen,FALSE,,jchen@idstudio4.com
+DAL-EMP-00108,Jared Wiseman,,,,,,,,Jared,Wiseman,FALSE,,
+DAL-EMP-00109,Jason Cluth,,,,,,,,Jason,Cluth,FALSE,,jcluth@idstudio4.com
+DAL-EMP-00110,Jason Eady,,,,,,,,Jason,Eady,FALSE,214.803.2557,jeady@idstudio4.com
+DAL-EMP-00111,Jason Goree,,,,,,,,Jason,Goree,FALSE,,
+DAL-EMP-00112,Jason Heard,,,,,,,,Jason,Heard,FALSE,,
+DAL-EMP-00113,Jason Keung,,,,,,,,Jason,Keung,FALSE,,jkeung@idstudio4.com
+DAL-EMP-00114,Jason Setters,,,,,,,,Jason,Setters,FALSE,,Jsetters@idstudio4.com
+DAL-EMP-00115,Javier Morante.,,,,,,,,Javier,Morante.,TRUE,469-867-1535,JMorante@idstudio4.com
+DAL-EMP-00116,Jenifer Lombardo,,,,,,,,Jenifer,Lombardo,FALSE,,jlombardo@idstudio4.com
+DAL-EMP-00117,Jennifer Ibanez,,,,,,,,Jennifer,Ibanez,FALSE,956.588.9962,
+DAL-EMP-00118,Jennifer L Pinto,,,,,,,,Jennifer,L Pinto,FALSE,,jpinto@idstudio4.com
+DAL-EMP-00119,Jennifer Petty,,,,,,,,Jennifer,Petty,FALSE,,jpetty@idstudio4.com
+DAL-EMP-00120,Jennifer Seager,,,,,,,,Jennifer,Seager,FALSE,,
+DAL-EMP-00121,Jennifer Vaghyjones,,,,,,,,Jennifer,Vaghyjones,FALSE,817.657.5843,jvaghyjones@idstudio4.com
+DAL-EMP-00122,Jerry L LaVarnway III,,,,,,,,Jerry,L LaVarnway III,TRUE,,
+DAL-EMP-00123,Jill McKee,,,,,,,,Jill,McKee,FALSE,817.319.8775,JMcKee@idstudio4.com
+DAL-EMP-00124,Joaquin Reyes,,,,,,,,Joaquin,Reyes,FALSE,817.205.2668,jreyes@idstudio4.com
+DAL-EMP-00125,Joel Greer,,,,,,,,Joel,Greer,FALSE,,jgreer@idstudio4.com
+DAL-EMP-00126,John G Sisk,,,,,,,,John,G Sisk,TRUE,817.673.1505,jsisk@idstudio4.com
+DAL-EMP-00127,John Hover,,,,,,,,John,Hover,FALSE,817.808.6729,jhover@idstudio4.com
+DAL-EMP-00128,John J Lesly,,,,,,,,John,J Lesly,FALSE,830.837.9628,JLesly@idstudio4.com
+DAL-EMP-00129,John Murazak,,,,,,,,John,Murazak,FALSE,,
+DAL-EMP-00130,Jose Hernandez,,,,,,,,Jose,Hernandez,FALSE,,jhernandez@idstudio4.com
+DAL-EMP-00131,Joseph Goldin,,,,,,,,Joseph,Goldin,TRUE,,
+DAL-EMP-00132,Joshua Burkhart,,,,,,,,Joshua,Burkhart,FALSE,,jburkhart@idstudio4.com
+DAL-EMP-00133,Joshua Gottlieb,,,,,,,,Joshua,Gottlieb,TRUE,,
+DAL-EMP-00134,Joyce Nguyen,,,,,,,,Joyce,Nguyen,FALSE,,
+DAL-EMP-00135,Juan Pablo Santin Rivero,,,,,,,,Juan,Pablo Santin Rivero,TRUE,,
+DAL-EMP-00136,Juana Ademodi,,,,,,,,Juana,Ademodi,TRUE,,
+DAL-EMP-00137,Julian Andrews,,,,,,,,Julian,Andrews,FALSE,,
+DAL-EMP-00138,Julian Edwards,,,,,,,,Julian,Edwards,FALSE,314.324.9607,jedwards@idstudio4.com
+DAL-EMP-00139,Kathy Burnett,,,,,,,,Kathy,Burnett,TRUE,817.263.6522,kburnett@idstudio4.com
+DAL-EMP-00140,Kelli J Guytan,,,,,,,,Kelli,J Guytan,FALSE,817-228-6992,kguytan@idstudio4.com
+DAL-EMP-00141,Kelly Harbacheck,,,,,,,,Kelly,Harbacheck,FALSE,,
+DAL-EMP-00142,Kelsey Williams,,,,,,,,Kelsey,Williams,FALSE,,
+DAL-EMP-00143,Kenneth L Sterling,,,,,,,,Kenneth,L Sterling,TRUE,469.688.2134,ksterling@idstudio4.com
+DAL-EMP-00144,Kevin Ngongo,,,,,,,,Kevin,Ngongo,FALSE,,kngongo@idstudio4.com
+DAL-EMP-00145,Kevin Sancibrian,,,,,,,,Kevin,Sancibrian,FALSE,,ksancibrian@idstudio4.com
+DAL-EMP-00146,Kevin Solodar,,,,,,,,Kevin,Solodar,TRUE,,
+DAL-EMP-00147,Kevin Watson,,,,,,,,Kevin,Watson,TRUE,,
+DAL-EMP-00148,Kristopher W Wasemiller,,,,,,,,Kristopher,W Wasemiller,FALSE,325.669.5645,kwasemiller@idstudio4.com
+DAL-EMP-00149,Laura Bernaldez,,,,,,,,Laura,Bernaldez,FALSE,,lbernaldez@idstudio4.com
+DAL-EMP-00150,Laura Quintero,,,,,,,,Laura,Quintero,FALSE,,
+DAL-EMP-00151,Laura Wong,,,,,,,,Laura,Wong,FALSE,,
+DAL-EMP-00152,Lauren Gamble,,,,,,,,Lauren,Gamble,FALSE,,
+DAL-EMP-00153,Lauren Young,,,,,,,,Lauren,Young,FALSE,,lyoung@idstudio4.com
+DAL-EMP-00154,Leonard McKay,,,,,,,,Leonard,McKay,TRUE,,
+DAL-EMP-00155,Leonel Estrada,,,,,,,,Leonel,Estrada,FALSE,,lestrada@idstudio4.com
+DAL-EMP-00156,Lesley A Coleman,,,,,,,,Lesley,A Coleman,TRUE,972.743.3923,lcoleman@idstudio4.com
+DAL-EMP-00157,Liron Amsellem,,,,,,,,Liron,Amsellem,FALSE,,lamsellem@idstudio4.com
+DAL-EMP-00158,Lisa E Haight,,,,,,,,Lisa,E Haight,FALSE,,lhaight@idstudio4.com
+DAL-EMP-00159,Maddie Powell,,,,,,,,Maddie,Powell,FALSE,,mpowell@idstudio4.com
+DAL-EMP-00160,Maggie Lenzen,,,,,,,,Maggie,Lenzen,FALSE,,mlenzen@idstudio4.com
+DAL-EMP-00161,Malina Tifrea,,,,,,,,Malina,Tifrea,FALSE,,MTifrea@idstudio4.com
+DAL-EMP-00162,Mark Isbell,,,,,,,,Mark,Isbell,FALSE,817.718.8744,misbell@idstudio4.com
+DAL-EMP-00163,Matthew N Cosgrove,,,,,,,,Matthew,N Cosgrove,TRUE,610-299-8028,
+DAL-EMP-00164,Maxcell Spriggs,,,,,,,,Maxcell,Spriggs,FALSE,,mspriggs@idstudio4.com
+DAL-EMP-00165,Megan McVey,,,,,,,,Megan,McVey,FALSE,,mmcvey@idstudio4.com
+DAL-EMP-00166,Megan O Smith - Ayers,,,,,,,,Megan,O Smith - Ayers,FALSE,682.208.4122,msmith@idstudio4.com
+DAL-EMP-00167,Melissa P Deleon,,,,,,,,Melissa,P Deleon,FALSE,817.948.8177,mdeleon@idstudio4.com
+DAL-EMP-00168,Mercedes Mendoza,,,,,,,,Mercedes,Mendoza,TRUE,,
+DAL-EMP-00169,Michael A Gonzales,,,,,,,,Michael,A Gonzales,FALSE,972.304.0663,
+DAL-EMP-00170,Michael Contreras,,,,,,,,Michael,Contreras,FALSE,817.456.2423,mcontreras@idstudio4.com
+DAL-EMP-00171,Michelle L Bushey,,,,,,,,Michelle,L Bushey,FALSE,214.660.3096,
+DAL-EMP-00172,Michelle Moss,,,,,,,,Michelle,Moss,FALSE,,
+DAL-EMP-00173,Mikaela Stefan,,,,,,,,Mikaela,Stefan,TRUE,,
+DAL-EMP-00174,Mike Rivera,,,,,,,,Mike,Rivera,TRUE,,
+DAL-EMP-00175,Mike Solis,,,,,,,,Mike,Solis,FALSE,,msolis@idstudio4.com
+DAL-EMP-00176,Miles D Lischer,,,,,,,,Miles,D Lischer,FALSE,,
+DAL-EMP-00177,Minh Nguyen,,,,,,,,Minh,Nguyen,FALSE,469.269.3599,
+DAL-EMP-00178,Miriam Navarro,,,,,,,,Miriam,Navarro,FALSE,972.896.8035,mnavarro@idstudio.com
+DAL-EMP-00179,Mobolaji Ogunbiyi,,,,,,,,Mobolaji,Ogunbiyi,TRUE,,
+DAL-EMP-00180,Nancy Garcia,,,,,,,,Nancy,Garcia,FALSE,,
+DAL-EMP-00181,Nandini Ramasesh,,,,,,,,Nandini,Ramasesh,FALSE,214.326.9589,nramasesh@idstudio4.com
+DAL-EMP-00182,Nang Su Myint,,,,,,,,Nang,Su Myint,TRUE,,
+DAL-EMP-00183,Naomi M Contreras,,,,,,,,Naomi,M Contreras,FALSE,325.455.6818,ncontreras@idstudio4.com
+DAL-EMP-00184,Nathan Morgan,,,,,,,,Nathan,Morgan,FALSE,,nmorgan@idstudio4.com
+DAL-EMP-00185,Nicholas Moser,,,,,,,,Nicholas,Moser,FALSE,972.552.0246,NMoser@idstudio4.com
+DAL-EMP-00186,Nicholas Williams,,,,,,,,Nicholas,Williams,TRUE,,nwilliams@idstudio4.com
+DAL-EMP-00187,Nick Otto,,,,,,,,Nick,Otto,FALSE,,
+DAL-EMP-00188,Olamide Banwo,,,,,,,,Olamide,Banwo,FALSE,,
+DAL-EMP-00189,Omar Aponte,,,,,,,,Omar,Aponte,FALSE,,
+DAL-EMP-00190,Omar Munoz,,,,,,,,Omar,Munoz,FALSE,,Omunoz@idstudio4.com
+DAL-EMP-00191,Osvaldo Estrada,,,,,,,,Osvaldo,Estrada,FALSE,817.733.9401,oestrada@idstudio4.com
+DAL-EMP-00192,Pamela Hernandez,,,,,,,,Pamela,Hernandez,FALSE,,phernandez@idstudio4.com
+DAL-EMP-00193,Pamela J Mathis,,,,,,,,Pamela,J Mathis,FALSE,,
+DAL-EMP-00194,Patrick McKechnie,,,,,,,,Patrick,McKechnie,TRUE,,
+DAL-EMP-00195,Pete Ramirez,,,,,,,,Pete,Ramirez,FALSE,972.351.0071,pramirez@idstudio4.com
+DAL-EMP-00196,Peter W. Brown,,,,,,,,Peter,W. Brown,TRUE,972.896.7650,pbrown@idstudio4.com
+DAL-EMP-00197,Phillip Caekaert,,,,,,,,Phillip,Caekaert,FALSE,,
+DAL-EMP-00198,Phillip Jones,,,,,,,,Phillip,Jones,FALSE,469.704.1263,pjones@idstudio4.com
+DAL-EMP-00199,Priscilla Tamez,,,,,,,,Priscilla,Tamez,FALSE,,
+DAL-EMP-00200,Priti Phalak,,,,,,,,Priti,Phalak,TRUE,,pphalak@idstudio4.com
+DAL-EMP-00201,Ralf Sebecke,,,,,,,,Ralf,Sebecke,TRUE,214.908.8886,rsebecke@idstudio4.com
+DAL-EMP-00202,Randolph C Barnett,,,,,,,,Randolph,C Barnett,TRUE,972.491.3355,rbarnett@idstudio4.com
+DAL-EMP-00203,Rebecca Perkins,,,,,,,,Rebecca,Perkins,FALSE,,rperkins@idstudio4.com
+DAL-EMP-00204,Richard Burton,,,,,,,,Richard,Burton,TRUE,,
+DAL-EMP-00205,Richard Greene,,,,,,,,Richard,Greene,FALSE,,
+DAL-EMP-00206,Richard Tuck AIA,,,,,,,,Richard,Tuck AIA,FALSE,,
+DAL-EMP-00207,Robert Coker,,,,,,,,Robert,Coker,FALSE,,
+DAL-EMP-00208,Robert Rothwell,,,,,,,,Robert,Rothwell,FALSE,,rrothwell@idstudio4.com
+DAL-EMP-00209,Robert Runyon,,,,,,,,Robert,Runyon,FALSE,,rrunyon@idstudio4.com
+DAL-EMP-00210,Roberto Nunez,,,,,,,,Roberto,Nunez,FALSE,,rnunez@idstudio4.com
+DAL-EMP-00211,Roger Saenz,,,,,,,,Roger,Saenz,FALSE,,rsaenz@idstudio4.com
+DAL-EMP-00212,Ron D Shultz,,,,,,,,Ron,D Shultz,FALSE,469.855.5613,rshultz@idstudio4.com
+DAL-EMP-00213,Rusty A Ridge,,,,,,,,Rusty,A Ridge,TRUE,972.322.0399,rridge@idstudio4.com
+DAL-EMP-00214,Ruth De La Cruz,,,,,,,,Ruth,De La Cruz,TRUE,,
+DAL-EMP-00215,Safir M Vazquez,,,,,,,,Safir,M Vazquez,FALSE,214.605.7706,svazquez@idstudio4.com
+DAL-EMP-00216,Sam Wilson,,,,,,,,Sam,Wilson,TRUE,,
+DAL-EMP-00217,Samuel Pena,,,,,,,,Samuel,Pena,TRUE,,
+DAL-EMP-00218,Sarang Han,,,,,,,,Sarang,Han,FALSE,,shan@idstudio4.com
+DAL-EMP-00219,Sasan Gozarchi,,,,,,,,Sasan,Gozarchi,TRUE,,
+DAL-EMP-00220,Sean Turnquest,,,,,,,,Sean,Turnquest,FALSE,,sturnquest@idstudio4.com
+DAL-EMP-00221,Seun Olatunbosun,,,,,,,,Seun,Olatunbosun,FALSE,,solatunbosun@idstudio4.com
+DAL-EMP-00222,Shalini Panicker,,,,,,,,Shalini,Panicker,FALSE,,
+DAL-EMP-00223,Skye Kirschner,,,,,,,,Skye,Kirschner,FALSE,,
+DAL-EMP-00224,Sophia Floro,,,,,,,,Sophia,Floro,TRUE,,
+DAL-EMP-00225,Stephanie V Christian,,,,,,,,Stephanie,V Christian,FALSE,,
+DAL-EMP-00226,Stephen R Bundy,,,,,,,,Stephen,R Bundy,TRUE,,
+DAL-EMP-00227,Stephen S Warren,,,,,,,,Stephen,S Warren,FALSE,,swarren@idstudio4.com
+DAL-EMP-00228,Steven C Cox,,,,,,,,Steven,C Cox,FALSE,940.389.8835,scox@idstudio4.com
+DAL-EMP-00229,Stewart Schuetze,,,,,,,,Stewart,Schuetze,TRUE,,
+DAL-EMP-00230,Sumaia A Alamoudi,,,,,,,,Sumaia,A Alamoudi,FALSE,469.878.1558,salamoudi@idstudio4.com
+DAL-EMP-00231,Susan Pignataro,,,,,,,,Susan,Pignataro,FALSE,,
+DAL-EMP-00232,Tania Inigo Vazquez,,,,,,,,Tania,Inigo Vazquez,FALSE,817.909.3469,tinigo@idstudio4.com
+DAL-EMP-00233,Taylor Walker,,,,,,,,Taylor,Walker,TRUE,,
+DAL-EMP-00234,Teresa Sigl,,,,,,,,Teresa,Sigl,FALSE,,
+DAL-EMP-00235,Terry Craig,,,,,,,,Terry,Craig,FALSE,214.284.0130,tcraig@idstudio4.com
+DAL-EMP-00236,Thant Nguyen,,,,,,,,Thant,Nguyen,FALSE,,
+DAL-EMP-00237,Thomas Edson,,,,,,,,Thomas,Edson,FALSE,214.478.2334,tedson@idstudio4.com
+DAL-EMP-00238,Thomas Lenz,,,,,,,,Thomas,Lenz,FALSE,682.201.6677,tlenz@idstudio4.com
+DAL-EMP-00239,Todd A Banaszynski,,,,,,,,Todd,A Banaszynski,TRUE,214.797.1860,toddb@idstudio4.com
+DAL-EMP-00240,Toni Wiggins,,,,,,,,Toni,Wiggins,FALSE,714.404.7286,twiggins@idstudio4.com
+DAL-EMP-00241,Trent Haynes,,,,,,,,Trent,Haynes,FALSE,,
+DAL-EMP-00242,Trey Lay,,,,,,,,Trey,Lay,FALSE,,
+DAL-EMP-00243,Tyler Patin,,,,,,,,Tyler,Patin,FALSE,469.571.9457,tpatin@idstudio4.com
+DAL-EMP-00244,Valarie L Smith,,,,,,,,Valarie,L Smith,FALSE,214.868.5329,vsmith@idstudio4.com
+DAL-EMP-00245,Velveth Simite,,,,,,,,Velveth,Simite,FALSE,,vsimite@idstudio4.com
+DAL-EMP-00246,Vicky Arteaga,,,,,,,,Vicky,Arteaga,TRUE,,
+DAL-EMP-00247,Walter Bateman,,,,,,,,Walter,Bateman,FALSE,469.261.8972,wbateman@idstudio4.com
+DAL-EMP-00248,Xavier Zaragoza,,,,,,,,Xavier,Zaragoza,TRUE,,
+DAL-EMP-00249,Yasir Al Jiboury,,,,,,,,Yasir,Al Jiboury,FALSE,,
+DAL-EMP-00250,Ying. Liu.,,,,,,,,Ying.,Liu.,FALSE,,
+DAL-EMP-00251,Yousef Elbarry,,,,,,,,Yousef,Elbarry,FALSE,,yelbarry@idstudio4.com
+DAL-EMP-00252,Zachary Hertzog,,,,,,,,Zachary,Hertzog,FALSE,218.831.3841,zhertzog@idstudio4.com

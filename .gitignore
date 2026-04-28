@@ -1,0 +1,29 @@
+# Credentials & tokens — never commit
+etl/.env
+etl/ajera.env
+etl/qbo_tokens.json
+etl/*.qwc
+
+# Python cache
+etl/__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Large source-data files (QB Desktop exports, Ajera XLS, migration templates)
+Documentation/
+TimeReport/
+input/
+output/dallas/Dallas_*
+output/dallas/Orlando_*
+output/orlando/Orlando_*
+output/orlando/Dallas_*
+
+# Excel lock files
+~$*
+
+# Local Claude session data
+.claude/
+
+# Streamlit local secrets (use Streamlit Cloud secrets UI for prod)
+.streamlit/secrets.toml

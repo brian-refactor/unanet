@@ -1,0 +1,132 @@
+BaseCode,BaseName,Description,IsActive,Is1099,IsSubcontractor,FinancialType,SubledgerType,MetricType,CostType,PMType,LaborRevenueType,ExpenseRevenueType,_QBD_FullName,_QBD_AcctType
+PNC_Checking_ORL,PNC Checking ORL,,TRUE,,,Asset,,,,,,,PNC Checking ORL,Bank
+Consulting,Consulting,,TRUE,,,Asset,,,,,,,Consulting,Bank
+First_Horizon,First Horizon,,TRUE,,,Asset,,,,,,,First Horizon,Bank
+Misc,Misc,,TRUE,,,Asset,,,,,,,Misc,Bank
+Payroll,Payroll,,FALSE,,,Asset,,,,,,,Payroll,Bank
+Payroll_II,Payroll II,,TRUE,,,Asset,,,,,,,Payroll II,Bank
+Regent/Langford-Consultant,Regent/Langford-Consultant,,FALSE,,,Asset,,,,,,,Regent/Langford-Consultant,Bank
+Accounts_Receivable,Accounts Receivable,,TRUE,,,Asset,,,,,,,Accounts Receivable,Accounts Receivable
+Due_to_Fusion_AE_-_MSP_Office,Due to Fusion AE - MSP Office,,TRUE,,,Asset,,,,,,,Due to Fusion AE - MSP Office,Other Current Asset
+Inventory_Asset,Inventory Asset,,TRUE,,,Asset,,,,,,,Inventory Asset,Other Current Asset
+Prepaid,Prepaid,,TRUE,,,Asset,,,,,,,Prepaid,Other Current Asset
+Undeposited_Funds,Undeposited Funds,,TRUE,,,Asset,,,,,,,Undeposited Funds,Other Current Asset
+Computer/Website,Computer/Website,,TRUE,,,Asset,,,,,,,Computer/Website,Fixed Asset
+Equipment,Equipment,,TRUE,,,Asset,,,,,,,Equipment,Fixed Asset
+Furniture_&_Fixtures,Furniture & Fixtures,,TRUE,,,Asset,,,,,,,Furniture & Fixtures,Fixed Asset
+Improvements,Improvements,,TRUE,,,Asset,,,,,,,Improvements,Fixed Asset
+Software,Software,,TRUE,,,Asset,,,,,,,Software,Fixed Asset
+Accumulated_Depreciation,Accumulated Depreciation,,TRUE,,,Asset,,,,,,,Accumulated Depreciation,Fixed Asset
+Due_to_Fusion_AE_-_DAL,Due to Fusion AE - DAL,,TRUE,,,Asset,,,,,,,Due to Fusion AE - DAL,Other Asset
+Due_from_Shareholder,Due from Shareholder,,TRUE,,,Asset,,,,,,,Due from Shareholder,Other Asset
+Security_Deposit,Security Deposit,,TRUE,,,Asset,,,,,,,Security Deposit,Other Asset
+Accounts_Payable,Accounts Payable,,TRUE,,,Liability,,,,,,,Accounts Payable,Accounts Payable
+Fusion_AE_VISA,Fusion AE VISA,,TRUE,,,Liability,,,,,,,Fusion AE VISA,Credit Card
+Fusion_AE_AMEX,Fusion AE AMEX,,TRUE,,,Liability,,,,,,,Fusion AE AMEX,Credit Card
+Accrued_Management_Fees,Accrued Management Fees,,TRUE,,,Liability,,,,,,,Accrued Management Fees,Other Current Liability
+Accrued_Revenue,Accrued Revenue,,TRUE,,,Liability,,,,,,,Accrued Revenue,Other Current Liability
+Unearned_Revenue,Unearned Revenue,,TRUE,,,Liability,,,,,,,Unearned Revenue,Other Current Liability
+Company_Liability,Company Liability,,FALSE,,,Liability,,,,,,,Company Liability,Other Current Liability
+Credit,Credit,,TRUE,,,Liability,,,,,,,Credit,Other Current Liability
+Joanne_short_term,Joanne short term,,TRUE,,,Liability,,,,,,,Joanne short term,Other Current Liability
+Line_of_Credit_Suntrust,Line of Credit Suntrust,,TRUE,,,Liability,,,,,,,Line of Credit Suntrust,Other Current Liability
+Note_Payable,Note Payable,,TRUE,,,Liability,,,,,,,Note Payable,Other Current Liability
+Payroll_Liabilities,Payroll Liabilities,,TRUE,,,Liability,,,,,,,Payroll Liabilities,Other Current Liability
+PPP_Loan,PPP Loan,,TRUE,,,Liability,,,,,,,PPP Loan,Other Current Liability
+Shareholder_Loan,Shareholder Loan,,TRUE,,,Liability,,,,,,,Shareholder Loan,Other Current Liability
+Suntrust_Credit_Card,Suntrust Credit Card,,TRUE,,,Liability,,,,,,,Suntrust Credit Card,Other Current Liability
+Preferred_Equity_Distributions,Preferred Equity Distributions,,TRUE,,,Equity,,,,,,,Preferred Equity Distributions,Equity
+Capital_Stock,Capital Stock,,TRUE,,,Equity,,,,,,,Capital Stock,Equity
+Opening_Bal_Equity,Opening Bal Equity,,FALSE,,,Equity,,,,,,,Opening Bal Equity,Equity
+Retained_Earnings,Retained Earnings,,TRUE,,,Equity,,,,,,,Retained Earnings,Equity
+Shareholder_Distributions,Shareholder Distributions,,TRUE,,,Equity,,,,,,,Shareholder Distributions,Equity
+Project_Revenue-Accrued,Project Revenue-Accrued,,TRUE,,,Revenue,,,,,,,Project Revenue-Accrued,Income
+Miscellaneous_-Fusion_AE_Texas,Miscellaneous -Fusion AE Texas,,TRUE,,,Revenue,,,,,,,Miscellaneous -Fusion AE Texas,Income
+Design_Income,Design Income,,TRUE,,,Revenue,,,,,,,Design Income,Income
+Project_Revenue,Project Revenue,,TRUE,,,Revenue,,,,,,,Project Revenue,Income
+Reimbursed_Expenses_-_Income,Reimbursed Expenses - Income,,TRUE,,,Revenue,,,,,,,Reimbursed Expenses - Income,Income
+Vendor_Refunds,Vendor Refunds,,TRUE,,,Revenue,,,,,,,Vendor Refunds,Income
+Continuing_Education,Continuing Education,,TRUE,,,Expense,,,,,,,Continuing Education,Cost of Goods Sold
+Cost_of_Goods_Sold,Cost of Goods Sold,,TRUE,,,Expense,,,,,,,Cost of Goods Sold,Cost of Goods Sold
+Project_Related_Costs,Project Related Costs,,TRUE,,,Expense,,,,,,,Project Related Costs,Cost of Goods Sold
+Project_Related_Costs_Outside_Consultants,Outside Consultants,,TRUE,,,Expense,,,,,,,Project Related Costs:Outside Consultants,Cost of Goods Sold
+Project_Related_Costs_Reimbursable_Expenses,Reimbursable Expenses,,TRUE,,,Expense,,,,,,,Project Related Costs:Reimbursable Expenses,Cost of Goods Sold
+Employee_Appreciation,Employee Appreciation,,TRUE,,,Expense,,,,,,,Employee Appreciation,Expense
+Reconciliation_Discrepancies,Reconciliation Discrepancies,,TRUE,,,Expense,,,,,,,Reconciliation Discrepancies,Expense
+Advertising_Expense,Advertising Expense,,TRUE,,,Expense,,,,,,,Advertising Expense,Expense
+Ask_My_Accountant,Ask My Accountant,,TRUE,,,Expense,,,,,,,Ask My Accountant,Expense
+Bank_Service_Charges,Bank Service Charges,,TRUE,,,Expense,,,,,,,Bank Service Charges,Expense
+Business_License_&_Fees,Business License & Fees,,TRUE,,,Expense,,,,,,,Business License & Fees,Expense
+Car_Rentals,Car Rentals,,TRUE,,,Expense,,,,,,,Car Rentals,Expense
+Car/Truck_Expense,Car/Truck Expense,,TRUE,,,Expense,,,,,,,Car/Truck Expense,Expense
+Car/Truck_Expense_Auto_Repairs_&_Maintenan,Auto Repairs & Maintenan,,TRUE,,,Expense,,,,,,,Car/Truck Expense:Auto Repairs & Maintenan,Expense
+Car/Truck_Expense_Gas,Gas,,TRUE,,,Expense,,,,,,,Car/Truck Expense:Gas,Expense
+Car/Truck_Expense_Registration_&_License,Registration & License,,TRUE,,,Expense,,,,,,,Car/Truck Expense:Registration & License,Expense
+Cleaning/Janitorial,Cleaning/Janitorial,,TRUE,,,Expense,,,,,,,Cleaning/Janitorial,Expense
+Client_Relations,Client Relations,,TRUE,,,Expense,,,,,,,Client Relations,Expense
+Computer_&_Internet,Computer & Internet,,TRUE,,,Expense,,,,,,,Computer & Internet,Expense
+Consulting_-,Consulting -,,TRUE,,,Expense,,,,,,,Consulting -,Expense
+Contributions,Contributions,,TRUE,,,Expense,,,,,,,Contributions,Expense
+Depreciation_-_Sec_179,Depreciation - Sec 179,,TRUE,,,Expense,,,,,,,Depreciation - Sec 179,Expense
+Depreciation_Expense,Depreciation Expense,,TRUE,,,Expense,,,,,,,Depreciation Expense,Expense
+Dues_and_Subscriptions,Dues and Subscriptions,,TRUE,,,Expense,,,,,,,Dues and Subscriptions,Expense
+Electric,Electric,,TRUE,,,Expense,,,,,,,Electric,Expense
+Filing_Fee,Filing Fee,,TRUE,,,Expense,,,,,,,Filing Fee,Expense
+Insurance,Insurance,,TRUE,,,Expense,,,,,,,Insurance,Expense
+Insurance_Auto_Insurance,Auto Insurance,,TRUE,,,Expense,,,,,,,Insurance:Auto Insurance,Expense
+Insurance_Disability_Insurance,Disability Insurance,,TRUE,,,Expense,,,,,,,Insurance:Disability Insurance,Expense
+Insurance_General_Liability_Insurance,General Liability Insurance,,TRUE,,,Expense,,,,,,,Insurance:General Liability Insurance,Expense
+Insurance_Life_Insurance,Life Insurance,,TRUE,,,Expense,,,,,,,Insurance:Life Insurance,Expense
+Insurance_Medical_Insurance,Medical Insurance,,TRUE,,,Expense,,,,,,,Insurance:Medical Insurance,Expense
+Insurance_Professional_Liability_Ins,Professional Liability Ins,,TRUE,,,Expense,,,,,,,Insurance:Professional Liability Ins,Expense
+Insurance_Worker's_Compensation,Worker's Compensation,,TRUE,,,Expense,,,,,,,Insurance:Worker's Compensation,Expense
+Lease,Lease,,TRUE,,,Expense,,,,,,,Lease,Expense
+Licenses,Licenses,,TRUE,,,Expense,,,,,,,Licenses,Expense
+Marketing,Marketing,,TRUE,,,Expense,,,,,,,Marketing,Expense
+Meal_-_Working,Meal - Working,,TRUE,,,Expense,,,,,,,Meal - Working,Expense
+Miscellaneous,Miscellaneous,,TRUE,,,Expense,,,,,,,Miscellaneous,Expense
+Office_Buildout,Office Buildout,,TRUE,,,Expense,,,,,,,Office Buildout,Expense
+Office_Equipment,Office Equipment,,TRUE,,,Expense,,,,,,,Office Equipment,Expense
+Office_Supplies,Office Supplies,,TRUE,,,Expense,,,,,,,Office Supplies,Expense
+Office_Supplies_IT,Office Supplies IT,,TRUE,,,Expense,,,,,,,Office Supplies IT,Expense
+Payroll_Expenses,Payroll Expenses,,TRUE,,,Expense,,,,,,,Payroll Expenses,Expense
+Payroll_Expenses_Officer's_Health_Insurance,Officer's Health Insurance,,TRUE,,,Expense,,,,,,,Payroll Expenses:Officer's Health Insurance,Expense
+Payroll_Expenses_Officer_Salaries,Officer Salaries,,TRUE,,,Expense,,,,,,,Payroll Expenses:Officer Salaries,Expense
+Payroll_Expenses_Salary_&_Wages,Salary & Wages,,TRUE,,,Expense,,,,,,,Payroll Expenses:Salary & Wages,Expense
+Payroll_Taxes,Payroll Taxes,,TRUE,,,Expense,,,,,,,Payroll Taxes,Expense
+Payroll_Taxes_Federal_Unemployment,Federal Unemployment,,TRUE,,,Expense,,,,,,,Payroll Taxes:Federal Unemployment,Expense
+Payroll_Taxes_Social_Security/Medicare,Social Security/Medicare,,TRUE,,,Expense,,,,,,,Payroll Taxes:Social Security/Medicare,Expense
+Payroll_Taxes_State_Unemployment,State Unemployment,,TRUE,,,Expense,,,,,,,Payroll Taxes:State Unemployment,Expense
+Permits,Permits,,TRUE,,,Expense,,,,,,,Permits,Expense
+Postage_and_Delivery,Postage and Delivery,,TRUE,,,Expense,,,,,,,Postage and Delivery,Expense
+Printing_and_Reproduction,Printing and Reproduction,,TRUE,,,Expense,,,,,,,Printing and Reproduction,Expense
+Professional_Development,Professional Development,,TRUE,,,Expense,,,,,,,Professional Development,Expense
+Professional_Fees,Professional Fees,,TRUE,,,Expense,,,,,,,Professional Fees,Expense
+Professional_Fees_Accounting_Fees,Accounting Fees,,TRUE,,,Expense,,,,,,,Professional Fees:Accounting Fees,Expense
+Professional_Fees_Legal_Fees,Legal Fees,,TRUE,,,Expense,,,,,,,Professional Fees:Legal Fees,Expense
+Professional_Fees_Payroll_Service_Fees,Payroll Service Fees,,TRUE,,,Expense,,,,,,,Professional Fees:Payroll Service Fees,Expense
+Renderings_for_Projects,Renderings for Projects,,TRUE,,,Expense,,,,,,,Renderings for Projects,Expense
+Rent,Rent,,TRUE,,,Expense,,,,,,,Rent,Expense
+Repairs,Repairs,,TRUE,,,Expense,,,,,,,Repairs,Expense
+Repairs_Building,Building,,TRUE,,,Expense,,,,,,,Repairs:Building,Expense
+Repairs_Computer_Repairs,Computer Repairs,,TRUE,,,Expense,,,,,,,Repairs:Computer Repairs,Expense
+Repairs_Equipment_Repairs,Equipment Repairs,,TRUE,,,Expense,,,,,,,Repairs:Equipment Repairs,Expense
+Suntrust,Suntrust,,FALSE,,,Expense,,,,,,,Suntrust,Expense
+Tax,Tax,,TRUE,,,Expense,,,,,,,Tax,Expense
+Telephone_&_Fax,Telephone & Fax,,TRUE,,,Expense,,,,,,,Telephone & Fax,Expense
+Travel_&_Entertainment,Travel & Entertainment,,TRUE,,,Expense,,,,,,,Travel & Entertainment,Expense
+Travel_&_Entertainment_Travel_-_Fusion_AE_Platform,Travel - Fusion AE Platform,,TRUE,,,Expense,,,,,,,Travel & Entertainment:Travel - Fusion AE Platform,Expense
+Travel_&_Entertainment_Entertainment,Entertainment,,TRUE,,,Expense,,,,,,,Travel & Entertainment:Entertainment,Expense
+Travel_&_Entertainment_Meals,Meals,,TRUE,,,Expense,,,,,,,Travel & Entertainment:Meals,Expense
+Travel_&_Entertainment_Travel,Travel,,TRUE,,,Expense,,,,,,,Travel & Entertainment:Travel,Expense
+Travel_&_Entertainment_Working_Meals_100%,Working Meals 100%,,TRUE,,,Expense,,,,,,,Travel & Entertainment:Working Meals 100%,Expense
+Travel/Airlines,Travel/Airlines,,TRUE,,,Expense,,,,,,,Travel/Airlines,Expense
+Utilities,Utilities,,TRUE,,,Expense,,,,,,,Utilities,Expense
+ADP_Credit,ADP Credit,,FALSE,,,Revenue,,,,,,,ADP Credit,Other Income
+Early_Payment_Discounts,Early Payment Discounts,,TRUE,,,Revenue,,,,,,,Early Payment Discounts,Other Income
+Interest_Income,Interest Income,,TRUE,,,Revenue,,,,,,,Interest Income,Other Income
+Non_Taxable_Income,Non Taxable Income,,TRUE,,,Revenue,,,,,,,Non Taxable Income,Other Income
+Other_Income,Other Income,,TRUE,,,Revenue,,,,,,,Other Income,Other Income
+Interest_Expense,Interest Expense,,TRUE,,,Expense,,,,,,,Interest Expense,Other Expense
+Other_Expense,Other Expense,,TRUE,,,Expense,,,,,,,Other Expense,Other Expense
+Other_Expense_Management_Fees,Management Fees,,TRUE,,,Expense,,,,,,,Other Expense:Management Fees,Other Expense

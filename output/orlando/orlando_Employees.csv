@@ -1,0 +1,12 @@
+EmployeeCode,EmployeeName,PayRate,salaryperpayperiod,PayRateStartDate,PayRateEndDate,IsHourly,OTRate,OTMU,_FirstName,_LastName,_IsActive,_Phone,_Email
+ORL-EMP-00001,A. J. Falbo,,,,,,,,A.,J. Falbo,TRUE,,
+ORL-EMP-00002,Bena Greene,,,,,,,,Bena,Greene,TRUE,,
+ORL-EMP-00003,Caroline Delong,,,,,,,,Caroline,Delong,TRUE,,
+ORL-EMP-00004,Claudio Aleja Guaman,,,,,,,,Claudio,Aleja Guaman,TRUE,,
+ORL-EMP-00005,Hillary N Anderson,,,,,,,,Hillary,N Anderson,TRUE,,
+ORL-EMP-00006,Hillary Stephens,,,,,,,,Hillary,Stephens,TRUE,,
+ORL-EMP-00007,Isaiah H. Triana,,,,,,,,Isaiah,H. Triana,TRUE,,
+ORL-EMP-00008,Jeremy Green,,,,,,,,Jeremy,Green,TRUE,,
+ORL-EMP-00009,Larry Adams,,,,,,,,Larry,Adams,TRUE,,
+ORL-EMP-00010,Michael Salazar,,,,,,,,Michael,Salazar,TRUE,,
+ORL-EMP-00011,Nikki Klein,,,,,,,,Nikki,Klein,TRUE,,

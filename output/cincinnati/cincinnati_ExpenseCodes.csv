@@ -1,0 +1,61 @@
+ECCode,ECName,ShowInES,IsUnit,UnitTypename,ECTypename,ExpMarkupTypename,Markup,UnitRate,BillStatusname,DirectBaseCode,DirectBasename,OHBaseCode,OHBasename,BilledDirectBaseCode,BilledDirectBasename,BilledMarkupBaseCode,BilledMarkupBasename,UnBilledBaseCode,UnBilledBasename,CurrencyCode,PMCmtRequired,IntCmtRequired,IsNonReim,_IsActive
+CIN-EXP-00001,Project Management,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00002,Billable Time,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00003,Meetings,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00004,Marketing,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00005,Vacation,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00006,Holiday,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00007,Sick,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00008,Paid Medical Leave,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00009,Continuing Education,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00010,Administration,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00011,Reproduction,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00012,Plotting,TRUE,TRUE,Plotting,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00013,Travel,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00014,Mileage,TRUE,TRUE,Mile,,,,0.725,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00015,Telephone,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00016,Postage,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00017,Shipping & Delivery,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00018,Photos,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00019,Models,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00020,Color Photocopies,TRUE,TRUE,Color Copy,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00021,Fees & Permits,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00022,Electrical Consultant,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00023,Mechanical Consultant,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00024,Structural Consultant,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00025,Other Consultant,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00026,Meals,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00027,Airfare Cost,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00028,Ticket Change Cost,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00029,Car Rental,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00030,Parking | Tolls | Fees,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00031,Fuel,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00032,Hotel,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00033,Bell Hop | Tips,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00034,B&W Photocopies,TRUE,TRUE,Copy,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00035,Technology,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00036,Supplies,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00037,Long Distance Phone,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00038,Code Consultant,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00039,Color Plotting,TRUE,TRUE,Color Plotting,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00040,Marketing Books,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00041,General Office,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00042,Non-Billable,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00043,B & W Plotting,TRUE,TRUE,B & W Plotting,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00044,Consultant as Employee,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00045,Samples,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00046,Registration,FALSE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,FALSE
+CIN-EXP-00047,Registrations,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00048,Cab Fare,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00049,Baggage Fee,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00050,Tools,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00051,Permits,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00052,Fonts,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00053,Maternity/Paternity Leave,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00054,Donation,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00055,Internet,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00056,Rendering,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00057,Autocad Conversion,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00058,Bereavement,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00059,IT,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE
+CIN-EXP-00060,Billable Overtime,TRUE,FALSE,,,,,0.0,,,,,,,,,,,,,,,,TRUE

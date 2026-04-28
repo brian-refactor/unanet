@@ -1,0 +1,296 @@
+BaseCode,BaseName,Description,IsActive,Is1099,IsSubcontractor,FinancialType,SubledgerType,MetricType,CostType,PMType,LaborRevenueType,ExpenseRevenueType,_QBO_AccountType,_QBO_SubType
+233,401(k) Payable,,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+205,Accounts Payable,Unpaid or unapplied vendor bills or credits,TRUE,,,Liability,,,,,,,Accounts Payable,AccountsPayable
+106,Accounts Receivable,Unpaid or unapplied customer invoices and credits,TRUE,,,Asset,,,,,,,Accounts Receivable,AccountsReceivable
+QBO-299,Allowance for Bad Debt,Contra A/R Acct for Bad debt,TRUE,,,Asset,,,,,,,Accounts Receivable,AccountsReceivable
+247,Accrued Professional Services,Legal and Other Prof Svcs from WCP,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+260,Accrued Revenue,,TRUE,,,Liability,,,,,,,Other Current Liability,DeferredRevenue
+240,Accrued Salaries,,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+244,Accrued State Taxes,,TRUE,,,Liability,,,,,,,Other Current Liability,StateLocalIncomeTaxPayable
+243,Accrued Wages,,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+189,Accumulated Amortization,,TRUE,,,Asset,,,,,,,Other Asset,OtherLongTermAssets
+149,Accumulated Depreciation,"Accumulated depreciation on equipment, buildings and improvements",TRUE,,,Asset,,,,,,,Fixed Asset,OtherFixedAssets
+388,Additional Paid In Capital,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+383.1,Additional Paid in Capital -NSS,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+380.1,Additonal Paid in Capital - EAR,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+128,Allowance for Doubtful Accounts,,TRUE,,,Asset,,,,,,,Other Current Asset,AllowanceForBadDebts
+221,American Express,,TRUE,,,Liability,,,,,,,Credit Card,CreditCard
+224,Chelsea AMEX Green Card,,TRUE,,,Liability,,,,,,,Credit Card,CreditCard
+223,Denton AMEX Green Card,,TRUE,,,Liability,,,,,,,Credit Card,CreditCard
+222,Eric AMEX Green Card,,TRUE,,,Liability,,,,,,,Credit Card,CreditCard
+974,Amortization Expense,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+111,Arch Rollup,Arch Rollup,TRUE,,,Asset,,,,,,,Bank,Checking
+105,Bank (zero),,TRUE,,,Asset,,,,,,,Bank,Checking
+QBO-182,Billable Expense Income,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+990,Billable Time,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.10,A0 General,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.11,A010 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.12,A020 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.13,A030 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.14,A040 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.15,A050 Administration,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.16,A060 Architect/Interior,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.20,A1 Pre-Design,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.21,A110 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.22,A120 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.23,A130 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.24,A140 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.25,A150 Administration,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.26,A160 Architect/Interior,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.30,A2 Schematic Design,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.31,A210 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.32,A220 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.33,A230 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.34,A240 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.36,A260 Architect/Interior,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.40,A3 Design Development,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.41,A310 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.42,A320 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.43,A330 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.44,A340 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.45,A350 Administration,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.46,A360 Architect/Interior,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.50,A4 Construction Document,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.51,A410 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.52,A420 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.53,A430 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.54,A440 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.56,A460 Architect/Designer,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.57,A470 Specifications/QA,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.60,A5 Bid/Negotiate,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.61,A510 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.62,A520 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.63,A530 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.64,A540 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.66,A560 Architect/Designer,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.70,A6 Construction Administration,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.71,A610 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.72,A620 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.73,A630 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.74,A640 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.75,A650 Administration,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.76,A660 Architect/Designer,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.80,A7 Supplemental Services,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.81,A710 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.82,A720 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.83,A730 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.84,A740 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.86,A760 Architect/Designer,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+990.90,A80 Lump Sum Fee,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.10,A9 Hourly Service Contracts,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.11,A910 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.12,A920 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.13,A930 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.14,A940 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.15,A950 Administration,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.16,A960 Architect/Designer,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.20,Completed Schematic Phase,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.30,M0 Marketing General,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.31,M010 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.32,M020 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.33,M030 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.34,M040 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.40,M1 Marketing Predesign,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.41,M110 Principal,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.42,M120 Project Manager,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.43,M130 Project Coordinator,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.44,M140 Intern,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+991.50,Procurement FF&E,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+401,Billed fee revenue,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.A0,A0 General,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.A1,A1 Pre-Design,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.A2,A2 Schematic Design,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.A3,A3 Design Development,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.A4,A4 Construction Document,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.A5,A5 Bid/Negotiate,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.A6,A6 Construction Administration,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.A7,A7 Supplemental Services,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.A8,A80 Lump Sum Fee,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.A9,A9 Hourly Service Contracts,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.M0,M0 Marketing General,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+401.M1,M1 Marketing Predesign,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+395,Capital - Arch Rollup LLC,,TRUE,,,Equity,,,,,,,Equity,PartnersEquity
+387,Capital - DM,,TRUE,,,Equity,,,,,,,Equity,CommonStock
+380,Capital - EAR,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+383,Capital - NSS,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+390,Capital - Partner Holdings LLC,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+220,Chase 100,,TRUE,,,Liability,,,,,,,Credit Card,CreditCard
+QBO-281,Chelsea Chase 100,,TRUE,,,Liability,,,,,,,Credit Card,CreditCard
+QBO-283,Denton Chase 100,,TRUE,,,Liability,,,,,,,Credit Card,CreditCard
+QBO-282,Eric Chase 100,,TRUE,,,Liability,,,,,,,Credit Card,CreditCard
+204,Client Retainers,,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+148,Computer Hardware,,TRUE,,,Asset,,,,,,,Fixed Asset,OtherFixedAssets
+455,Consulting Income-Accrued,,TRUE,,,Revenue,,,,,,,Income,DiscountsRefundsGiven
+608,Contract Labor,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+404,Corporate/Commercial/Retail,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+50000,Cost of Goods Sold,Costs of items purchased and then sold to customers,TRUE,,,Expense,,,,,,,Cost of Goods Sold,SuppliesMaterialsCogs
+QBO-1150040019,Customer Deposit (Liability),,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+QBO-304,Deferred Revenue,,TRUE,,,Liability,,,,,,,Other Current Liability,DeferredRevenue
+975,Depreciation Expense,"Depreciation on equipment, buildings and improvements",TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+405,Design Income-Accrued,,TRUE,,,Revenue,,,,,,,Income,DiscountsRefundsGiven
+600,Direct Expenses,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+605,Civil/Landscape Consultant,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+603,Electrical Consultant,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+607,IDStudio4 MEP Consultants,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+602,MEP Consultant,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+606,Other Consultants,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+604,Plumbing Consultant,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+601,Structural Consultant,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+499,Discounts/Credits,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+976,Donations,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+382,Draw - DM,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+386,Draw - EAR,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+385,Draw - NSS,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+136,Due from ACI,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+129,Due from ID Studio 4,Tracks reimbursable expenses owed by ID Studio 4,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+130,Due from Partner Holdings,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+138,Due from Reztark,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+131,Due from Third Parties,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+246,Due to Clients,,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+245,Due to Employees,,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+248,Due to ID Studio 4,Represents expenses paid by ID Studio on behalf of SRA,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+217,Due to Reiners,,TRUE,,,Liability,,,,,,,Long Term Liability,OtherLongTermLiabilities
+218,Due to Sellers - ERC refund,,TRUE,,,Liability,,,,,,,Long Term Liability,OtherLongTermLiabilities
+215,Due to Shareholders,,TRUE,,,Liability,,,,,,,Long Term Liability,OtherLongTermLiabilities
+216,Due to Sperides,,TRUE,,,Liability,,,,,,,Long Term Liability,OtherLongTermLiabilities
+146,"Furniture, Fixtures, Etc.",Furniture and equipment with useful life exceeding one year,TRUE,,,Asset,,,,,,,Fixed Asset,OtherFixedAssets
+970,Fusion AE Expenses,Fusion AE Restructuring Expense,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+135,Gift Cards,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+180,Goodwill,,TRUE,,,Asset,,,,,,,Other Asset,Goodwill
+963,Guaranteed Payments - E.R,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+961,Guaranteed Payments - N.S,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+402,Healthcare,Design services income,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+QBO-134,highland bank loan,,TRUE,,,Liability,,,,,,,Long Term Liability,OtherLongTermLiabilities
+971,IDStudio4 Expenses,IDStudio4 Expenses,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+700,Indirect Expenses,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+734,Advertising/Promotions,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+701,Ask My Accountant,"Transactions to be discussed with accountant, consultant, or tax preparer",TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+760,Bad Debt Expenses,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+765,Bank Charges,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+768,Computer Supplies,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+732,Conferences and Client Events,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+762,Credit Card Processing Fees,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+767,Drafting Expenses,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+780,Dues/Subscriptions,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+737,Employee Appreciation,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+740,Employee Benefit,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+721,Equipment Rental,Rent paid for rented equipment used for business,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+752,Gas/Maintenance,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+715,Indirect Labor - Employees,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+735,Insurance,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+735.3,Disability Insurance,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+736,Employer HSA,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+735.6,General/Auto,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+735.4,Group Health,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+735.5,Liability,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+735.7,Officer HSA contributions,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+735.2,Officer Life Insurance,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+735.1,Worker's Compensation,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+731,IT Support,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+781,Legal/Accounting,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+733,Marketing Expenses,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+739,Meals/Entertainment,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+785,Misc. Expense,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+766,Office Expenses,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+743,Payroll Processing Fee,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+742,Payroll Taxes,,TRUE,,,Expense,,,,,,,Expense,PayrollExpenses
+719,Pension & Profit Sharing,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+719.1,401(k) Administrative Fees,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+748,Permits/Licenses,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+712,Postage & Delivery,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+710,Printing,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+779,Professional Development,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+727,Recruiting Expense,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+720,Rent,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+730,Repairs and Maintenance,Incidental repairs and maintenance of business assets that do not add to the value or appreciably pr,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+769,Software Renewals,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+729,Telephone Expense,"Telephone and long distance charges, faxing, and other fees Not equipment purchases",TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+717,Temporary Help,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+738,Travel Expenses,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+726,Utilities,"Water, electricity, garbage, and other basic utilities expenses",TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+753,Vehicle Lease,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+790,Web Hosting,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+950,Interest Expense,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+951,Interest Expense - FVCBank,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+406,Interior Design,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+QBO-188,Inventory Asset,,TRUE,,,Asset,,,,,,,Other Current Asset,Inventory
+269,L.O.C Platinum,,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+142,Leashehold Improvements,,TRUE,,,Asset,,,,,,,Fixed Asset,OtherFixedAssets
+268,Line of Credit,,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+268.1,Line of Credit 2,,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+190,Loan Expense,,TRUE,,,Asset,,,,,,,Other Asset,OtherLongTermAssets
+213,Loan Platinum Bank,,TRUE,,,Liability,,,,,,,Long Term Liability,OtherLongTermLiabilities
+263,Loans from Officers,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+263.2,Due from Eric,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+263.1,Due to Nick,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+171,Management Fee Payable,WCP Payable,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+410,MFG/Industrial,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+980,MN Min Fee Tax,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+107,Money Market Savings,,TRUE,,,Asset,,,,,,,Bank,Checking
+170,Monthly Management Fee,WCP monthly fee,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+955,Non-deductible Insurance Exp,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+30000,Opening Balance Equity,Opening balances during setup post to this account. The balance of this account should be zero after,TRUE,,,Equity,,,,,,,Equity,OpeningBalanceEquity
+186,Organization Expenses,,TRUE,,,Asset,,,,,,,Other Asset,OtherLongTermAssets
+409,Other Revenue,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+110,Partner Holdings LLC CHK,,TRUE,,,Asset,,,,,,,Bank,Checking
+120,Payments to deposit,"Funds received, but not yet deposited to a bank account",TRUE,,,Asset,,,,,,,Other Current Asset,UndepositedFunds
+232,Payroll Liabilities,"Unpaid payroll liabilities. Amounts withheld or accrued, but not yet paid",TRUE,,,Liability,,,,,,,Other Current Liability,PayrollTaxPayable
+985,Penalties and Interest,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+108,Platinum Checking,,TRUE,,,Asset,,,,,,,Bank,Checking
+112,PNC Checking,,TRUE,,,Asset,,,,,,,Bank,Checking
+365,PPP Loan Proceeds,,TRUE,,,Liability,,,,,,,Long Term Liability,OtherLongTermLiabilities
+173,Preferred Div,WCP Pref Div,TRUE,,,Equity,,,,,,,Equity,PartnerDistributions
+174,Preferred Div Payable,WCP Pref Div Payable,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+172,Preferred Equity Payments-MN,Preferred Equity Payments-MN,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+127,Prepaid Expenses,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+133,Prepaid Insurance,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+132,Prepaid Rent,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+134,Prepaid Vehicle Lease,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+999,prior income,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+QBO-186,Purchases,,TRUE,,,Expense,,,,,,,Expense,SuppliesMaterials
+QBO-305,QuickBooks Payments Fees,,TRUE,,,Expense,,,,,,,Expense,OtherSellingExpenses
+66900,Reconciliation Discrepancies,Discrepancies between bank statements and company records,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+QBO-189,Reconciliation Discrepancies-1,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+550,Reimbursable Expenses,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+552,Civil/Landscape Consultants,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+554,IDStudio4 MEP Consultants,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+564,Miscellaneous Expenses,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+553,Other Consultants,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+561,Plan Approval Fees,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+563,Postage & Delivery,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+560,Printing & Reproductions,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+551,Structural Consultants,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+562,Travel,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+450,Reimbursed Expenses - Income,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+452,Civil/Landscape Consultants,,TRUE,,,Revenue,,,,,,,Income,ServiceFeeIncome
+465,Credit Card Processing Fees,Credit Card Processing Fees Reimbursement,TRUE,,,Revenue,,,,,,,Income,ServiceFeeIncome
+454,IDStudio4 MEP Consultants,,TRUE,,,Revenue,,,,,,,Income,ServiceFeeIncome
+464,Miscellaneous,,TRUE,,,Revenue,,,,,,,Income,ServiceFeeIncome
+453,Other Consultants,,TRUE,,,Revenue,,,,,,,Income,ServiceFeeIncome
+461,Plan Approval Fees,,TRUE,,,Revenue,,,,,,,Income,ServiceFeeIncome
+463,Postage & Delivery,,TRUE,,,Revenue,,,,,,,Income,ServiceFeeIncome
+460,Printing & Reproductions,,TRUE,,,Revenue,,,,,,,Income,ServiceFeeIncome
+451,Structural Consultants,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+462,Travel,,TRUE,,,Revenue,,,,,,,Income,ServiceFeeIncome
+456,Reimbursed Expenses-Accrued,,TRUE,,,Revenue,,,,,,,Income,DiscountsRefundsGiven
+384,Retained Earnings,Undistributed earnings of the business,TRUE,,,Equity,,,,,,,Equity,RetainedEarnings
+QBO-187,Sales of Product Income,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+981,Sales Tax,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+236,Sales Tax Payable,,TRUE,,,Liability,,,,,,,Other Current Liability,OtherCurrentLiabilities
+109,Savings Platinum,,TRUE,,,Asset,,,,,,,Bank,Checking
+185,Security Deposits,,TRUE,,,Asset,,,,,,,Other Asset,OtherLongTermAssets
+407,Senior Housing,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+715.1,Shareholder Compensation,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+QBO-181,Shipping Income,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+408,Single Family Residence,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+977,Sponsorships,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense
+403,Sports,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+137,Tax Refund Receivables - ERC,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+301,Treasury Stock,,TRUE,,,Equity,,,,,,,Equity,OwnersEquity
+QBO-179,Unapplied Cash Bill Payment Expense,,TRUE,,,Expense,,,,,,,Expense,UnappliedCashBillPaymentExpense
+QBO-180,Unapplied Cash Payment Income,,TRUE,,,Revenue,,,,,,,Income,UnappliedCashPaymentIncome
+QBO-183,Uncategorized Asset,,TRUE,,,Asset,,,,,,,Other Current Asset,OtherCurrentAssets
+QBO-184,Uncategorized Expense,,TRUE,,,Expense,,,,,,,Expense,OtherMiscellaneousServiceCost
+QBO-185,Uncategorized Income,,TRUE,,,Revenue,,,,,,,Income,SalesOfProductIncome
+147,Vehicles,,TRUE,,,Asset,,,,,,,Fixed Asset,OtherFixedAssets
+982,WI Fee Tax,,TRUE,,,Expense,,,,,,,Other Expense,OtherMiscellaneousExpense

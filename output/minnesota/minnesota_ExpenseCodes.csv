@@ -1,0 +1,105 @@
+ECCode,ECName,ShowInES,IsUnit,UnitTypename,ECTypename,ExpMarkupTypename,Markup,UnitRate,BillStatusname,DirectBaseCode,DirectBasename,OHBaseCode,OHBasename,BilledDirectBaseCode,BilledDirectBasename,BilledMarkupBaseCode,BilledMarkupBasename,UnBilledBaseCode,UnBilledBasename,CurrencyCode,PMCmtRequired,IntCmtRequired,IsNonReim,_IsActive,_QBO_Type
+MN-EXP-00001,A0 General,TRUE,FALSE,,,,,,,A0 General,,,,A0 General,,,,,,,,,,TRUE,Service
+MN-EXP-00002,A010 Principal,TRUE,FALSE,,,,,210,,A010 Principal,,,,A0 General,,,,,,,,,,TRUE,Service
+MN-EXP-00003,A020 Project Manager,TRUE,FALSE,,,,,165,,A020 Project Manager,,,,A0 General,,,,,,,,,,TRUE,Service
+MN-EXP-00004,A030 Project Coordinator,TRUE,FALSE,,,,,125,,A030 Project Coordinator,,,,A0 General,,,,,,,,,,TRUE,Service
+MN-EXP-00005,A040 Intern,TRUE,FALSE,,,,,90,,A040 Intern,,,,A0 General,,,,,,,,,,TRUE,Service
+MN-EXP-00006,A050 Administration,TRUE,FALSE,,,,,90,,A050 Administration,,,,A0 General,,,,,,,,,,TRUE,Service
+MN-EXP-00007,A060 Architect/Interior,TRUE,FALSE,,,,,165,,A060 Architect/Interior,,,,A0 General,,,,,,,,,,TRUE,Service
+MN-EXP-00008,A1 Pre-Design,TRUE,FALSE,,,,,,,A1 Pre-Design,,,,A1 Pre-Design,,,,,,,,,,TRUE,Service
+MN-EXP-00009,A110 Principal,TRUE,FALSE,,,,,195,,A110 Principal,,,,A1 Pre-Design,,,,,,,,,,TRUE,Service
+MN-EXP-00010,A120 Project Manager,TRUE,FALSE,,,,,185,,A120 Project Manager,,,,A1 Pre-Design,,,,,,,,,,TRUE,Service
+MN-EXP-00011,A130 Project Coordinator,TRUE,FALSE,,,,,125,,A130 Project Coordinator,,,,A1 Pre-Design,,,,,,,,,,TRUE,Service
+MN-EXP-00012,A140 Intern,TRUE,FALSE,,,,,75,,A140 Intern,,,,A1 Pre-Design,,,,,,,,,,TRUE,Service
+MN-EXP-00013,A150 Administration,TRUE,FALSE,,,,,75,,A150 Administration,,,,A1 Pre-Design,,,,,,,,,,TRUE,Service
+MN-EXP-00014,A160 Architect/Interior,TRUE,FALSE,,,,,145,,A160 Architect/Interior,,,,A1 Pre-Design,,,,,,,,,,TRUE,Service
+MN-EXP-00015,Site Survey,TRUE,FALSE,,,,,185,,,,,,Reimbursed Expenses - Income,,,,,,,,,,TRUE,Service
+MN-EXP-00016,A2 Schematic Design,TRUE,FALSE,,,,,,,A2 Schematic Design,,,,A2 Schematic Design,,,,,,,,,,TRUE,Service
+MN-EXP-00017,A210 Principal,TRUE,FALSE,,,,,195,,A210 Principal,,,,A2 Schematic Design,,,,,,,,,,TRUE,Service
+MN-EXP-00018,A220 Project Manager,TRUE,FALSE,,,,,165,,A220 Project Manager,,,,A2 Schematic Design,,,,,,,,,,TRUE,Service
+MN-EXP-00019,A230 Project Coordinator,TRUE,FALSE,,,,,125,,A230 Project Coordinator,,,,A2 Schematic Design,,,,,,,,,,TRUE,Service
+MN-EXP-00020,A240 Intern,TRUE,FALSE,,,,,75,,A240 Intern,,,,A2 Schematic Design,,,,,,,,,,TRUE,Service
+MN-EXP-00021,A260 Architect/Interior,TRUE,FALSE,,,,,145,,A260 Architect/Interior,,,,A2 Schematic Design,,,,,,,,,,TRUE,Service
+MN-EXP-00022,A3 Design Development,TRUE,FALSE,,,,,,,A3 Design Development,,,,A3 Design Development,,,,,,,,,,TRUE,Service
+MN-EXP-00023,A310 Principal,TRUE,FALSE,,,,,195,,A310 Principal,,,,A3 Design Development,,,,,,,,,,TRUE,Service
+MN-EXP-00024,A320 Project Manager,TRUE,FALSE,,,,,165,,A320 Project Manager,,,,A3 Design Development,,,,,,,,,,TRUE,Service
+MN-EXP-00025,A330 Project Coordinator,TRUE,FALSE,,,,,125,,A330 Project Coordinator,,,,A3 Design Development,,,,,,,,,,TRUE,Service
+MN-EXP-00026,A340 Intern,TRUE,FALSE,,,,,75,,A340 Intern,,,,A3 Design Development,,,,,,,,,,TRUE,Service
+MN-EXP-00027,A350 Administration,TRUE,FALSE,,,,,75,,A350 Administration,,,,A3 Design Development,,,,,,,,,,TRUE,Service
+MN-EXP-00028,A360 Architect/Interior,TRUE,FALSE,,,,,145,,A360 Architect/Interior,,,,A3 Design Development,,,,,,,,,,TRUE,Service
+MN-EXP-00029,A4 Construction Document,TRUE,FALSE,,,,,,,A4 Construction Document,,,,A4 Construction Document,,,,,,,,,,TRUE,Service
+MN-EXP-00030,A410 Principal,TRUE,FALSE,,,,,195,,A410 Principal,,,,A4 Construction Document,,,,,,,,,,TRUE,Service
+MN-EXP-00031,A420 Project Manager,TRUE,FALSE,,,,,165,,A420 Project Manager,,,,A4 Construction Document,,,,,,,,,,TRUE,Service
+MN-EXP-00032,A430 Project Coordinator,TRUE,FALSE,,,,,125,,A430 Project Coordinator,,,,A4 Construction Document,,,,,,,,,,TRUE,Service
+MN-EXP-00033,A440 Intern,TRUE,FALSE,,,,,75,,A440 Intern,,,,A4 Construction Document,,,,,,,,,,TRUE,Service
+MN-EXP-00034,A460 Architect/Designer,TRUE,FALSE,,,,,145,,A460 Architect/Designer,,,,A4 Construction Document,,,,,,,,,,TRUE,Service
+MN-EXP-00035,A470 Specifications/QA,TRUE,FALSE,,,,,,,A470 Specifications/QA,,,,A4 Construction Document,,,,,,,,,,TRUE,Service
+MN-EXP-00036,A5 Bid/Negotiate,TRUE,FALSE,,,,,,,A5 Bid/Negotiate,,,,A5 Bid/Negotiate,,,,,,,,,,TRUE,Service
+MN-EXP-00037,A510 Principal,TRUE,FALSE,,,,,195,,A510 Principal,,,,A5 Bid/Negotiate,,,,,,,,,,TRUE,Service
+MN-EXP-00038,A520 Project Manager,TRUE,FALSE,,,,,165,,A520 Project Manager,,,,A5 Bid/Negotiate,,,,,,,,,,TRUE,Service
+MN-EXP-00039,A530 Project Coordinator,TRUE,FALSE,,,,,125,,A530 Project Coordinator,,,,A5 Bid/Negotiate,,,,,,,,,,TRUE,Service
+MN-EXP-00040,A540 Intern,TRUE,FALSE,,,,,75,,A540 Intern,,,,A5 Bid/Negotiate,,,,,,,,,,TRUE,Service
+MN-EXP-00041,A560 Architect/Designer,TRUE,FALSE,,,,,145,,A560 Architect/Designer,,,,A5 Bid/Negotiate,,,,,,,,,,TRUE,Service
+MN-EXP-00042,A6 Construction Administration,TRUE,FALSE,,,,,,,A6 Construction Administration,,,,A6 Construction Administration,,,,,,,,,,TRUE,Service
+MN-EXP-00043,A610 Principal,TRUE,FALSE,,,,,195,,A610 Principal,,,,A6 Construction Administration,,,,,,,,,,TRUE,Service
+MN-EXP-00044,A620 Project Manager,TRUE,FALSE,,,,,165,,A620 Project Manager,,,,A6 Construction Administration,,,,,,,,,,TRUE,Service
+MN-EXP-00045,A630 Project Coordinator,TRUE,FALSE,,,,,125,,A630 Project Coordinator,,,,A6 Construction Administration,,,,,,,,,,TRUE,Service
+MN-EXP-00046,A640 Intern,TRUE,FALSE,,,,,75,,A640 Intern,,,,A6 Construction Administration,,,,,,,,,,TRUE,Service
+MN-EXP-00047,A650 Administration,TRUE,FALSE,,,,,75,,A650 Administration,,,,A6 Construction Administration,,,,,,,,,,TRUE,Service
+MN-EXP-00048,A660 Architect/Designer,TRUE,FALSE,,,,,145,,A660 Architect/Designer,,,,A6 Construction Administration,,,,,,,,,,TRUE,Service
+MN-EXP-00049,A7 Supplemental Services,TRUE,FALSE,,,,,,,A7 Supplemental Services,,,,A7 Supplemental Services,,,,,,,,,,TRUE,Service
+MN-EXP-00050,A710 Principal,TRUE,FALSE,,,,,195,,A710 Principal,,,,A7 Supplemental Services,,,,,,,,,,TRUE,Service
+MN-EXP-00051,A720 Project Manager,TRUE,FALSE,,,,,165,,A720 Project Manager,,,,A7 Supplemental Services,,,,,,,,,,TRUE,Service
+MN-EXP-00052,A730 Project Coordinator,TRUE,FALSE,,,,,125,,A730 Project Coordinator,,,,A7 Supplemental Services,,,,,,,,,,TRUE,Service
+MN-EXP-00053,A740 Intern,TRUE,FALSE,,,,,90,,A740 Intern,,,,A7 Supplemental Services,,,,,,,,,,TRUE,Service
+MN-EXP-00054,A760 Architect/Designer,TRUE,FALSE,,,,,145,,A760 Architect/Designer,,,,A7 Supplemental Services,,,,,,,,,,TRUE,Service
+MN-EXP-00055,A80 Lump Sum Fee,TRUE,FALSE,,,,,,,A80 Lump Sum Fee,,,,A80 Lump Sum Fee,,,,,,,,,,TRUE,Service
+MN-EXP-00056,A9 Hourly Service Contracts,TRUE,FALSE,,,,,,,A9 Hourly Service Contracts,,,,A9 Hourly Service Contracts,,,,,,,,,,TRUE,Service
+MN-EXP-00057,A910 Principal,TRUE,FALSE,,,,,210,,A910 Principal,,,,A9 Hourly Service Contracts,,,,,,,,,,TRUE,Service
+MN-EXP-00058,A920 Project Manager,TRUE,FALSE,,,,,185,,A920 Project Manager,,,,A9 Hourly Service Contracts,,,,,,,,,,TRUE,Service
+MN-EXP-00059,A930 Project Coordinator,TRUE,FALSE,,,,,145,,A930 Project Coordinator,,,,A9 Hourly Service Contracts,,,,,,,,,,TRUE,Service
+MN-EXP-00060,A940 Intern,TRUE,FALSE,,,,,90,,A940 Intern,,,,A9 Hourly Service Contracts,,,,,,,,,,TRUE,Service
+MN-EXP-00061,A950 Administration,TRUE,FALSE,,,,,90,,A950 Administration,,,,A9 Hourly Service Contracts,,,,,,,,,,TRUE,Service
+MN-EXP-00062,A960 Architect/Designer,TRUE,FALSE,,,,,165,,A960 Architect/Designer,,,,A9 Hourly Service Contracts,,,,,,,,,,TRUE,Service
+MN-EXP-00063,Cash Adjustment,TRUE,FALSE,,,,,,,,,,,A0 General,,,,,,,,,,TRUE,NonInventory
+MN-EXP-00064,Client Retainers,TRUE,FALSE,,,,,,,,,,,Client Retainers,,,,,,,,,,TRUE,Service
+MN-EXP-00065,Completed Construction Administration,TRUE,FALSE,,,,,,,,,,,Ask My Accountant,,,,,,,,,,TRUE,Service
+MN-EXP-00066,Completed Construction Development,TRUE,FALSE,,,,,,,,,,,Ask My Accountant,,,,,,,,,,TRUE,Service
+MN-EXP-00067,Completed Construction Document,TRUE,FALSE,,,,,,,,,,,Ask My Accountant,,,,,,,,,,TRUE,Service
+MN-EXP-00068,Completed Design Development,TRUE,FALSE,,,,,,,,,,,Ask My Accountant,,,,,,,,,,TRUE,Service
+MN-EXP-00069,Completed Pre-Design,TRUE,FALSE,,,,,,,,,,,Ask My Accountant,,,,,,,,,,TRUE,Service
+MN-EXP-00070,Completed Schematic Phase,TRUE,FALSE,,,,,,,,,,,Ask My Accountant,,,,,,,,,,TRUE,Service
+MN-EXP-00071,Completed Supplemental Services,TRUE,FALSE,,,,,,,,,,,Ask My Accountant,,,,,,,,,,TRUE,Service
+MN-EXP-00072,Fin Chg,TRUE,FALSE,,,,,0.12,,,,,,Finance Charges,,,,,,,,,,TRUE,Service
+MN-EXP-00073,M0 Marketing General,TRUE,FALSE,,,,,,,M0 Marketing General,,,,M0 Marketing General,,,,,,,,,,TRUE,Service
+MN-EXP-00074,M010 Principal,TRUE,FALSE,,,,,195,,M010 Principal,,,,M0 Marketing General,,,,,,,,,,TRUE,Service
+MN-EXP-00075,M020 Project Manager,TRUE,FALSE,,,,,165,,M020 Project Manager,,,,M0 Marketing General,,,,,,,,,,TRUE,Service
+MN-EXP-00076,M030 Project Coordinator,TRUE,FALSE,,,,,125,,M030 Project Coordinator,,,,M0 Marketing General,,,,,,,,,,TRUE,Service
+MN-EXP-00077,M040 Intern,TRUE,FALSE,,,,,50,,M040 Intern,,,,M0 Marketing General,,,,,,,,,,TRUE,Service
+MN-EXP-00078,M110 Principal,TRUE,FALSE,,,,,195,,M110 Principal,,,,M1 Marketing Predesign,,,,,,,,,,TRUE,Service
+MN-EXP-00079,M120 Project Manager,TRUE,FALSE,,,,,165,,M120 Project Manager,,,,M1 Marketing Predesign,,,,,,,,,,TRUE,Service
+MN-EXP-00080,M130 Project Coordinator,TRUE,FALSE,,,,,125,,M130 Project Coordinator,,,,M1 Marketing Predesign,,,,,,,,,,TRUE,Service
+MN-EXP-00081,M140 Intern,TRUE,FALSE,,,,,50,,M140 Intern,,,,M1 Marketing Predesign,,,,,,,,,,TRUE,Service
+MN-EXP-00082,NO NOT USE,TRUE,FALSE,,,,,,,Billable Time,,,,Billed fee revenue,,,,,,,,,,TRUE,Service
+MN-EXP-00083,Plumbing Consultant,TRUE,FALSE,,,,,,,Plumbing Consultant,,,,Reimbursed Expenses - Income,,,,,,,,,,TRUE,Service
+MN-EXP-00084,PmntDiscount_Bad Debt Expenses,TRUE,FALSE,,,,,,,Bad Debt Expenses,,,,Reimbursed Expenses - Income,,,,,,,,,,TRUE,Service
+MN-EXP-00085,PmntDiscount_Bank Charges,TRUE,FALSE,,,,,,,Bank Charges,,,,Reimbursed Expenses - Income,,,,,,,,,,TRUE,Service
+MN-EXP-00086,PmntDiscount_Miscellaneous Expenses,TRUE,FALSE,,,,,,,Miscellaneous Expenses,,,,Reimbursed Expenses - Income,,,,,,,,,,TRUE,Service
+MN-EXP-00087,PmntDiscount_Permits/Licenses,TRUE,FALSE,,,,,,,Permits/Licenses,,,,Plan Approval Fees,,,,,,,,,,TRUE,Service
+MN-EXP-00088,PmntDiscount_Postage,TRUE,FALSE,,,,,,,Postage & Delivery,,,,Postage & Delivery,,,,,,,,,,TRUE,Service
+MN-EXP-00089,PmntDiscount_Printing & Reproductions,TRUE,FALSE,,,,,,,Printing & Reproductions,,,,Printing & Reproductions,,,,,,,,,,TRUE,Service
+MN-EXP-00090,PmntDiscount_Reimbursable Expenses,TRUE,FALSE,,,,,,,Miscellaneous Expenses,,,,Miscellaneous,,,,,,,,,,TRUE,Service
+MN-EXP-00091,Procurement FF&E,TRUE,FALSE,,,,,,,Procurement FF&E,,,,A7 Supplemental Services,,,,,,,,,,TRUE,Service
+MN-EXP-00092,Civil/Landscape Consultant,TRUE,FALSE,,,,,,,Civil/Landscape Consultants,,,,Civil/Landscape Consultants,,,,,,,,,,TRUE,Service
+MN-EXP-00093,Credit Card Processing Fees,TRUE,FALSE,,,,,,,,,,,Credit Card Processing Fees,,,,,,,,,,TRUE,Service
+MN-EXP-00094,Misc. Reimbursable Expenses,TRUE,FALSE,,,,,,,Miscellaneous Expenses,,,,Miscellaneous,,,,,,,,,,TRUE,Service
+MN-EXP-00095,Other Consultants,TRUE,FALSE,,,,,,,Other Consultants,,,,Other Consultants,,,,,,,,,,TRUE,Service
+MN-EXP-00096,Plan Approval Fees,TRUE,FALSE,,,,,,,Plan Approval Fees,,,,Plan Approval Fees,,,,,,,,,,TRUE,Service
+MN-EXP-00097,Postage and Delivery,TRUE,FALSE,,,,,,,Postage & Delivery,,,,Postage & Delivery,,,,,,,,,,TRUE,Service
+MN-EXP-00098,Printing,TRUE,FALSE,,,,,,,Printing & Reproductions,,,,Printing & Reproductions,,,,,,,,,,TRUE,Service
+MN-EXP-00099,Reimbursable Expenses,TRUE,FALSE,,,,,,,Credit Card Processing Fees,,,,Miscellaneous,,,,,,,,,,TRUE,Service
+MN-EXP-00100,Structural Consultant,TRUE,FALSE,,,,,,,Structural Consultants,,,,Structural Consultants,,,,,,,,,,TRUE,Service
+MN-EXP-00101,Telephone/Faxes,TRUE,FALSE,,,,,,,Miscellaneous Expenses,,,,Miscellaneous,,,,,,,,,,TRUE,Service
+MN-EXP-00102,Travel Expenses,TRUE,FALSE,,,,,,,Travel,,,,Travel,,,,,,,,,,TRUE,Service
+MN-EXP-00103,Sales,TRUE,FALSE,,,,,,,Billable Time,,,,Reimbursed Expenses - Income,,,,,,,,,,TRUE,Service
+MN-EXP-00104,Structural Consultant,TRUE,FALSE,,,,,,,Structural Consultant,,,,Reimbursed Expenses - Income,,,,,,,,,,TRUE,Service

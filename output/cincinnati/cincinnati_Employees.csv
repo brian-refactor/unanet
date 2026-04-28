@@ -1,0 +1,456 @@
+EmployeeCode,EmployeeName,PayRate,salaryperpayperiod,PayRateStartDate,PayRateEndDate,IsHourly,OTRate,OTMU,_Status,_HireDate,_TermDate,_Title,_Email
+CIN-EMP-00001,Dean G. Lutton,28.845,2500.0,2012-12-01,2014-01-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,31.7295,2750.0,2014-01-01,2015-10-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,34.6141,3000.0,2015-10-01,2018-03-16,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,38.46,3333.33,2018-03-16,2019-07-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,43.2676,3750.0,2019-07-01,2020-01-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,52.8825,4583.33,2020-01-01,2020-09-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,42.3061,3666.67,2020-09-01,2021-02-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,52.8825,4583.33,2021-02-01,2021-09-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,57.6901,5000.0,2021-09-01,2022-04-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,67.3051,5833.33,2022-04-01,2022-06-30,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,72.1126,6250.0,2022-06-30,2025-04-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,74.276,6437.5,2025-04-01,2025-09-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,59.4208,5150.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,74.276,6437.5,2025-11-01,2026-01-01,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,74.2789,5942.31,2026-01-01,2026-04-13,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00001,Dean G. Lutton,76.4423,6115.38,2026-04-13,,FALSE,,,TRUE,2007-01-01,,Vice President,dlutton@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,34.6141,3000.0,2001-01-01,2014-12-01,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,0.0001,0.01,2014-12-01,2015-01-01,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,46.1521,4000.0,2015-01-01,2020-01-01,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,57.6901,5000.0,2020-01-01,2020-09-01,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,46.1521,4000.0,2020-09-01,2021-02-01,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,57.6901,5000.0,2021-02-01,2021-09-01,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,72.1126,6250.0,2021-09-01,2025-01-01,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,115.3802,10000.0,2025-01-01,2025-09-01,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,92.3041,8000.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,93.7464,8125.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00002,Brett JD Kratzer,93.75,7500.0,2026-01-01,,FALSE,,,TRUE,2006-02-15,,CEO | Founder,bkratzer@reztark.com
+CIN-EMP-00003,Christie Kratzer,25.9605,2250.0,2001-01-01,2013-01-16,FALSE,,,FALSE,2007-01-22,2023-12-31,Principal,ckratzer@reztark.com
+CIN-EMP-00003,Christie Kratzer,31.7295,2750.0,2013-01-16,2014-04-01,FALSE,,,FALSE,2007-01-22,2023-12-31,Principal,ckratzer@reztark.com
+CIN-EMP-00003,Christie Kratzer,34.6141,3000.0,2014-04-01,2014-12-01,FALSE,,,FALSE,2007-01-22,2023-12-31,Principal,ckratzer@reztark.com
+CIN-EMP-00003,Christie Kratzer,0.0001,0.01,2014-12-01,2015-01-01,FALSE,,,FALSE,2007-01-22,2023-12-31,Principal,ckratzer@reztark.com
+CIN-EMP-00003,Christie Kratzer,40.3831,3500.0,2015-01-01,2020-01-01,FALSE,,,FALSE,2007-01-22,2023-12-31,Principal,ckratzer@reztark.com
+CIN-EMP-00003,Christie Kratzer,52.8825,4583.33,2020-01-01,2020-09-01,FALSE,,,FALSE,2007-01-22,2023-12-31,Principal,ckratzer@reztark.com
+CIN-EMP-00003,Christie Kratzer,42.3061,3666.67,2020-09-01,2021-02-01,FALSE,,,FALSE,2007-01-22,2023-12-31,Principal,ckratzer@reztark.com
+CIN-EMP-00003,Christie Kratzer,52.8825,4583.33,2021-02-01,2021-09-16,FALSE,,,FALSE,2007-01-22,2023-12-31,Principal,ckratzer@reztark.com
+CIN-EMP-00003,Christie Kratzer,28.845,2500.0,2021-09-16,2022-04-16,FALSE,,,FALSE,2007-01-22,2023-12-31,Principal,ckratzer@reztark.com
+CIN-EMP-00003,Christie Kratzer,43.2676,3750.0,2022-04-16,,FALSE,,,FALSE,2007-01-22,2023-12-31,Principal,ckratzer@reztark.com
+CIN-EMP-00004,Tom Schroeder,31.7295,2750.0,2001-01-01,2013-05-16,FALSE,,,FALSE,2013-01-01,2024-01-01,,txxxxxschroeder@reztark.com
+CIN-EMP-00004,Tom Schroeder,34.6141,3000.0,2013-05-16,,FALSE,,,FALSE,2013-01-01,2024-01-01,,txxxxxschroeder@reztark.com
+CIN-EMP-00005,Vicki Decker,3.7499,325.0,2001-01-01,2013-02-01,FALSE,,,FALSE,2006-08-16,2014-07-11,Controller,vdecker@reztark.com
+CIN-EMP-00005,Vicki Decker,6.9228,600.0,2013-02-01,,FALSE,,,FALSE,2006-08-16,2014-07-11,Controller,vdecker@reztark.com
+CIN-EMP-00006,Michael Jacobsohn,25.9605,2250.0,2001-01-01,2013-02-16,FALSE,,,FALSE,2011-10-31,2018-03-23,BIM Manager,mjacobsohn@reztark.com
+CIN-EMP-00006,Michael Jacobsohn,28.845,2500.0,2013-02-16,2016-05-01,FALSE,,,FALSE,2011-10-31,2018-03-23,BIM Manager,mjacobsohn@reztark.com
+CIN-EMP-00006,Michael Jacobsohn,31.7295,2750.0,2016-05-01,2018-03-01,FALSE,,,FALSE,2011-10-31,2018-03-23,BIM Manager,mjacobsohn@reztark.com
+CIN-EMP-00006,Michael Jacobsohn,34.6141,3000.0,2018-03-01,,FALSE,,,FALSE,2011-10-31,2018-03-23,BIM Manager,mjacobsohn@reztark.com
+CIN-EMP-00007,Cliff Custer,31.7295,2750.0,2001-01-01,2016-07-16,FALSE,,,FALSE,2012-02-01,2020-10-31,,ccuster@reztark.com
+CIN-EMP-00007,Cliff Custer,33.6526,2916.67,2016-07-16,2018-06-08,FALSE,,,FALSE,2012-02-01,2020-10-31,,ccuster@reztark.com
+CIN-EMP-00007,Cliff Custer,0.0001,,2018-06-08,2019-02-01,TRUE,,,FALSE,2012-02-01,2020-10-31,,ccuster@reztark.com
+CIN-EMP-00007,Cliff Custer,33.6526,2916.67,2019-02-01,2020-09-01,FALSE,,,FALSE,2012-02-01,2020-10-31,,ccuster@reztark.com
+CIN-EMP-00007,Cliff Custer,26.922,2333.33,2020-09-01,,FALSE,,,FALSE,2012-02-01,2020-10-31,,ccuster@reztark.com
+CIN-EMP-00008,Jennifer Kelley,25.9605,2250.0,2001-01-01,2013-02-15,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,28.845,2500.0,2013-02-15,2013-03-01,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,23.076,2000.0,2013-03-01,2013-03-16,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,27.7634,2406.25,2013-03-16,2014-05-01,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,28.845,2500.0,2014-05-01,2015-05-01,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,31.7295,2750.0,2015-05-01,2016-07-16,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,33.6526,2916.67,2016-07-16,2018-03-16,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,35.5755,3083.33,2018-03-16,2019-08-01,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,38.46,3333.33,2019-08-01,2020-09-01,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,30.7681,2666.67,2020-09-01,2021-02-01,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,38.46,3333.33,2021-02-01,2021-09-01,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,43.2676,3750.0,2021-09-01,2023-02-16,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00008,Jennifer Kelley,52.8825,4583.33,2023-02-16,,FALSE,,,FALSE,2012-01-16,2024-05-08,Director,jkelley@reztark.com
+CIN-EMP-00009,Marie Gyllstrom,17.307,1500.0,2001-01-01,,FALSE,,,FALSE,,2014-01-01,,mgyllstrom@reztark.com
+CIN-EMP-00010,Gene Allison,28.845,2500.0,2001-01-01,2013-01-16,FALSE,,,FALSE,2012-10-01,2019-06-03,Director,gallison@reztark.com
+CIN-EMP-00010,Gene Allison,34.6141,3000.0,2013-01-16,2015-07-16,FALSE,,,FALSE,2012-10-01,2019-06-03,Director,gallison@reztark.com
+CIN-EMP-00010,Gene Allison,38.46,3333.33,2015-07-16,2016-07-16,FALSE,,,FALSE,2012-10-01,2019-06-03,Director,gallison@reztark.com
+CIN-EMP-00010,Gene Allison,40.3831,3500.0,2016-07-16,2018-02-01,FALSE,,,FALSE,2012-10-01,2019-06-03,Director,gallison@reztark.com
+CIN-EMP-00010,Gene Allison,40.3831,,2018-02-01,,TRUE,,,FALSE,2012-10-01,2019-06-03,Director,gallison@reztark.com
+CIN-EMP-00011,Erin Alyssa Kratzer,15.0,,2001-01-01,2014-08-16,TRUE,,,FALSE,2013-01-15,2022-01-15,Administration,ekratzer@reztark.com
+CIN-EMP-00011,Erin Alyssa Kratzer,13.4611,1166.67,2014-08-16,2016-04-16,FALSE,,,FALSE,2013-01-15,2022-01-15,Administration,ekratzer@reztark.com
+CIN-EMP-00011,Erin Alyssa Kratzer,15.384,1333.33,2016-04-16,2021-09-01,FALSE,,,FALSE,2013-01-15,2022-01-15,Administration,ekratzer@reztark.com
+CIN-EMP-00011,Erin Alyssa Kratzer,18.2685,1583.33,2021-09-01,2023-02-16,FALSE,,,FALSE,2013-01-15,2022-01-15,Administration,ekratzer@reztark.com
+CIN-EMP-00011,Erin Alyssa Kratzer,19.2301,1666.67,2023-02-16,,FALSE,,,FALSE,2013-01-15,2022-01-15,Administration,ekratzer@reztark.com
+CIN-EMP-00012,William Tyler Zembrodt,19.6146,1700.0,2001-01-01,2014-01-01,FALSE,,,FALSE,2013-01-15,2017-10-26,Professional,tzembrodt@reztark.com
+CIN-EMP-00012,William Tyler Zembrodt,21.1531,1833.34,2014-01-01,2015-07-16,FALSE,,,FALSE,2013-01-15,2017-10-26,Professional,tzembrodt@reztark.com
+CIN-EMP-00012,William Tyler Zembrodt,24.0375,2083.33,2015-07-16,2016-07-16,FALSE,,,FALSE,2013-01-15,2017-10-26,Professional,tzembrodt@reztark.com
+CIN-EMP-00012,William Tyler Zembrodt,26.922,2333.33,2016-07-16,,FALSE,,,FALSE,2013-01-15,2017-10-26,Professional,tzembrodt@reztark.com
+CIN-EMP-00013,Amanda Sue Woltjer,17.307,1500.0,2001-01-01,2013-02-01,FALSE,,,FALSE,2013-01-19,2018-04-20,,awoltjer@reztark.com
+CIN-EMP-00013,Amanda Sue Woltjer,18.4608,1600.0,2013-02-01,2014-01-01,FALSE,,,FALSE,2013-01-19,2018-04-20,,awoltjer@reztark.com
+CIN-EMP-00013,Amanda Sue Woltjer,20.1915,1750.0,2014-01-01,2015-05-01,FALSE,,,FALSE,2013-01-19,2018-04-20,,awoltjer@reztark.com
+CIN-EMP-00013,Amanda Sue Woltjer,23.076,2000.0,2015-05-01,2016-04-16,FALSE,,,FALSE,2013-01-19,2018-04-20,,awoltjer@reztark.com
+CIN-EMP-00013,Amanda Sue Woltjer,26.922,2333.33,2016-04-16,,FALSE,,,FALSE,2013-01-19,2018-04-20,,awoltjer@reztark.com
+CIN-EMP-00014,Brett J. D. Kratzer-Inactive,0.0001,,2013-05-02,,TRUE,,,FALSE,2006-01-01,2006-01-01,President / CEO,bjdkratzer@reztark.com
+CIN-EMP-00015,Lisa Ducey,20.0,,2001-01-01,2015-09-01,TRUE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,24.04,,2015-09-01,2016-07-16,TRUE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,25.96,,2016-07-16,2018-03-16,TRUE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,27.16,,2018-03-16,2018-03-17,TRUE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,27.1625,2354.17,2018-03-17,2019-04-01,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,28.845,2500.0,2019-04-01,2020-09-01,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,23.076,2000.0,2020-09-01,2021-01-01,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,28.845,2500.0,2021-01-01,2021-09-01,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,33.6526,2916.67,2021-09-01,2022-09-01,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,43.2676,3750.0,2022-09-01,2025-01-01,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,47.5943,4125.0,2025-01-01,2025-09-01,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,38.0755,3300.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,47.5943,4125.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,47.5961,3807.69,2026-01-01,2026-04-13,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00015,Lisa Ducey,49.5193,3961.54,2026-04-13,,FALSE,,,TRUE,2013-12-10,,Controller,lducey@reztark.com
+CIN-EMP-00016,Stefan Molinaro,15.0,,2001-01-01,,TRUE,,,FALSE,2014-01-07,2014-07-11,Co-op,smolinaro@reztark.com
+CIN-EMP-00017,Thomas Schroeder,34.6141,3000.0,2001-01-01,2016-07-16,FALSE,,,FALSE,2011-10-31,2017-10-06,Project Director,tschroeder@reztark.com
+CIN-EMP-00017,Thomas Schroeder,36.5371,3166.67,2016-07-16,2018-01-01,FALSE,,,FALSE,2011-10-31,2017-10-06,Project Director,tschroeder@reztark.com
+CIN-EMP-00017,Thomas Schroeder,0.0001,0.01,2018-01-01,,FALSE,,,FALSE,2011-10-31,2017-10-06,Project Director,tschroeder@reztark.com
+CIN-EMP-00018,Kelsey E. Hillebrand,15.0,,2001-01-01,2014-12-16,TRUE,,,FALSE,2014-01-20,2016-06-08,Professional,khillebrand@reztark.com
+CIN-EMP-00018,Kelsey E. Hillebrand,15.8648,1375.0,2014-12-16,,FALSE,,,FALSE,2014-01-20,2016-06-08,Professional,khillebrand@reztark.com
+CIN-EMP-00019,Curtis James Lindberg,51.9211,4500.0,2001-01-01,2015-07-01,FALSE,,,FALSE,2007-01-04,2017-06-15,Design Director,clindberg@reztark.com
+CIN-EMP-00019,Curtis James Lindberg,43.2676,3750.0,2015-07-01,,FALSE,,,FALSE,2007-01-04,2017-06-15,Design Director,clindberg@reztark.com
+CIN-EMP-00020,Katherine Anne Kratzer-Smith,28.85,,2001-01-01,2014-06-01,TRUE,,,FALSE,2006-06-16,2016-04-07,Director,kkratzer@reztark.com
+CIN-EMP-00020,Katherine Anne Kratzer-Smith,25.9605,2250.0,2014-06-01,2015-04-16,FALSE,,,FALSE,2006-06-16,2016-04-07,Director,kkratzer@reztark.com
+CIN-EMP-00020,Katherine Anne Kratzer-Smith,28.845,2500.0,2015-04-16,2016-04-16,FALSE,,,FALSE,2006-06-16,2016-04-07,Director,kkratzer@reztark.com
+CIN-EMP-00020,Katherine Anne Kratzer-Smith,32.691,2833.33,2016-04-16,,FALSE,,,FALSE,2006-06-16,2016-04-07,Director,kkratzer@reztark.com
+CIN-EMP-00021,Ian M. Ramous,26.922,2333.33,2001-01-01,2015-07-16,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,28.845,2500.0,2015-07-16,2016-07-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,31.7295,2750.0,2016-07-01,2018-02-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,34.6141,3000.0,2018-02-01,2019-06-16,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,38.46,3333.33,2019-06-16,2020-01-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,43.2676,3750.0,2020-01-01,2020-09-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,34.6141,3000.0,2020-09-01,2021-02-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,43.2676,3750.0,2021-02-01,2021-09-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,52.8825,4583.33,2021-09-01,2022-04-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,57.6901,5000.0,2022-04-01,2023-03-16,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,67.3051,5833.33,2023-03-16,2025-04-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,76.9202,6666.67,2025-04-01,2025-09-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,61.5361,5333.33,2025-09-01,2025-11-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,76.9202,6666.67,2025-11-01,2026-01-01,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,76.9231,6153.85,2026-01-01,2026-04-13,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00021,Ian M. Ramous,86.5385,6923.08,2026-04-13,,FALSE,,,TRUE,2014-02-10,,Senior Vice President,iramous@reztark.com
+CIN-EMP-00022,Caroline Sarah Bozzi,18.0,,2001-01-01,2014-12-16,TRUE,,,FALSE,2014-02-17,2015-07-31,Professional,cbozzi@reztark.com
+CIN-EMP-00022,Caroline Sarah Bozzi,18.7493,1625.0,2014-12-16,,FALSE,,,FALSE,2014-02-17,2015-07-31,Professional,cbozzi@reztark.com
+CIN-EMP-00023,Scott Allison,25.9605,2250.0,2001-01-01,2015-09-01,FALSE,,,FALSE,2015-05-04,2016-09-15,Business Development,sallison@reztark.com
+CIN-EMP-00023,Scott Allison,28.845,2500.0,2015-09-01,,FALSE,,,FALSE,2015-05-04,2016-09-15,Business Development,sallison@reztark.com
+CIN-EMP-00024,Zachary Smith,0.0001,,2001-01-01,2014-06-26,TRUE,,,FALSE,2014-06-26,2016-07-31,Professional,zsmith@reztark.com
+CIN-EMP-00024,Zachary Smith,19.2301,1666.67,2014-06-26,2015-07-16,FALSE,,,FALSE,2014-06-26,2016-07-31,Professional,zsmith@reztark.com
+CIN-EMP-00024,Zachary Smith,21.6338,1875.0,2015-07-16,,FALSE,,,FALSE,2014-06-26,2016-07-31,Professional,zsmith@reztark.com
+CIN-EMP-00025,Corey Mai,14.0,,2001-01-01,2014-11-01,TRUE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,18.0,,2014-11-01,2017-05-16,TRUE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,20.1915,1750.0,2017-05-16,2018-02-01,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,21.6338,1875.0,2018-02-01,2018-11-01,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,24.0375,2083.33,2018-11-01,2019-05-01,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,26.922,2333.33,2019-05-01,2020-09-01,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,21.5377,1866.67,2020-09-01,2021-02-01,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,26.922,2333.33,2021-02-01,2021-05-16,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,29.8065,2583.33,2021-05-16,2021-09-01,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,33.6526,2916.67,2021-09-01,2022-09-15,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,39.2293,3400.0,2022-09-15,2025-03-01,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,50.4788,4375.0,2025-03-01,2025-09-01,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,40.3831,3500.0,2025-09-01,2025-11-01,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00025,Corey Mai,50.4788,4375.0,2025-11-01,,FALSE,,,FALSE,2014-05-13,2025-11-13,Senior Design Professional,cmai@reztark.com
+CIN-EMP-00026,Ryan Johnson,0.0001,2333.33,2001-01-01,2014-11-17,TRUE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,26.922,2333.33,2014-11-17,2015-10-16,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,28.845,2500.0,2015-10-16,2016-05-01,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,30.7681,2666.67,2016-05-01,2018-03-16,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,32.691,2833.33,2018-03-16,2019-01-16,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,35.5755,3083.33,2019-01-16,2020-09-01,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,28.4605,2466.67,2020-09-01,2021-02-01,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,35.5755,3083.33,2021-02-01,2021-09-01,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,43.2676,3750.0,2021-09-01,2022-09-15,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,48.4597,4200.0,2022-09-15,2023-08-16,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,57.6901,5000.0,2023-08-16,2025-04-01,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,63.4591,5500.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,50.7673,4400.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,63.4591,5500.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,63.4615,5076.92,2026-01-01,2026-04-13,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00026,Ryan Johnson,66.6346,5330.77,2026-04-13,,FALSE,,,TRUE,2014-11-17,,Vice President,rjohnson@reztark.com
+CIN-EMP-00027,Cerryia J Lindberg,12.0,,2001-01-01,,TRUE,,,FALSE,2014-08-12,2016-07-15,Administration,celindberg@reztark.com
+CIN-EMP-00028,Katherine E Stanifer,12.0,,2001-01-01,2015-02-04,TRUE,,,FALSE,2015-02-04,2015-12-31,,kstanifer@reztark.com
+CIN-EMP-00028,Katherine E Stanifer,12.0,,2015-02-04,,TRUE,,,FALSE,2015-02-04,2015-12-31,,kstanifer@reztark.com
+CIN-EMP-00029,Kristin Rohrkasse,13.5,1.0,2001-01-01,,TRUE,,,FALSE,2015-05-04,2016-05-04,,krohrkasse@reztark.com
+CIN-EMP-00030,Loran Sanvido,18.2685,1583.33,2001-01-01,2015-11-01,FALSE,,,FALSE,2015-03-11,2016-06-16,,lsanvido@reztark.com
+CIN-EMP-00030,Loran Sanvido,19.2301,1666.67,2015-11-01,2016-05-16,FALSE,,,FALSE,2015-03-11,2016-06-16,,lsanvido@reztark.com
+CIN-EMP-00030,Loran Sanvido,20.1915,1750.0,2016-05-16,,FALSE,,,FALSE,2015-03-11,2016-06-16,,lsanvido@reztark.com
+CIN-EMP-00031,Mercedeh Namei,26.249,2275.0,2001-01-01,2016-07-16,FALSE,,,FALSE,2015-06-02,2017-06-15,,mnamei@reztark.com
+CIN-EMP-00031,Mercedeh Namei,28.845,2500.0,2016-07-16,,FALSE,,,FALSE,2015-06-02,2017-06-15,,mnamei@reztark.com
+CIN-EMP-00032,Brett Z Kratzer,14.4225,1250.0,2001-01-01,,FALSE,,,FALSE,,2017-08-31,Director,bzkratzer@reztark.com
+CIN-EMP-00033,David S Cole,24.9991,2166.67,2001-01-01,,FALSE,,,FALSE,2015-08-10,2016-04-08,,dcole@reztark.com
+CIN-EMP-00034,David A Burgei,17.0,,2001-01-01,,TRUE,,,FALSE,2015-08-24,2017-06-15,,dburgei@reztark.com
+CIN-EMP-00035,Rebecca Kaiser,20.4319,1770.83,2001-01-01,2020-09-01,FALSE,,,TRUE,2019-07-15,,Senior Graphic Designer,rkaiser@reztark.com
+CIN-EMP-00035,Rebecca Kaiser,16.3456,1416.67,2020-09-01,2021-02-01,FALSE,,,TRUE,2019-07-15,,Senior Graphic Designer,rkaiser@reztark.com
+CIN-EMP-00035,Rebecca Kaiser,20.4319,1770.83,2021-02-01,2021-09-01,FALSE,,,TRUE,2019-07-15,,Senior Graphic Designer,rkaiser@reztark.com
+CIN-EMP-00035,Rebecca Kaiser,26.4413,2291.67,2021-09-01,2022-12-15,FALSE,,,TRUE,2019-07-15,,Senior Graphic Designer,rkaiser@reztark.com
+CIN-EMP-00035,Rebecca Kaiser,30.4075,2635.42,2022-12-15,2025-04-01,FALSE,,,TRUE,2019-07-15,,Senior Graphic Designer,rkaiser@reztark.com
+CIN-EMP-00035,Rebecca Kaiser,32.8401,2846.25,2025-04-01,2025-09-01,FALSE,,,TRUE,2019-07-15,,Senior Graphic Designer,rkaiser@reztark.com
+CIN-EMP-00035,Rebecca Kaiser,27.6912,2400.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2019-07-15,,Senior Graphic Designer,rkaiser@reztark.com
+CIN-EMP-00035,Rebecca Kaiser,34.6141,3000.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2019-07-15,,Senior Graphic Designer,rkaiser@reztark.com
+CIN-EMP-00035,Rebecca Kaiser,34.6154,2769.23,2026-01-01,2026-04-13,FALSE,,,TRUE,2019-07-15,,Senior Graphic Designer,rkaiser@reztark.com
+CIN-EMP-00035,Rebecca Kaiser,36.3461,2907.69,2026-04-13,,FALSE,,,TRUE,2019-07-15,,Senior Graphic Designer,rkaiser@reztark.com
+CIN-EMP-00036,Alexandra M Kramer,15.0,,2001-01-01,2016-05-09,TRUE,,,FALSE,2015-08-24,2016-08-13,,AKramer@reztark.com
+CIN-EMP-00036,Alexandra M Kramer,15.0,,2016-05-09,,TRUE,,,FALSE,2015-08-24,2016-08-13,,AKramer@reztark.com
+CIN-EMP-00037,Chang Suo,15.0,,2001-01-01,,TRUE,,,FALSE,2015-09-04,2015-10-31,,csuo@reztark.com
+CIN-EMP-00038,DongYu Qie,20.1915,1750.0,2001-01-01,,FALSE,,,FALSE,2015-10-19,2015-11-06,,dqie@reztark.com
+CIN-EMP-00039,Keirstin Heitman,23.076,2000.0,2001-01-01,,FALSE,,,FALSE,2016-06-06,2017-06-15,Designer,kheitman@reztark.com
+CIN-EMP-00040,Michael Beeghly,28.845,2500.0,2001-01-01,,FALSE,,,FALSE,2016-06-14,2017-04-19,Senior Designer,mbeeghly@reztark.com
+CIN-EMP-00041,Jenna M Prenger,29.8065,2583.33,2001-01-01,2019-03-16,FALSE,,,FALSE,2016-08-08,2019-12-20,,jprenger@reztark.com
+CIN-EMP-00041,Jenna M Prenger,32.2103,2791.67,2019-03-16,2019-09-17,FALSE,,,FALSE,2016-08-08,2019-12-20,,jprenger@reztark.com
+CIN-EMP-00041,Jenna M Prenger,40.26,,2019-09-17,,TRUE,,,FALSE,2016-08-08,2019-12-20,,jprenger@reztark.com
+CIN-EMP-00042,Emma Fitzgerald,16.0,,2001-01-01,,TRUE,,,FALSE,2016-08-22,2017-07-31,,efitzgerald@reztark.com
+CIN-EMP-00043,Rachel McGinnis,17.0,,2001-01-01,,TRUE,,,FALSE,2017-01-09,2017-04-30,,rmcginnis@reztark.com
+CIN-EMP-00044,Avery Davis,0.01,,2001-01-01,,TRUE,,,FALSE,2016-12-14,2017-12-31,IT,adavis@reztark.com
+CIN-EMP-00045,Mariah Baker,16.0,,2001-01-01,,TRUE,,,FALSE,2017-01-03,2017-04-30,Co-op,mbaker@reztark.com
+CIN-EMP-00046,Brian Murray,30.047,2604.17,2001-01-01,2019-04-01,FALSE,,,FALSE,2017-03-01,2025-10-23,Vice President,bmurray@reztark.com
+CIN-EMP-00046,Brian Murray,33.6526,2916.67,2019-04-01,2020-09-01,FALSE,,,FALSE,2017-03-01,2025-10-23,Vice President,bmurray@reztark.com
+CIN-EMP-00046,Brian Murray,26.922,2333.33,2020-09-01,2021-02-01,FALSE,,,FALSE,2017-03-01,2025-10-23,Vice President,bmurray@reztark.com
+CIN-EMP-00046,Brian Murray,33.6526,2916.67,2021-02-01,2021-09-01,FALSE,,,FALSE,2017-03-01,2025-10-23,Vice President,bmurray@reztark.com
+CIN-EMP-00046,Brian Murray,43.2676,3750.0,2021-09-01,2022-09-01,FALSE,,,FALSE,2017-03-01,2025-10-23,Vice President,bmurray@reztark.com
+CIN-EMP-00046,Brian Murray,57.6901,5000.0,2022-09-01,2025-04-01,FALSE,,,FALSE,2017-03-01,2025-10-23,Vice President,bmurray@reztark.com
+CIN-EMP-00046,Brian Murray,60.5746,5250.0,2025-04-01,2025-09-01,FALSE,,,FALSE,2017-03-01,2025-10-23,Vice President,bmurray@reztark.com
+CIN-EMP-00046,Brian Murray,48.4597,4200.0,2025-09-01,,FALSE,,,FALSE,2017-03-01,2025-10-23,Vice President,bmurray@reztark.com
+CIN-EMP-00047,Nick Azbell,31.7295,2750.0,2001-01-01,2018-11-16,FALSE,,,FALSE,2017-10-09,2021-04-16,Senior Production & BIM Manager,nazbell@reztark.com
+CIN-EMP-00047,Nick Azbell,34.6141,3000.0,2018-11-16,2020-02-01,FALSE,,,FALSE,2017-10-09,2021-04-16,Senior Production & BIM Manager,nazbell@reztark.com
+CIN-EMP-00047,Nick Azbell,34.6141,3000.0,2020-02-01,2020-09-01,FALSE,,,FALSE,2017-10-09,2021-04-16,Senior Production & BIM Manager,nazbell@reztark.com
+CIN-EMP-00047,Nick Azbell,27.6912,2400.0,2020-09-01,2021-02-01,FALSE,,,FALSE,2017-10-09,2021-04-16,Senior Production & BIM Manager,nazbell@reztark.com
+CIN-EMP-00047,Nick Azbell,34.6141,3000.0,2021-02-01,,FALSE,,,FALSE,2017-10-09,2021-04-16,Senior Production & BIM Manager,nazbell@reztark.com
+CIN-EMP-00048,Grant Wagner,18.0,,2001-01-01,2020-06-15,TRUE,,,FALSE,2018-01-08,2021-12-31,,gwagner@reztark.com
+CIN-EMP-00048,Grant Wagner,24.0375,2083.33,2020-06-15,2020-09-01,FALSE,,,FALSE,2018-01-08,2021-12-31,,gwagner@reztark.com
+CIN-EMP-00048,Grant Wagner,19.2301,1666.67,2020-09-01,2021-02-01,FALSE,,,FALSE,2018-01-08,2021-12-31,,gwagner@reztark.com
+CIN-EMP-00048,Grant Wagner,24.0375,2083.33,2021-02-01,2021-09-01,FALSE,,,FALSE,2018-01-08,2021-12-31,,gwagner@reztark.com
+CIN-EMP-00048,Grant Wagner,27.8836,2416.67,2021-09-01,,FALSE,,,FALSE,2018-01-08,2021-12-31,,gwagner@reztark.com
+CIN-EMP-00049,COOP COOP,0.0001,0.01,2001-01-01,,FALSE,,,FALSE,,2024-01-01,,coop@reztark.com
+CIN-EMP-00050,Architect Intern,0.0001,0.01,2001-01-01,,FALSE,,,FALSE,,2024-01-01,,aintern@reztark.com
+CIN-EMP-00051,Project Architect,0.0001,0.01,2001-01-01,,FALSE,,,FALSE,,2024-01-01,,parchitect@reztark.com
+CIN-EMP-00052,Alexis Lindsay,16.0,,2001-01-01,,TRUE,,,FALSE,2018-05-07,2018-08-19,Intern,alindsay@reztark.com
+CIN-EMP-00053,Nathaniel K Glaze,15.5,,2001-01-01,,TRUE,,,FALSE,2018-05-14,2018-08-05,,nglaze@reztark.com
+CIN-EMP-00054,Andrew Lehman,0.0001,,2001-01-01,2018-11-26,TRUE,,,FALSE,2018-05-23,2024-05-31,,alehman@reztark.com
+CIN-EMP-00054,Andrew Lehman,27.6431,2395.83,2018-11-26,2019-07-01,FALSE,,,FALSE,2018-05-23,2024-05-31,,alehman@reztark.com
+CIN-EMP-00054,Andrew Lehman,31.2488,2708.33,2019-07-01,2021-02-01,FALSE,,,FALSE,2018-05-23,2024-05-31,,alehman@reztark.com
+CIN-EMP-00054,Andrew Lehman,31.2488,,2021-02-01,2021-09-16,TRUE,,,FALSE,2018-05-23,2024-05-31,,alehman@reztark.com
+CIN-EMP-00054,Andrew Lehman,36.06,,2021-09-16,2022-12-15,TRUE,,,FALSE,2018-05-23,2024-05-31,,alehman@reztark.com
+CIN-EMP-00054,Andrew Lehman,38.9408,3375.0,2022-12-15,,FALSE,,,FALSE,2018-05-23,2024-05-31,,alehman@reztark.com
+CIN-EMP-00055,Cassidy Rodgers,16.5,,2001-01-01,,TRUE,,,FALSE,2018-08-20,2018-12-31,Co-op,crodgers@reztark.com
+CIN-EMP-00056,Jacob Bayer,16.5,,2001-01-01,,TRUE,,,FALSE,2018-08-13,2018-12-31,Co-op,jbayer@reztark.com
+CIN-EMP-00057,Samantha Wells,18.0,,2001-01-01,,TRUE,,,FALSE,2018-08-14,2018-12-31,Co-op,swells@reztark.com
+CIN-EMP-00058,Heather Lezon,16.5,,2001-01-01,2019-08-19,TRUE,,,FALSE,2019-01-02,2019-12-20,,hlezon@reztark.com
+CIN-EMP-00058,Heather Lezon,17.0,,2019-08-19,,TRUE,,,FALSE,2019-01-02,2019-12-20,,hlezon@reztark.com
+CIN-EMP-00059,Angela Sansalone,36.3448,3150.0,2001-01-01,,FALSE,,,FALSE,2019-01-28,2019-10-30,Project Director,asansalone@reztark.com
+CIN-EMP-00060,Lauren Petrakis,33.6526,2916.67,2001-01-01,,FALSE,,,FALSE,2019-02-11,2019-05-03,,lPetrakis@reztark.com
+CIN-EMP-00061,Rachel McNeal,0.0001,,2001-01-01,,TRUE,,,FALSE,2019-02-01,2024-01-01,,rMcNeal@reztark.com
+CIN-EMP-00062,Madison Grothaus,28.845,2500.0,2001-01-01,2020-09-01,FALSE,,,TRUE,2019-04-01,,,mgilmore@reztark.com
+CIN-EMP-00062,Madison Grothaus,23.076,2000.0,2020-09-01,2021-02-01,FALSE,,,TRUE,2019-04-01,,,mgilmore@reztark.com
+CIN-EMP-00062,Madison Grothaus,28.845,2500.0,2021-02-01,2021-09-01,FALSE,,,TRUE,2019-04-01,,,mgilmore@reztark.com
+CIN-EMP-00062,Madison Grothaus,32.691,2833.33,2021-09-01,2022-08-15,FALSE,,,TRUE,2019-04-01,,,mgilmore@reztark.com
+CIN-EMP-00062,Madison Grothaus,35.5755,3083.33,2022-08-15,2025-04-01,FALSE,,,TRUE,2019-04-01,,,mgilmore@reztark.com
+CIN-EMP-00062,Madison Grothaus,42.4022,3675.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2019-04-01,,,mgilmore@reztark.com
+CIN-EMP-00062,Madison Grothaus,33.9218,2940.0,2025-09-01,2025-10-16,FALSE,,,TRUE,2019-04-01,,,mgilmore@reztark.com
+CIN-EMP-00062,Madison Grothaus,42.4022,3675.0,2025-10-16,2026-01-01,FALSE,,,TRUE,2019-04-01,,,mgilmore@reztark.com
+CIN-EMP-00062,Madison Grothaus,42.4039,3392.31,2026-01-01,2026-04-30,FALSE,,,TRUE,2019-04-01,,,mgilmore@reztark.com
+CIN-EMP-00062,Madison Grothaus,43.75,3500.0,2026-04-30,,FALSE,,,TRUE,2019-04-01,,,mgilmore@reztark.com
+CIN-EMP-00063,Nadja Stowasser,17.0,,2001-01-01,,TRUE,,,FALSE,2019-05-06,2019-08-27,,nstowasser@reztark.com
+CIN-EMP-00064,Rebecca Kinzer,16.5,,2001-01-01,2020-01-07,TRUE,,,FALSE,2019-05-13,2020-04-01,,rkinzer@reztark.com
+CIN-EMP-00064,Rebecca Kinzer,17.5,,2020-01-07,,TRUE,,,FALSE,2019-05-13,2020-04-01,,rkinzer@reztark.com
+CIN-EMP-00065,Elizabeth Ann Lucas,34.375,2750.0,2001-01-01,2020-09-01,FALSE,,,FALSE,2019-04-08,2022-05-31,,elucas@reztark.com
+CIN-EMP-00065,Elizabeth Ann Lucas,25.3836,2200.0,2020-09-01,2021-02-01,FALSE,,,FALSE,2019-04-08,2022-05-31,,elucas@reztark.com
+CIN-EMP-00065,Elizabeth Ann Lucas,31.7295,2750.0,2021-02-01,2021-09-01,FALSE,,,FALSE,2019-04-08,2022-05-31,,elucas@reztark.com
+CIN-EMP-00065,Elizabeth Ann Lucas,36.5371,3166.67,2021-09-01,2021-09-16,FALSE,,,FALSE,2019-04-08,2022-05-31,,elucas@reztark.com
+CIN-EMP-00065,Elizabeth Ann Lucas,29.2296,2533.33,2021-09-16,2022-01-01,FALSE,,,FALSE,2019-04-08,2022-05-31,,elucas@reztark.com
+CIN-EMP-00065,Elizabeth Ann Lucas,0.0001,,2022-01-01,,TRUE,,,FALSE,2019-04-08,2022-05-31,,elucas@reztark.com
+CIN-EMP-00066,Christopher Flottemesch,32.691,2833.33,2001-01-01,,FALSE,,,FALSE,2019-04-15,2020-02-14,Project Architect/Designer,cflottemesch@reztark.com
+CIN-EMP-00067,Benjamin Darlington,15.0,,2001-01-01,,TRUE,,,FALSE,2019-05-13,2019-08-09,,bdarlington@reztark.com
+CIN-EMP-00068,Trevor Strohm,16.5,,2001-01-01,2022-01-03,TRUE,,,FALSE,2019-08-19,2022-05-08,,tsrohm@reztark.com
+CIN-EMP-00068,Trevor Strohm,19.0,,2022-01-03,,TRUE,,,FALSE,2019-08-19,2022-05-08,,tsrohm@reztark.com
+CIN-EMP-00069,Yara Alandia,16.5,,2001-01-01,,TRUE,,,FALSE,2019-08-19,2019-12-06,Junior Professional,yalandia@reztark.com
+CIN-EMP-00070,Thomas Kirk,22.1146,1916.67,2001-01-01,,FALSE,,,FALSE,2019-07-15,2020-10-12,,tkirk@reztark.com
+CIN-EMP-00071,Maria Luisa Walker,33.6526,2916.67,2001-01-01,2020-09-01,FALSE,,,FALSE,2019-08-06,2021-09-03,Project Manager,mwalker@reztark.com
+CIN-EMP-00071,Maria Luisa Walker,26.922,2333.33,2020-09-01,2021-02-01,FALSE,,,FALSE,2019-08-06,2021-09-03,Project Manager,mwalker@reztark.com
+CIN-EMP-00071,Maria Luisa Walker,33.6526,2916.67,2021-02-01,,FALSE,,,FALSE,2019-08-06,2021-09-03,Project Manager,mwalker@reztark.com
+CIN-EMP-00072,Kristina Anderson,26.922,2333.33,2001-01-01,2020-09-01,FALSE,,,FALSE,2019-08-12,2020-12-05,Project Designer,kanderson@reztrk.com
+CIN-EMP-00072,Kristina Anderson,21.5377,1866.67,2020-09-01,,FALSE,,,FALSE,2019-08-12,2020-12-05,Project Designer,kanderson@reztrk.com
+CIN-EMP-00073,Project Executive. M Jandricek,26.922,2333.33,2001-01-01,2020-09-01,FALSE,,,FALSE,2019-12-16,2020-12-05,Project Executive,ajandricek@reztak.com
+CIN-EMP-00073,Project Executive. M Jandricek,21.5377,1866.67,2020-09-01,,FALSE,,,FALSE,2019-12-16,2020-12-05,Project Executive,ajandricek@reztak.com
+CIN-EMP-00074,Maia Davidson,16.5,,2001-01-01,,TRUE,,,FALSE,2020-01-02,2020-04-03,Co-Op,mdavidson@reztark.com
+CIN-EMP-00075,Grace Anaple,16.5,,2001-01-01,,TRUE,,,FALSE,2020-01-02,2020-04-15,Co-Op,ganaple@reztark.com
+CIN-EMP-00076,Amy Shieh,24.9991,2166.67,2001-01-01,2020-09-01,FALSE,,,FALSE,2020-01-20,2020-12-05,,ashieh@reztak.com
+CIN-EMP-00076,Amy Shieh,19.9992,1733.33,2020-09-01,,FALSE,,,FALSE,2020-01-20,2020-12-05,,ashieh@reztak.com
+CIN-EMP-00077,Stephanie Knechtly,22.0,,2001-01-01,,TRUE,,,FALSE,2020-09-01,2020-12-05,,sknechtly@reztrk.com
+CIN-EMP-00078,Barbara Beeghly,38.46,3333.33,2001-01-01,2021-09-01,FALSE,,,FALSE,2020-09-15,2023-12-31,,bbeeghly@reztark.com
+CIN-EMP-00078,Barbara Beeghly,43.2676,3750.0,2021-09-01,2022-04-01,FALSE,,,FALSE,2020-09-15,2023-12-31,,bbeeghly@reztark.com
+CIN-EMP-00078,Barbara Beeghly,52.8825,4583.33,2022-04-01,,FALSE,,,FALSE,2020-09-15,2023-12-31,,bbeeghly@reztark.com
+CIN-EMP-00079,Cassie Koch,48.0751,4166.67,2001-01-01,2022-12-15,FALSE,,,FALSE,2021-07-06,2025-10-23,Senior Architect,ckoch@reztark.com
+CIN-EMP-00079,Cassie Koch,51.9211,4500.0,2022-12-15,2025-04-01,FALSE,,,FALSE,2021-07-06,2025-10-23,Senior Architect,ckoch@reztark.com
+CIN-EMP-00079,Cassie Koch,57.1132,4950.0,2025-04-01,2025-09-01,FALSE,,,FALSE,2021-07-06,2025-10-23,Senior Architect,ckoch@reztark.com
+CIN-EMP-00079,Cassie Koch,45.6906,3960.0,2025-09-01,,FALSE,,,FALSE,2021-07-06,2025-10-23,Senior Architect,ckoch@reztark.com
+CIN-EMP-00080,Daniel Berger,28.845,2500.0,2001-01-01,2022-06-01,FALSE,,,TRUE,2021-09-13,,Senior Design Professional,dberger@reztark.com
+CIN-EMP-00080,Daniel Berger,34.6141,3000.0,2022-06-01,2025-04-01,FALSE,,,TRUE,2021-09-13,,Senior Design Professional,dberger@reztark.com
+CIN-EMP-00080,Daniel Berger,37.3832,3240.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2021-09-13,,Senior Design Professional,dberger@reztark.com
+CIN-EMP-00080,Daniel Berger,32.4,2592.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2021-09-13,,Senior Design Professional,dberger@reztark.com
+CIN-EMP-00080,Daniel Berger,40.5,3240.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2021-09-13,,Senior Design Professional,dberger@reztark.com
+CIN-EMP-00080,Daniel Berger,40.3846,3230.77,2026-01-01,2026-04-13,FALSE,,,TRUE,2021-09-13,,Senior Design Professional,dberger@reztark.com
+CIN-EMP-00080,Daniel Berger,43.2693,3461.54,2026-04-13,,FALSE,,,TRUE,2021-09-13,,Senior Design Professional,dberger@reztark.com
+CIN-EMP-00081,Bonnie Vodenik,28.845,2500.0,2001-01-01,2022-12-15,FALSE,,,TRUE,2021-10-25,,Senior Interior Designer,bvodenik@reztark.com
+CIN-EMP-00081,Bonnie Vodenik,31.1526,2700.0,2022-12-15,2025-04-01,FALSE,,,TRUE,2021-10-25,,Senior Interior Designer,bvodenik@reztark.com
+CIN-EMP-00081,Bonnie Vodenik,33.6449,2916.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2021-10-25,,Senior Interior Designer,bvodenik@reztark.com
+CIN-EMP-00081,Bonnie Vodenik,27.6912,2400.0,2025-09-01,2025-10-20,FALSE,,,TRUE,2021-10-25,,Senior Interior Designer,bvodenik@reztark.com
+CIN-EMP-00081,Bonnie Vodenik,34.6141,3000.0,2025-10-20,2026-01-01,FALSE,,,TRUE,2021-10-25,,Senior Interior Designer,bvodenik@reztark.com
+CIN-EMP-00081,Bonnie Vodenik,34.6154,2769.23,2026-01-01,2026-04-13,FALSE,,,TRUE,2021-10-25,,Senior Interior Designer,bvodenik@reztark.com
+CIN-EMP-00081,Bonnie Vodenik,36.3461,2907.69,2026-04-13,,FALSE,,,TRUE,2021-10-25,,Senior Interior Designer,bvodenik@reztark.com
+CIN-EMP-00082,Michael Darcy,43.2676,3750.0,2001-01-01,2022-12-15,FALSE,,,FALSE,2021-11-29,2024-10-13,Senior Architect,mdarcy@reztark.com
+CIN-EMP-00082,Michael Darcy,47.5943,4125.0,2022-12-15,,FALSE,,,FALSE,2021-11-29,2024-10-13,Senior Architect,mdarcy@reztark.com
+CIN-EMP-00083,Neil Hutchinson,36.0563,3125.0,2001-01-01,,FALSE,,,FALSE,2021-12-13,2022-03-04,Project Professional,nhutchinson@reztark.com
+CIN-EMP-00084,Seth Aridano,17.5,,2001-01-01,2022-08-08,TRUE,,,FALSE,2021-12-13,2023-04-28,,saridano@reztark.com
+CIN-EMP-00084,Seth Aridano,23.0,,2022-08-08,,TRUE,,,FALSE,2021-12-13,2023-04-28,,saridano@reztark.com
+CIN-EMP-00085,Mark Specker,0.0001,,2001-01-01,2022-03-16,TRUE,,,TRUE,2021-12-20,,Design Professional,mspecker@reztark.com
+CIN-EMP-00085,Mark Specker,28.845,2500.0,2022-03-16,2025-08-01,FALSE,,,TRUE,2021-12-20,,Design Professional,mspecker@reztark.com
+CIN-EMP-00085,Mark Specker,40.3831,3500.0,2025-08-01,2025-09-01,FALSE,,,TRUE,2021-12-20,,Design Professional,mspecker@reztark.com
+CIN-EMP-00085,Mark Specker,32.3064,2800.0,2025-09-01,2025-10-16,FALSE,,,TRUE,2021-12-20,,Design Professional,mspecker@reztark.com
+CIN-EMP-00085,Mark Specker,40.3831,3500.0,2025-10-16,2026-01-01,FALSE,,,TRUE,2021-12-20,,Design Professional,mspecker@reztark.com
+CIN-EMP-00085,Mark Specker,40.3846,3230.77,2026-01-01,2026-04-30,FALSE,,,TRUE,2021-12-20,,Design Professional,mspecker@reztark.com
+CIN-EMP-00085,Mark Specker,43.2693,3461.54,2026-04-30,,FALSE,,,TRUE,2021-12-20,,Design Professional,mspecker@reztark.com
+CIN-EMP-00086,Eric Arter,67.3243,5835.0,2001-01-01,2023-02-16,FALSE,,,TRUE,2022-01-17,,Senior Vice President,earter@reztark.com
+CIN-EMP-00086,Eric Arter,76.9202,6666.67,2023-02-16,2025-04-01,FALSE,,,TRUE,2022-01-17,,Senior Vice President,earter@reztark.com
+CIN-EMP-00086,Eric Arter,86.5351,7500.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2022-01-17,,Senior Vice President,earter@reztark.com
+CIN-EMP-00086,Eric Arter,69.2281,6000.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2022-01-17,,Senior Vice President,earter@reztark.com
+CIN-EMP-00086,Eric Arter,86.5351,7500.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2022-01-17,,Senior Vice President,earter@reztark.com
+CIN-EMP-00086,Eric Arter,86.5385,6923.08,2026-01-01,2026-04-16,FALSE,,,TRUE,2022-01-17,,Senior Vice President,earter@reztark.com
+CIN-EMP-00086,Eric Arter,95.1923,7615.38,2026-04-16,,FALSE,,,TRUE,2022-01-17,,Senior Vice President,earter@reztark.com
+CIN-EMP-00087,Zach Kamerer,43.2676,3750.0,2001-01-01,2023-03-01,FALSE,,,FALSE,2022-01-17,2025-05-02,Director,zkamerer@reztark.com
+CIN-EMP-00087,Zach Kamerer,52.8825,4583.33,2023-03-01,,FALSE,,,FALSE,2022-01-17,2025-05-02,Director,zkamerer@reztark.com
+CIN-EMP-00088,Darion Ziegler,34.6141,3000.0,2001-01-01,2022-10-16,FALSE,,,TRUE,2022-02-01,,Senior Architect,dziegler@reztark.com
+CIN-EMP-00088,Darion Ziegler,37.4986,3250.0,2022-10-16,2025-04-01,FALSE,,,TRUE,2022-02-01,,Senior Architect,dziegler@reztark.com
+CIN-EMP-00088,Darion Ziegler,40.3831,3500.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2022-02-01,,Senior Architect,dziegler@reztark.com
+CIN-EMP-00088,Darion Ziegler,35.0,2800.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2022-02-01,,Senior Architect,dziegler@reztark.com
+CIN-EMP-00088,Darion Ziegler,43.75,3500.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2022-02-01,,Senior Architect,dziegler@reztark.com
+CIN-EMP-00088,Darion Ziegler,42.4039,3392.31,2026-01-01,2026-04-13,FALSE,,,TRUE,2022-02-01,,Senior Architect,dziegler@reztark.com
+CIN-EMP-00088,Darion Ziegler,48.7981,3903.85,2026-04-13,,FALSE,,,TRUE,2022-02-01,,Senior Architect,dziegler@reztark.com
+CIN-EMP-00089,Leeanne Boland,32.5949,2825.0,2001-01-01,2025-04-01,FALSE,,,TRUE,2022-02-28,,Senior Interior Designer,lboland@reztark.com
+CIN-EMP-00089,Leeanne Boland,28.6835,2486.0,2025-04-01,2026-01-01,FALSE,,,TRUE,2022-02-28,,Senior Interior Designer,lboland@reztark.com
+CIN-EMP-00089,Leeanne Boland,28.6846,2294.77,2026-01-01,2026-04-13,FALSE,,,TRUE,2022-02-28,,Senior Interior Designer,lboland@reztark.com
+CIN-EMP-00089,Leeanne Boland,29.5673,2365.38,2026-04-13,,FALSE,,,TRUE,2022-02-28,,Senior Interior Designer,lboland@reztark.com
+CIN-EMP-00090,Emma McMonigal,22.0,,2001-01-01,2023-05-22,TRUE,,,TRUE,2022-05-16,2022-08-19,Design Professional,emcmonigal@reztark.com
+CIN-EMP-00090,Emma McMonigal,26.922,2333.33,2023-05-22,2025-04-01,FALSE,,,TRUE,2022-05-16,2022-08-19,Design Professional,emcmonigal@reztark.com
+CIN-EMP-00090,Emma McMonigal,31.7295,2750.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2022-05-16,2022-08-19,Design Professional,emcmonigal@reztark.com
+CIN-EMP-00090,Emma McMonigal,25.3836,2200.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2022-05-16,2022-08-19,Design Professional,emcmonigal@reztark.com
+CIN-EMP-00090,Emma McMonigal,31.7295,2750.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2022-05-16,2022-08-19,Design Professional,emcmonigal@reztark.com
+CIN-EMP-00090,Emma McMonigal,31.7308,2538.46,2026-01-01,2026-04-13,FALSE,,,TRUE,2022-05-16,2022-08-19,Design Professional,emcmonigal@reztark.com
+CIN-EMP-00090,Emma McMonigal,33.6539,2692.31,2026-04-13,,FALSE,,,TRUE,2022-05-16,2022-08-19,Design Professional,emcmonigal@reztark.com
+CIN-EMP-00091,Meghana Yelagandula,20.0,,2001-01-01,,TRUE,,,FALSE,2022-06-06,2022-08-31,,mYelagandula@reztark.com
+CIN-EMP-00092,Derrick Payne,43.2676,3750.0,2001-01-01,,FALSE,,,FALSE,2022-03-24,2023-03-17,,dpayne@reztark.com
+CIN-EMP-00093,Danielle Henke,23.076,2000.0,2001-01-01,2022-12-31,FALSE,,,FALSE,2022-06-06,2023-12-15,Interior Designer,dhenke@reztark.com
+CIN-EMP-00093,Danielle Henke,24.5183,2125.0,2022-12-31,,FALSE,,,FALSE,2022-06-06,2023-12-15,Interior Designer,dhenke@reztark.com
+CIN-EMP-00094,Austin Weller,43.2676,3750.0,2001-01-01,,FALSE,,,FALSE,2022-06-13,2023-09-20,Senior Project Designer,aweller@reztark.com
+CIN-EMP-00095,test test,43.2676,3750.0,2001-01-01,,FALSE,,,FALSE,2022-05-23,2025-04-19,,test@reztark.com
+CIN-EMP-00096,Alison Dooley,26.4413,2291.67,2001-01-01,,FALSE,,,FALSE,2022-08-08,2023-07-28,Design Professional,adooley@reztark.com
+CIN-EMP-00097,Jeffrey Kemp,18.0,,2001-01-01,,TRUE,,,FALSE,2022-08-15,2022-12-31,,jkemp@reztark.com
+CIN-EMP-00098,Alexsandra Arnstein,18.0,,2001-01-01,,TRUE,,,FALSE,2022-08-22,2022-12-31,,aarnstein@reztark.com
+CIN-EMP-00099,Luciano Filippi,18.0,,2001-01-01,,TRUE,,,FALSE,2022-08-22,2022-12-31,,lfilippi@reztark.com
+CIN-EMP-00100,Brett Smith,26.4413,2291.67,2001-01-01,2025-04-01,FALSE,,,TRUE,2022-09-19,,Design Professional,bsmith@reztark.com
+CIN-EMP-00100,Brett Smith,31.7295,2750.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2022-09-19,,Design Professional,bsmith@reztark.com
+CIN-EMP-00100,Brett Smith,25.3836,2200.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2022-09-19,,Design Professional,bsmith@reztark.com
+CIN-EMP-00100,Brett Smith,31.7295,2750.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2022-09-19,,Design Professional,bsmith@reztark.com
+CIN-EMP-00100,Brett Smith,31.7308,2538.46,2026-01-01,2026-04-13,FALSE,,,TRUE,2022-09-19,,Design Professional,bsmith@reztark.com
+CIN-EMP-00100,Brett Smith,33.1731,2653.85,2026-04-13,,FALSE,,,TRUE,2022-09-19,,Design Professional,bsmith@reztark.com
+CIN-EMP-00101,Emma Hill,21.0,,2001-01-01,,TRUE,,,FALSE,2023-01-05,2023-04-28,,ehill@reztark.com
+CIN-EMP-00102,Jeffrey Akers,26.4413,2291.67,2001-01-01,,FALSE,,,FALSE,2022-10-17,2023-05-12,Design Professional,jakers@reztark.com
+CIN-EMP-00103,Ella St.Pierre,20.0,,2001-01-01,,TRUE,,,FALSE,2023-05-15,2023-08-04,,estpierre@reztark.com
+CIN-EMP-00104,Paula Brizzio,0.0001,,2001-01-01,,TRUE,,,FALSE,2023-04-26,2023-07-28,,pbrizzio@reztark.com
+CIN-EMP-00105,Clayton Virzi,21.0,,2001-01-01,,TRUE,,,FALSE,2023-05-08,2023-08-11,,Cvirzi@reztark.com
+CIN-EMP-00106,Mauro Lorenzatti,0.0001,,2001-01-01,,TRUE,,,FALSE,2023-02-01,2023-08-31,,mlorenzatti@reztark.com
+CIN-EMP-00107,Kevin Kastle,29.9988,2600.0,2001-01-01,,FALSE,,,FALSE,2022-11-28,2023-09-20,,kkastle@reztark.com
+CIN-EMP-00108,Megan Crawford,26.5374,2300.0,2001-01-01,,FALSE,,,FALSE,2023-02-15,2023-09-29,Interior Designer,mcrawford@reztark.com
+CIN-EMP-00109,Varun Bhimanpally,22.0,,2001-01-01,,TRUE,,,FALSE,2023-01-03,2023-04-28,,vbhimanpally@reztark.com
+CIN-EMP-00110,Agustina Bazán,0.0001,,2001-01-01,,TRUE,,,FALSE,2025-03-31,2025-03-31,,abazan@reztark.com
+CIN-EMP-00111,Victoria Myrick,31.2488,2708.33,2001-01-01,,FALSE,,,FALSE,2023-03-20,2025-03-07,Design Professional,vmyrick@reztark.com
+CIN-EMP-00112,Annette Eberhardt,21.6338,1875.0,2001-01-01,,FALSE,,,FALSE,2022-11-07,2023-08-23,,aeberhardt@reztark.com
+CIN-EMP-00113,Mosaic m,0.0001,,2001-01-01,,TRUE,,,FALSE,,2024-01-01,,billing@reztark.com
+CIN-EMP-00114,Fernando Rodriguez,0.0001,,2001-01-01,,TRUE,,,FALSE,2025-03-25,2025-07-31,,frodriguez@reztark.com
+CIN-EMP-00115,Jeremias Vago,0.0001,,2001-01-01,,TRUE,,,FALSE,2025-03-10,2025-07-31,,jvago@reztark.com
+CIN-EMP-00116,Maria Cordon,0.0001,,2001-01-01,,TRUE,,,FALSE,2025-03-17,2025-07-31,,mcordon@reztark.com
+CIN-EMP-00117,Meredith Seeds,67.3051,5833.33,2001-01-01,2025-09-01,FALSE,,,FALSE,2023-03-01,2025-09-04,Vice President of Interior Design,mseeds@reztark.com
+CIN-EMP-00117,Meredith Seeds,53.8441,4666.67,2025-09-01,,FALSE,,,FALSE,2023-03-01,2025-09-04,Vice President of Interior Design,mseeds@reztark.com
+CIN-EMP-00118,Katherine Ducey,28.845,2500.0,2001-01-01,,FALSE,,,FALSE,2023-09-05,2025-05-23,Professional / Marketing,kducey@reztark.com
+CIN-EMP-00119,Yazeed Abu Gharbieh,28.845,2500.0,2001-01-01,,FALSE,,,FALSE,2023-03-13,2025-03-28,Design Professional,ygharbieh@reztark.com
+CIN-EMP-00120,Pace Perry,22.0,,2001-01-01,,TRUE,,,FALSE,2025-05-12,2025-08-08,,pperry@reztark.com
+CIN-EMP-00121,Project Coordinator,0.0001,,2001-01-01,,TRUE,,,TRUE,2026-01-01,,Project Coordinator,p@reztark.com
+CIN-EMP-00122,Erin Kline,40.3831,3500.0,2001-01-01,2025-04-01,FALSE,,,FALSE,2022-11-07,2026-03-06,Senior Architect,ekline@reztark.com
+CIN-EMP-00122,Erin Kline,43.6137,3780.0,2025-04-01,2025-09-01,FALSE,,,FALSE,2022-11-07,2026-03-06,Senior Architect,ekline@reztark.com
+CIN-EMP-00122,Erin Kline,36.6274,3174.5,2025-09-01,2025-10-16,FALSE,,,FALSE,2022-11-07,2026-03-06,Senior Architect,ekline@reztark.com
+CIN-EMP-00122,Erin Kline,45.7844,3968.13,2025-10-16,2026-01-01,FALSE,,,FALSE,2022-11-07,2026-03-06,Senior Architect,ekline@reztark.com
+CIN-EMP-00122,Erin Kline,45.7861,3662.89,2026-01-01,,FALSE,,,FALSE,2022-11-07,2026-03-06,Senior Architect,ekline@reztark.com
+CIN-EMP-00123,Joshua Pedoto,36.0563,3125.0,2001-01-01,2025-01-01,FALSE,,,FALSE,2022-11-21,2026-03-06,Senior Architect,jpedoto@reztark.com
+CIN-EMP-00123,Joshua Pedoto,41.3445,3583.33,2025-01-01,2025-09-01,FALSE,,,FALSE,2022-11-21,2026-03-06,Senior Architect,jpedoto@reztark.com
+CIN-EMP-00123,Joshua Pedoto,33.0757,2866.67,2025-09-01,2025-10-16,FALSE,,,FALSE,2022-11-21,2026-03-06,Senior Architect,jpedoto@reztark.com
+CIN-EMP-00123,Joshua Pedoto,41.3445,3583.33,2025-10-16,2026-01-01,FALSE,,,FALSE,2022-11-21,2026-03-06,Senior Architect,jpedoto@reztark.com
+CIN-EMP-00123,Joshua Pedoto,41.3461,3307.69,2026-01-01,,FALSE,,,FALSE,2022-11-21,2026-03-06,Senior Architect,jpedoto@reztark.com
+CIN-EMP-00124,Andrew Warman,29.9988,2600.0,2001-01-01,2025-09-01,FALSE,,,TRUE,2025-06-16,,Design Professional,awarman@reztark.com
+CIN-EMP-00124,Andrew Warman,23.9991,2080.0,2025-09-01,2025-10-20,FALSE,,,TRUE,2025-06-16,,Design Professional,awarman@reztark.com
+CIN-EMP-00124,Andrew Warman,29.9988,2600.0,2025-10-20,2026-01-01,FALSE,,,TRUE,2025-06-16,,Design Professional,awarman@reztark.com
+CIN-EMP-00124,Andrew Warman,30.0,2400.0,2026-01-01,2026-04-13,FALSE,,,TRUE,2025-06-16,,Design Professional,awarman@reztark.com
+CIN-EMP-00124,Andrew Warman,31.6346,2530.77,2026-04-13,,FALSE,,,TRUE,2025-06-16,,Design Professional,awarman@reztark.com
+CIN-EMP-00125,Thomas Custer,64.9013,5625.0,2001-01-01,2025-04-01,FALSE,,,TRUE,2024-04-15,,Vice President/Business Development,tcuster@reztark.com
+CIN-EMP-00125,Thomas Custer,68.1464,5906.25,2025-04-01,2025-09-01,FALSE,,,TRUE,2024-04-15,,Vice President/Business Development,tcuster@reztark.com
+CIN-EMP-00125,Thomas Custer,54.5171,4725.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2024-04-15,,Vice President/Business Development,tcuster@reztark.com
+CIN-EMP-00125,Thomas Custer,68.1464,5906.25,2025-11-01,2026-01-01,FALSE,,,TRUE,2024-04-15,,Vice President/Business Development,tcuster@reztark.com
+CIN-EMP-00125,Thomas Custer,68.149,5451.92,2026-01-01,2026-02-14,FALSE,,,TRUE,2024-04-15,,Vice President/Business Development,tcuster@reztark.com
+CIN-EMP-00125,Thomas Custer,96.1539,7692.31,2026-02-14,,FALSE,,,TRUE,2024-04-15,,Vice President/Business Development,tcuster@reztark.com
+CIN-EMP-00126,Karlena Cornett,41.5369,3600.0,2001-01-01,2025-04-01,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,kcornett@reztark.com
+CIN-EMP-00126,Karlena Cornett,44.0291,3816.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,kcornett@reztark.com
+CIN-EMP-00126,Karlena Cornett,35.2233,3052.8,2025-09-01,2025-11-01,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,kcornett@reztark.com
+CIN-EMP-00126,Karlena Cornett,44.0291,3816.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,kcornett@reztark.com
+CIN-EMP-00126,Karlena Cornett,44.0308,3522.46,2026-01-01,2026-04-13,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,kcornett@reztark.com
+CIN-EMP-00126,Karlena Cornett,45.2885,3623.08,2026-04-13,,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,kcornett@reztark.com
+CIN-EMP-00127,Hannah Webster,22.0,,2001-01-01,2025-04-21,TRUE,,,TRUE,2023-01-03,2023-04-28,,hwebster@reztark.com
+CIN-EMP-00127,Hannah Webster,30.7681,2666.67,2025-04-21,2025-09-01,FALSE,,,TRUE,2023-01-03,2023-04-28,,hwebster@reztark.com
+CIN-EMP-00127,Hannah Webster,24.6144,2133.33,2025-09-01,2025-10-16,FALSE,,,TRUE,2023-01-03,2023-04-28,,hwebster@reztark.com
+CIN-EMP-00127,Hannah Webster,30.7681,2666.67,2025-10-16,2026-01-01,FALSE,,,TRUE,2023-01-03,2023-04-28,,hwebster@reztark.com
+CIN-EMP-00127,Hannah Webster,30.7693,2461.54,2026-01-01,2026-04-13,FALSE,,,TRUE,2023-01-03,2023-04-28,,hwebster@reztark.com
+CIN-EMP-00127,Hannah Webster,31.6346,2530.77,2026-04-13,,FALSE,,,TRUE,2023-01-03,2023-04-28,,hwebster@reztark.com
+CIN-EMP-00128,Brian McDonald,0.0001,0.01,2001-01-01,,FALSE,,,TRUE,2025-10-24,,,bmcdonald@reztark.com
+CIN-EMP-00129,Mallory Stein,46.1521,4000.0,2001-01-01,2025-09-01,FALSE,,,TRUE,2025-03-10,,Senior Interior Designer,mstein@reztark.com
+CIN-EMP-00129,Mallory Stein,36.9217,3200.0,2025-09-01,2025-10-20,FALSE,,,TRUE,2025-03-10,,Senior Interior Designer,mstein@reztark.com
+CIN-EMP-00129,Mallory Stein,46.1521,4000.0,2025-10-20,2026-01-01,FALSE,,,TRUE,2025-03-10,,Senior Interior Designer,mstein@reztark.com
+CIN-EMP-00129,Mallory Stein,46.1539,3692.31,2026-01-01,2026-04-13,FALSE,,,TRUE,2025-03-10,,Senior Interior Designer,mstein@reztark.com
+CIN-EMP-00129,Mallory Stein,47.1154,3769.23,2026-04-13,,FALSE,,,TRUE,2025-03-10,,Senior Interior Designer,mstein@reztark.com
+CIN-EMP-00130,Jeffrey Wysocki,47.3059,4100.0,2001-01-01,2025-04-01,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,jwysocki@reztark.com
+CIN-EMP-00130,Jeffrey Wysocki,50.1442,4346.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,jwysocki@reztark.com
+CIN-EMP-00130,Jeffrey Wysocki,40.1154,3476.8,2025-09-01,2025-11-01,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,jwysocki@reztark.com
+CIN-EMP-00130,Jeffrey Wysocki,50.1442,4346.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,jwysocki@reztark.com
+CIN-EMP-00130,Jeffrey Wysocki,50.1461,4011.69,2026-01-01,2026-04-13,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,jwysocki@reztark.com
+CIN-EMP-00130,Jeffrey Wysocki,51.5625,4125.0,2026-04-13,,FALSE,,,TRUE,2023-03-22,,Senior Design Professional,jwysocki@reztark.com
+CIN-EMP-00131,George Masie,55.3825,4800.0,2001-01-01,2025-04-01,FALSE,,,TRUE,2023-03-22,,Senior Architect,gmasie@reztark.com
+CIN-EMP-00131,George Masie,58.7054,5088.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2023-03-22,,Senior Architect,gmasie@reztark.com
+CIN-EMP-00131,George Masie,46.9643,4070.4,2025-09-01,2025-11-01,FALSE,,,TRUE,2023-03-22,,Senior Architect,gmasie@reztark.com
+CIN-EMP-00131,George Masie,58.7054,5088.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2023-03-22,,Senior Architect,gmasie@reztark.com
+CIN-EMP-00131,George Masie,58.7078,4696.62,2026-01-01,2026-04-13,FALSE,,,TRUE,2023-03-22,,Senior Architect,gmasie@reztark.com
+CIN-EMP-00131,George Masie,60.5769,4846.15,2026-04-13,,FALSE,,,TRUE,2023-03-22,,Senior Architect,gmasie@reztark.com
+CIN-EMP-00132,Kevin Spring,57.6901,5000.0,2001-01-01,2025-04-01,FALSE,,,TRUE,2023-03-22,,Director,kspring@reztark.com
+CIN-EMP-00132,Kevin Spring,57.6901,5000.0,2025-04-01,2025-09-01,FALSE,,,TRUE,2023-03-22,,Director,kspring@reztark.com
+CIN-EMP-00132,Kevin Spring,57.6901,5000.0,2025-09-01,2026-01-01,FALSE,,,TRUE,2023-03-22,,Director,kspring@reztark.com
+CIN-EMP-00132,Kevin Spring,61.1539,4892.31,2026-01-01,2026-04-13,FALSE,,,TRUE,2023-03-22,,Director,kspring@reztark.com
+CIN-EMP-00132,Kevin Spring,62.8846,5030.77,2026-04-13,,FALSE,,,TRUE,2023-03-22,,Director,kspring@reztark.com
+CIN-EMP-00133,Joseph Northcutt,73.7395,6391.0,2001-01-01,2025-04-01,FALSE,,,TRUE,2023-01-03,,Director,jnorthcutt@reztark.com
+CIN-EMP-00133,Joseph Northcutt,75.2221,6519.5,2025-04-01,2026-01-01,FALSE,,,TRUE,2023-01-03,,Director,jnorthcutt@reztark.com
+CIN-EMP-00133,Joseph Northcutt,75.225,6018.0,2026-01-01,2026-04-13,FALSE,,,TRUE,2023-01-03,,Director,jnorthcutt@reztark.com
+CIN-EMP-00133,Joseph Northcutt,77.3318,6186.54,2026-04-13,,FALSE,,,TRUE,2023-01-03,,Director,jnorthcutt@reztark.com
+CIN-EMP-00134,Garrett Rice,47.1135,4083.33,2001-01-01,2025-04-01,FALSE,,,TRUE,2023-02-21,,Vice President,grice@reztark.com
+CIN-EMP-00134,Garrett Rice,55.5267,4812.5,2025-04-01,2025-09-01,FALSE,,,TRUE,2023-02-21,,Vice President,grice@reztark.com
+CIN-EMP-00134,Garrett Rice,46.1521,4000.0,2025-09-01,2025-10-20,FALSE,,,TRUE,2023-02-21,,Vice President,grice@reztark.com
+CIN-EMP-00134,Garrett Rice,57.6901,5000.0,2025-10-20,2026-01-01,FALSE,,,TRUE,2023-02-21,,Vice President,grice@reztark.com
+CIN-EMP-00134,Garrett Rice,57.6923,4615.38,2026-01-01,2026-04-16,FALSE,,,TRUE,2023-02-21,,Vice President,grice@reztark.com
+CIN-EMP-00134,Garrett Rice,64.9039,5192.31,2026-04-16,,FALSE,,,TRUE,2023-02-21,,Vice President,grice@reztark.com
+CIN-EMP-00135,David Behrens,62.5361,5420.0,2001-01-01,2025-04-01,FALSE,,,TRUE,2023-03-22,,Director,dbehrens@reztark.com
+CIN-EMP-00135,David Behrens,66.2882,5745.2,2025-04-01,2025-09-01,FALSE,,,TRUE,2023-03-22,,Director,dbehrens@reztark.com
+CIN-EMP-00135,David Behrens,57.45,4596.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2023-03-22,,Director,dbehrens@reztark.com
+CIN-EMP-00135,David Behrens,66.2882,5745.2,2025-11-01,2026-01-01,FALSE,,,TRUE,2023-03-22,,Director,dbehrens@reztark.com
+CIN-EMP-00135,David Behrens,66.2908,5303.26,2026-01-01,2026-02-13,FALSE,,,TRUE,2023-03-22,,Director,dbehrens@reztark.com
+CIN-EMP-00135,David Behrens,69.7115,5576.92,2026-02-13,,FALSE,,,TRUE,2023-03-22,,Director,dbehrens@reztark.com
+CIN-EMP-00136,Guinivere Bishop,22.0,,2001-01-01,,TRUE,,,TRUE,2026-05-11,,,gbishop@reztark.com
+CIN-EMP-00137,Lindsay Combs,28.845,2500.0,2001-01-01,2025-09-01,FALSE,,,TRUE,2025-06-16,,,lcombs@reztark.com
+CIN-EMP-00137,Lindsay Combs,23.076,2000.0,2025-09-01,2025-11-01,FALSE,,,TRUE,2025-06-16,,,lcombs@reztark.com
+CIN-EMP-00137,Lindsay Combs,28.845,2500.0,2025-11-01,2026-01-01,FALSE,,,TRUE,2025-06-16,,,lcombs@reztark.com
+CIN-EMP-00137,Lindsay Combs,28.8461,2307.69,2026-01-01,2026-04-13,FALSE,,,TRUE,2025-06-16,,,lcombs@reztark.com
+CIN-EMP-00137,Lindsay Combs,30.2885,2423.08,2026-04-13,,FALSE,,,TRUE,2025-06-16,,,lcombs@reztark.com
+CIN-EMP-00138,Donna Ross,67.3051,5833.33,2001-01-01,2025-04-01,FALSE,,,TRUE,2023-03-22,,Vice President,dross@reztark.com
+CIN-EMP-00138,Donna Ross,74.0357,6416.67,2025-04-01,2025-09-01,FALSE,,,TRUE,2023-03-22,,Vice President,dross@reztark.com
+CIN-EMP-00138,Donna Ross,59.2285,5133.33,2025-09-01,2025-11-01,FALSE,,,TRUE,2023-03-22,,Vice President,dross@reztark.com
+CIN-EMP-00138,Donna Ross,74.0357,6416.67,2025-11-01,2026-01-01,FALSE,,,TRUE,2023-03-22,,Vice President,dross@reztark.com
+CIN-EMP-00138,Donna Ross,74.0385,5923.08,2026-01-01,2026-04-13,FALSE,,,TRUE,2023-03-22,,Vice President,dross@reztark.com
+CIN-EMP-00138,Donna Ross,76.4423,6115.38,2026-04-13,,FALSE,,,TRUE,2023-03-22,,Vice President,dross@reztark.com
