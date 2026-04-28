@@ -246,6 +246,7 @@ def extract_clients(qb: QuickBooks, term_lookup: dict):
 
         client_rows.append({
             'FirmCode': firm_code,
+            '_source_id': str(getattr(c, 'Id', '') or ''),
             'FirmName': firm_name,
             'IsActive': 'TRUE' if getattr(c, 'Active', True) else 'FALSE',
             'Website': getattr(getattr(c, 'WebAddr', None), 'URI', '') or '',
@@ -313,6 +314,7 @@ def extract_vendors(qb: QuickBooks, term_lookup: dict):
 
         vendor_rows.append({
             'FirmCode': firm_code,
+            '_source_id': str(getattr(v, 'Id', '') or ''),
             'FirmName': firm_name,
             'IsActive': 'TRUE' if getattr(v, 'Active', True) else 'FALSE',
             'IsConsultant': '',
@@ -369,7 +371,7 @@ def extract_vendors(qb: QuickBooks, term_lookup: dict):
             })
 
     vendor_fields = [
-        'FirmCode', 'FirmName', 'IsActive', 'IsConsultant', 'ConsultantType', 'Is1099',
+        'FirmCode', '_source_id', 'FirmName', 'IsActive', 'IsConsultant', 'ConsultantType', 'Is1099',
         'Website', 'VendorType', 'Note', 'NetDays', 'EIN',
         'PayToAddress_Phone',
         'PayToAddress_Street1', 'PayToAddress_Street2', 'PayToAddress_Street3', 'PayToAddress_Street4',
@@ -395,6 +397,7 @@ def extract_employees(qb: QuickBooks):
         emp_seq += 1
         rows.append({
             'EmployeeCode': f'MN-EMP-{emp_seq:05d}',
+            '_source_id': str(getattr(e, 'Id', '') or ''),
             'EmployeeName': e.DisplayName or '',
             'PayRate': '',
             'salaryperpayperiod': '',

@@ -14,10 +14,8 @@ etl/__pycache__/
 Documentation/
 TimeReport/
 input/
-output/dallas/Dallas_*
-output/dallas/Orlando_*
-output/orlando/Orlando_*
-output/orlando/Dallas_*
+# All output files ignored by default — generated CSVs are added explicitly via git add
+output/
 
 # Excel lock files
 ~$*

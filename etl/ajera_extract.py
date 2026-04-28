@@ -285,6 +285,7 @@ def extract_clients(api_url: str, token: str):
 
             client_rows.append({
                 'FirmCode':   firm_code,
+                '_source_id': str(c.get('ClientKey', '') or ''),
                 'FirmName':   name,
                 'IsActive':   is_active(c.get('Status')),
                 'Website':    c.get('Website') or '',
@@ -375,6 +376,7 @@ def extract_vendors(api_url: str, token: str):
 
             vendor_rows.append({
                 'FirmCode':       firm_code,
+                '_source_id':     str(v.get('VendorKey', '') or ''),
                 'FirmName':       name,
                 'IsActive':       is_active(v.get('Status')),
                 'IsConsultant':   'TRUE' if v.get('VendorTypeIsConsultant') else 'FALSE',
@@ -435,7 +437,7 @@ def extract_vendors(api_url: str, token: str):
                 })
 
     vendor_fields = [
-        'FirmCode', 'FirmName', 'IsActive', 'IsConsultant', 'ConsultantType', 'Is1099',
+        'FirmCode', '_source_id', 'FirmName', 'IsActive', 'IsConsultant', 'ConsultantType', 'Is1099',
         'Website', 'VendorType', 'Note', 'NetDays', 'EIN',
         'PayToAddress_Phone',
         'PayToAddress_Street1', 'PayToAddress_Street2', 'PayToAddress_Street3', 'PayToAddress_Street4',
@@ -484,6 +486,7 @@ def extract_employees(api_url: str, token: str):
                     next_start = pay_rates[i + 1].get('StartDate') if i + 1 < len(pay_rates) else ''
                     rows.append({
                         'EmployeeCode':       emp_code,
+                        '_source_id':         str(e.get('EmployeeKey', '') or ''),
                         'EmployeeName':       full_name,
                         'PayRate':            pr.get('PayRate') or '',
                         'salaryperpayperiod': pr.get('Salary') or '',
@@ -501,6 +504,7 @@ def extract_employees(api_url: str, token: str):
             else:
                 rows.append({
                     'EmployeeCode':       emp_code,
+                    '_source_id':         str(e.get('EmployeeKey', '') or ''),
                     'EmployeeName':       full_name,
                     'PayRate':            '',
                     'salaryperpayperiod': '',

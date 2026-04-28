@@ -322,8 +322,9 @@ def parse_customers(path: Path, prefix: str, office: str, output_dir: Path):
         bill_zip     = r.get('Zip', r.get('Bill to 5', '')).strip()
 
         clients.append({
-            'FirmCode':  firm_code,
-            'FirmName':  company,
+            'FirmCode':   firm_code,
+            '_source_id': name,
+            'FirmName':   company,
             'IsActive':  active_str(r),
             'Website':   '',
             'ClientType': '',
@@ -397,7 +398,7 @@ def parse_customers(path: Path, prefix: str, office: str, output_dir: Path):
     write_csv(
         output_dir / f'{office}_Clients.csv',
         clients,
-        ['FirmCode', 'FirmName', 'IsActive', 'Website', 'ClientType', 'Specialty', 'Note', 'PayDays',
+        ['FirmCode', '_source_id', 'FirmName', 'IsActive', 'Website', 'ClientType', 'Specialty', 'Note', 'PayDays',
          'MainEmail', 'BillToAddress_Phone',
          'BillToAddress_Street1', 'BillToAddress_Street2', 'BillToAddress_Street3', 'BillToAddress_Street4',
          'BillToAddress_City', 'BillToAddress_State', 'BillToAddress_Zip', 'BillToAddress_Country',
@@ -437,8 +438,9 @@ def parse_vendors(path: Path, prefix: str, office: str, output_dir: Path):
         net_days    = net_m.group() if net_m else ''
 
         vendors.append({
-            'FirmCode':  firm_code,
-            'FirmName':  company,
+            'FirmCode':   firm_code,
+            '_source_id': name,
+            'FirmName':   company,
             'IsActive':  active_str(r),
             'IsConsultant': 'TRUE' if 'consultant' in vendor_type.lower() else 'FALSE',
             'ConsultantType': '',
@@ -499,7 +501,7 @@ def parse_vendors(path: Path, prefix: str, office: str, output_dir: Path):
     write_csv(
         output_dir / f'{office}_Vendors.csv',
         vendors,
-        ['FirmCode', 'FirmName', 'IsActive', 'IsConsultant', 'ConsultantType', 'Is1099',
+        ['FirmCode', '_source_id', 'FirmName', 'IsActive', 'IsConsultant', 'ConsultantType', 'Is1099',
          'Website', 'VendorType', 'Note', 'NetDays', 'EIN',
          'PayToAddress_Phone',
          'PayToAddress_Street1', 'PayToAddress_Street2', 'PayToAddress_Street3', 'PayToAddress_Street4',
@@ -546,6 +548,7 @@ def parse_employees(path: Path, prefix: str, office: str, output_dir: Path):
 
         out.append({
             'EmployeeCode':      emp_code,
+            '_source_id':        name,
             'EmployeeName':      name,
             'PayRate':           '',
             'salaryperpayperiod': '',
@@ -564,7 +567,7 @@ def parse_employees(path: Path, prefix: str, office: str, output_dir: Path):
     write_csv(
         output_dir / f'{office}_Employees.csv',
         out,
-        ['EmployeeCode', 'EmployeeName', 'PayRate', 'salaryperpayperiod',
+        ['EmployeeCode', '_source_id', 'EmployeeName', 'PayRate', 'salaryperpayperiod',
          'PayRateStartDate', 'PayRateEndDate', 'IsHourly', 'OTRate', 'OTMU',
          '_FirstName', '_LastName', '_IsActive', '_Phone', '_Email'],
     )

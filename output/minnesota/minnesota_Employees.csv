@@ -1,66 +1,66 @@
-EmployeeCode,EmployeeName,PayRate,salaryperpayperiod,PayRateStartDate,PayRateEndDate,IsHourly,OTRate,OTMU,_FirstName,_LastName,_IsActive,_HireDate,_ReleaseDate,_WorkPhone,_Mobile,_Email
-MN-EMP-00001,Alex Ormsby,,,,,,,,Alex,Ormsby,TRUE,2021-09-20,,(612) 965-2387,612-965-2387,alex.ormsby1@gmail.com
-MN-EMP-00002,Andrew Altstatt,,,,,,,,Andrew,Altstatt,TRUE,2016-04-06,,(651) 324-2778,651-324-2778,
-MN-EMP-00003,Andrew Tovsen,,,,,,,,Andrew,Tovsen,TRUE,2022-05-23,,612-910-3416,,andrew.tovsen2@comcast.net
-MN-EMP-00004,Ashley Kesler,,,,,,,,Ashley,Kesler,TRUE,2020-11-16,,,952-693-3050,ash.can52@gmail.com
-MN-EMP-00005,Bailey Weed,,,,,,,,Bailey,Weed,TRUE,2017-07-31,,(612) 483-9089,612-483-9089,Baileyw@sra-mn.com
-MN-EMP-00006,Ben Castiglione,,,,,,,,Ben,Castiglione,TRUE,2017-04-03,,586-344-1199,,
-MN-EMP-00007,Benjamin Youngstrom,,,,,,,,Benjamin,Youngstrom,TRUE,2012-03-28,2017-04-14,612-281-8535,,
-MN-EMP-00008,Blaze Capper,,,,,,,,Blaze,Capper,TRUE,2021-11-22,,(913) 636-0772,913-636-0772,blazec@sra-mn.com
-MN-EMP-00009,Brandon Bryant,,,,,,,,Brandon,Bryant,TRUE,2021-12-20,,,414-313-2510,bryan397@umn.edu
-MN-EMP-00010,Chelsea Miller,,,,,,,,Chelsea,Miller,TRUE,2021-09-27,,651-214-2401,,chelseam@sra-mn.com
-MN-EMP-00011,Choy Leow,,,,,,,,Choy,Leow,TRUE,2017-05-10,,,612-747-1582,choy.leow@r3cconsulting.com
-MN-EMP-00012,Chris Chaffee,,,,,,,,Chris,Chaffee,TRUE,2022-10-03,,(952) 451-8290,,
-MN-EMP-00013,Christopher Utt,,,,,,,,Christopher,Utt,TRUE,,,,7016301048,
-MN-EMP-00014,Chuck Knight,,,,,,,,Chuck,Knight,TRUE,2022-06-20,,612-845-4570,,chuckk@sra-mn.com
-MN-EMP-00015,Cindy Kruse,,,,,,,,Cindy,Kruse,TRUE,2017-01-03,,651-343-2894,,cindyk@sra-mn.com
-MN-EMP-00016,Dan Noyes,,,,,,,,Dan,Noyes,TRUE,2016-08-09,,,612-750-9538,danraynoyes@gmail.com
-MN-EMP-00017,Denton Mack,,,,,,,,Denton,Mack,TRUE,2017-05-23,,(651) 245-7310,651-245-7310,
-MN-EMP-00018,Devin Krugerud,,,,,,,,Devin,Krugerud,TRUE,2016-06-29,,(612) 597-1170,612-597-1170,
-MN-EMP-00019,Drew Carroll,,,,,,,,Drew,Carroll,TRUE,2021-01-07,,,612-916-2064,dtc0839@gmail.com
-MN-EMP-00020,Edward Markfort,,,,,,,,Edward,Markfort,TRUE,2011-08-10,,,612-669-2044,emarkfort@gmail.com
-MN-EMP-00021,Emily Nelsen,,,,,,,,Emily,Nelsen,TRUE,1989-03-27,,(320) 220-1789,,emily3nelsen@gmail.com
-MN-EMP-00022,Eric Reiners,,,,,,,,Eric,Reiners,TRUE,2008-12-15,,(612) 209-3749,612-209-3749,
-MN-EMP-00023,Fatima Paratusic,,,,,,,,Fatima,Paratusic,TRUE,2022-09-12,,763-843-1973,,fatimap@sra-mn.com
-MN-EMP-00024,Fuad Samatar,,,,,,,,Fuad,Samatar,TRUE,2021-01-18,,,612-735-9793,fuad910@gmail.com
-MN-EMP-00025,Garrett Burnham,,,,,,,,Garrett,Burnham,TRUE,2017-06-14,,,608-633-2694,burnh039@umn.edu
-MN-EMP-00026,Gregg Mellang,,,,,,,,Gregg,Mellang,TRUE,2022-07-11,,,612-803-0414,greggm@sra-mn.com
-MN-EMP-00027,Gregory S Kinney,,,,,,,,Gregory,Kinney,TRUE,2010-05-25,,651-458-3440,612-801-3459,gsk.architect@gmail.com
-MN-EMP-00028,Heidi Lambertz,,,,,,,,Heidi,Lambertz,TRUE,2008-12-22,,,612-834-9657,
-MN-EMP-00029,Irina Chertkova,,,,,,,,Irina,Chertkova,TRUE,2022-10-31,,(612) 719-6515,,irina.chertkova@yahoo.com
-MN-EMP-00030,Jacob Bonde,,,,,,,,Jacob,Bonde,TRUE,2021-06-30,,,763-269-9319,bonde052@umn.edu
-MN-EMP-00031,Jacqui Plasha,,,,,,,,Jacqui,Plasha,TRUE,2022-11-07,,(651) 442-2359,,jacquiplasha@comcast.net
-MN-EMP-00032,James Warren,,,,,,,,James,Warren,TRUE,2021-03-30,,,612-812-6259,jwarren.creative@gmail.com
-MN-EMP-00033,Jeff Gears,,,,,,,,Jeff,Gears,TRUE,2022-08-15,,(952) 270-2482,952-270-2482,jeffg@sra-mn.com
-MN-EMP-00034,Jennifer M Paist,,,,,,,,Jennifer,Paist,TRUE,2015-10-28,,651-690-5950,651-233-8220,jpaist@yahoo.com
-MN-EMP-00035,Jocelyne Dougan,,,,,,,,Jocelyne,Wicka,TRUE,2022-05-23,,7155053366,7155053366,jocelyned@sra-mn.com
-MN-EMP-00036,Jodi Zoerb,,,,,,,,Jodi,Zoerb,TRUE,2012-08-23,,952-412-0670,,
-MN-EMP-00037,Jonah Ritter,,,,,,,,Jonah,Ritter,TRUE,2018-08-27,,,612-965-3433,jonahr@sra-mn.com
-MN-EMP-00038,Katelyn Lamb,,,,,,,,Katelyn,Lamb,TRUE,2024-06-03,,,7157819902,katelynclamb@outlook.com
-MN-EMP-00039,Katherine Polson-McCannon,,,,,,,,Katherine,Polson-McCannon,TRUE,2024-06-18,,,,kmsperides@gmail.com
-MN-EMP-00040,Kelli Barclay,,,,,,,,Kelli,Barclay,TRUE,2022-01-30,,,,
-MN-EMP-00041,Kory Kerber,,,,,,,,Kory,Kerber,TRUE,2022-02-28,,612-720-4839,,kory.kerber@gmail.com
-MN-EMP-00042,Kristin Sprague,,,,,,,,Kristin,Sprague,TRUE,2018-02-13,,,952-221-7469,
-MN-EMP-00043,Laura Cragoe,,,,,,,,Laura,Cragoe,TRUE,2023-01-03,,(507) 261-9612,,laura.cragoe@gmail.com
-MN-EMP-00044,Lauren Johnson,,,,,,,,Lauren,Johnson,TRUE,2022-11-02,,,(208) 850-8190,johnsonlauren1479@gmail.com
-MN-EMP-00045,Lauren Zoellner,,,,,,,,Lauren,Zoellner,TRUE,2021-05-19,,,507-205-2733,laurenzoellner@gmail.com
-MN-EMP-00046,Leslie Maus,,,,,,,,Leslie,Maus,TRUE,2022-09-19,,(612) 202-4294,lesliemaus831@gm,lesliem@sra-mn.com
-MN-EMP-00047,Logan Stein,,,,,,,,Logan,Stein,TRUE,2021-04-06,,,612-443-0412,stei1338@umn.edu
-MN-EMP-00048,Luke Schneider,,,,,,,,Luke,Schneider,TRUE,,,,,lschneider@fusion-ae.com
-MN-EMP-00049,Margaret M Sperides,,,,,,,,Margaret,Sperides,TRUE,2008-12-15,,952-829-8855,612-709-2948,
-MN-EMP-00050,Matthew A Rymer,,,,,,,,Matthew,Rymer,TRUE,2012-09-19,,217-621-9266,,matt.rymer@gmail.com
-MN-EMP-00051,Megan Hanson,,,,,,,,Megan,Hanson,TRUE,2021-10-26,,(612) 708-9097,612-708-9097,mrsmeghanson@gmail.com
-MN-EMP-00052,Morgan Clark,,,,,,,,Morgan,Clark,TRUE,2020-08-31,,,952-917-9730,
-MN-EMP-00053,Nathan Rauner,,,,,,,,Nathan,Rauner,TRUE,2020-12-07,,,763-360-9071,
-MN-EMP-00054,Nazanin Nafeipoor,,,,,,,,Nazanin,Nafeipoor,TRUE,,,,,
-MN-EMP-00055,Nicholas Sperides,,,,,,,,Nicholas,Sperides,TRUE,2008-12-15,,952-829-8855,612-618-8573,
-MN-EMP-00056,Nick Getchman,,,,,,,,Nick,Getchman,TRUE,,,,,
-MN-EMP-00057,Nicole Semmler-1,,,,,,,,Nicole,Semmler,TRUE,2011-08-03,,217-898-2338,,
-MN-EMP-00058,Rebecca Allen,,,,,,,,Rebecca,Allen,TRUE,2014-07-08,,,651-491-1947,rebecca.rose.allen@gmail.com
-MN-EMP-00059,Rob Carson,,,,,,,,Rob,Carson,TRUE,2021-09-22,,,7636149660,
-MN-EMP-00060,Robert Liebelt,,,,,,,,Robert,Liebelt,TRUE,2022-03-03,,,763-350-8628,robertl@sra-mn.com
-MN-EMP-00061,Soo young Seo,,,,,,,,Soo young,Seo,TRUE,2022-05-02,,(763) 742-8787,(763) 742-8787,sooyoungs@sra-mn.com
-MN-EMP-00062,Theresa Decesare,,,,,,,,Theresa,Decesare,TRUE,2023-05-16,,(952) 737-8431,(952) 737-8431,decesaretheresa@gmail.com
-MN-EMP-00063,Timothy Vaughn,,,,,,,,Timothy,Vaughn,TRUE,2014-07-17,2019-09-20,,612-396-6917,tgvku91@gmail.com
-MN-EMP-00064,Travis Wiegand,,,,,,,,Travis,Wiegand,TRUE,2024-02-26,,(612) 819-6853,(612) 819-6853,travis.wiegand@me.com
-MN-EMP-00065,Trevor Isaacson,,,,,,,,Trevor,Isaacson,TRUE,2016-02-29,,,,
+EmployeeCode,_source_id,EmployeeName,PayRate,salaryperpayperiod,PayRateStartDate,PayRateEndDate,IsHourly,OTRate,OTMU,_FirstName,_LastName,_IsActive,_HireDate,_ReleaseDate,_WorkPhone,_Mobile,_Email
+MN-EMP-00001,2180,Alex Ormsby,,,,,,,,Alex,Ormsby,TRUE,2021-09-20,,(612) 965-2387,612-965-2387,alex.ormsby1@gmail.com
+MN-EMP-00002,2158,Andrew Altstatt,,,,,,,,Andrew,Altstatt,TRUE,2016-04-06,,(651) 324-2778,651-324-2778,
+MN-EMP-00003,2191,Andrew Tovsen,,,,,,,,Andrew,Tovsen,TRUE,2022-05-23,,612-910-3416,,andrew.tovsen2@comcast.net
+MN-EMP-00004,2172,Ashley Kesler,,,,,,,,Ashley,Kesler,TRUE,2020-11-16,,,952-693-3050,ash.can52@gmail.com
+MN-EMP-00005,2165,Bailey Weed,,,,,,,,Bailey,Weed,TRUE,2017-07-31,,(612) 483-9089,612-483-9089,Baileyw@sra-mn.com
+MN-EMP-00006,2161,Ben Castiglione,,,,,,,,Ben,Castiglione,TRUE,2017-04-03,,586-344-1199,,
+MN-EMP-00007,2145,Benjamin Youngstrom,,,,,,,,Benjamin,Youngstrom,TRUE,2012-03-28,2017-04-14,612-281-8535,,
+MN-EMP-00008,2183,Blaze Capper,,,,,,,,Blaze,Capper,TRUE,2021-11-22,,(913) 636-0772,913-636-0772,blazec@sra-mn.com
+MN-EMP-00009,2186,Brandon Bryant,,,,,,,,Brandon,Bryant,TRUE,2021-12-20,,,414-313-2510,bryan397@umn.edu
+MN-EMP-00010,2184,Chelsea Miller,,,,,,,,Chelsea,Miller,TRUE,2021-09-27,,651-214-2401,,chelseam@sra-mn.com
+MN-EMP-00011,2162,Choy Leow,,,,,,,,Choy,Leow,TRUE,2017-05-10,,,612-747-1582,choy.leow@r3cconsulting.com
+MN-EMP-00012,2671,Chris Chaffee,,,,,,,,Chris,Chaffee,TRUE,2022-10-03,,(952) 451-8290,,
+MN-EMP-00013,400000011,Christopher Utt,,,,,,,,Christopher,Utt,TRUE,,,,7016301048,
+MN-EMP-00014,2193,Chuck Knight,,,,,,,,Chuck,Knight,TRUE,2022-06-20,,612-845-4570,,chuckk@sra-mn.com
+MN-EMP-00015,2157,Cindy Kruse,,,,,,,,Cindy,Kruse,TRUE,2017-01-03,,651-343-2894,,cindyk@sra-mn.com
+MN-EMP-00016,2160,Dan Noyes,,,,,,,,Dan,Noyes,TRUE,2016-08-09,,,612-750-9538,danraynoyes@gmail.com
+MN-EMP-00017,2163,Denton Mack,,,,,,,,Denton,Mack,TRUE,2017-05-23,,(651) 245-7310,651-245-7310,
+MN-EMP-00018,2159,Devin Krugerud,,,,,,,,Devin,Krugerud,TRUE,2016-06-29,,(612) 597-1170,612-597-1170,
+MN-EMP-00019,2174,Drew Carroll,,,,,,,,Drew,Carroll,TRUE,2021-01-07,,,612-916-2064,dtc0839@gmail.com
+MN-EMP-00020,2144,Edward Markfort,,,,,,,,Edward,Markfort,TRUE,2011-08-10,,,612-669-2044,emarkfort@gmail.com
+MN-EMP-00021,3070,Emily Nelsen,,,,,,,,Emily,Nelsen,TRUE,1989-03-27,,(320) 220-1789,,emily3nelsen@gmail.com
+MN-EMP-00022,2128,Eric Reiners,,,,,,,,Eric,Reiners,TRUE,2008-12-15,,(612) 209-3749,612-209-3749,
+MN-EMP-00023,2196,Fatima Paratusic,,,,,,,,Fatima,Paratusic,TRUE,2022-09-12,,763-843-1973,,fatimap@sra-mn.com
+MN-EMP-00024,2175,Fuad Samatar,,,,,,,,Fuad,Samatar,TRUE,2021-01-18,,,612-735-9793,fuad910@gmail.com
+MN-EMP-00025,2164,Garrett Burnham,,,,,,,,Garrett,Burnham,TRUE,2017-06-14,,,608-633-2694,burnh039@umn.edu
+MN-EMP-00026,2194,Gregg Mellang,,,,,,,,Gregg,Mellang,TRUE,2022-07-11,,,612-803-0414,greggm@sra-mn.com
+MN-EMP-00027,2138,Gregory S Kinney,,,,,,,,Gregory,Kinney,TRUE,2010-05-25,,651-458-3440,612-801-3459,gsk.architect@gmail.com
+MN-EMP-00028,2131,Heidi Lambertz,,,,,,,,Heidi,Lambertz,TRUE,2008-12-22,,,612-834-9657,
+MN-EMP-00029,2668,Irina Chertkova,,,,,,,,Irina,Chertkova,TRUE,2022-10-31,,(612) 719-6515,,irina.chertkova@yahoo.com
+MN-EMP-00030,2179,Jacob Bonde,,,,,,,,Jacob,Bonde,TRUE,2021-06-30,,,763-269-9319,bonde052@umn.edu
+MN-EMP-00031,2669,Jacqui Plasha,,,,,,,,Jacqui,Plasha,TRUE,2022-11-07,,(651) 442-2359,,jacquiplasha@comcast.net
+MN-EMP-00032,2176,James Warren,,,,,,,,James,Warren,TRUE,2021-03-30,,,612-812-6259,jwarren.creative@gmail.com
+MN-EMP-00033,2195,Jeff Gears,,,,,,,,Jeff,Gears,TRUE,2022-08-15,,(952) 270-2482,952-270-2482,jeffg@sra-mn.com
+MN-EMP-00034,2156,Jennifer M Paist,,,,,,,,Jennifer,Paist,TRUE,2015-10-28,,651-690-5950,651-233-8220,jpaist@yahoo.com
+MN-EMP-00035,2192,Jocelyne Dougan,,,,,,,,Jocelyne,Wicka,TRUE,2022-05-23,,7155053366,7155053366,jocelyned@sra-mn.com
+MN-EMP-00036,2150,Jodi Zoerb,,,,,,,,Jodi,Zoerb,TRUE,2012-08-23,,952-412-0670,,
+MN-EMP-00037,2168,Jonah Ritter,,,,,,,,Jonah,Ritter,TRUE,2018-08-27,,,612-965-3433,jonahr@sra-mn.com
+MN-EMP-00038,3125,Katelyn Lamb,,,,,,,,Katelyn,Lamb,TRUE,2024-06-03,,,7157819902,katelynclamb@outlook.com
+MN-EMP-00039,3137,Katherine Polson-McCannon,,,,,,,,Katherine,Polson-McCannon,TRUE,2024-06-18,,,,kmsperides@gmail.com
+MN-EMP-00040,2187,Kelli Barclay,,,,,,,,Kelli,Barclay,TRUE,2022-01-30,,,,
+MN-EMP-00041,2188,Kory Kerber,,,,,,,,Kory,Kerber,TRUE,2022-02-28,,612-720-4839,,kory.kerber@gmail.com
+MN-EMP-00042,2166,Kristin Sprague,,,,,,,,Kristin,Sprague,TRUE,2018-02-13,,,952-221-7469,
+MN-EMP-00043,2758,Laura Cragoe,,,,,,,,Laura,Cragoe,TRUE,2023-01-03,,(507) 261-9612,,laura.cragoe@gmail.com
+MN-EMP-00044,2667,Lauren Johnson,,,,,,,,Lauren,Johnson,TRUE,2022-11-02,,,(208) 850-8190,johnsonlauren1479@gmail.com
+MN-EMP-00045,2178,Lauren Zoellner,,,,,,,,Lauren,Zoellner,TRUE,2021-05-19,,,507-205-2733,laurenzoellner@gmail.com
+MN-EMP-00046,2641,Leslie Maus,,,,,,,,Leslie,Maus,TRUE,2022-09-19,,(612) 202-4294,lesliemaus831@gm,lesliem@sra-mn.com
+MN-EMP-00047,2177,Logan Stein,,,,,,,,Logan,Stein,TRUE,2021-04-06,,,612-443-0412,stei1338@umn.edu
+MN-EMP-00048,400000001,Luke Schneider,,,,,,,,Luke,Schneider,TRUE,,,,,lschneider@fusion-ae.com
+MN-EMP-00049,2127,Margaret M Sperides,,,,,,,,Margaret,Sperides,TRUE,2008-12-15,,952-829-8855,612-709-2948,
+MN-EMP-00050,2151,Matthew A Rymer,,,,,,,,Matthew,Rymer,TRUE,2012-09-19,,217-621-9266,,matt.rymer@gmail.com
+MN-EMP-00051,2182,Megan Hanson,,,,,,,,Megan,Hanson,TRUE,2021-10-26,,(612) 708-9097,612-708-9097,mrsmeghanson@gmail.com
+MN-EMP-00052,2171,Morgan Clark,,,,,,,,Morgan,Clark,TRUE,2020-08-31,,,952-917-9730,
+MN-EMP-00053,2173,Nathan Rauner,,,,,,,,Nathan,Rauner,TRUE,2020-12-07,,,763-360-9071,
+MN-EMP-00054,3061,Nazanin Nafeipoor,,,,,,,,Nazanin,Nafeipoor,TRUE,,,,,
+MN-EMP-00055,2126,Nicholas Sperides,,,,,,,,Nicholas,Sperides,TRUE,2008-12-15,,952-829-8855,612-618-8573,
+MN-EMP-00056,3422,Nick Getchman,,,,,,,,Nick,Getchman,TRUE,,,,,
+MN-EMP-00057,2143,Nicole Semmler-1,,,,,,,,Nicole,Semmler,TRUE,2011-08-03,,217-898-2338,,
+MN-EMP-00058,2153,Rebecca Allen,,,,,,,,Rebecca,Allen,TRUE,2014-07-08,,,651-491-1947,rebecca.rose.allen@gmail.com
+MN-EMP-00059,2181,Rob Carson,,,,,,,,Rob,Carson,TRUE,2021-09-22,,,7636149660,
+MN-EMP-00060,2189,Robert Liebelt,,,,,,,,Robert,Liebelt,TRUE,2022-03-03,,,763-350-8628,robertl@sra-mn.com
+MN-EMP-00061,2190,Soo young Seo,,,,,,,,Soo young,Seo,TRUE,2022-05-02,,(763) 742-8787,(763) 742-8787,sooyoungs@sra-mn.com
+MN-EMP-00062,2833,Theresa Decesare,,,,,,,,Theresa,Decesare,TRUE,2023-05-16,,(952) 737-8431,(952) 737-8431,decesaretheresa@gmail.com
+MN-EMP-00063,2154,Timothy Vaughn,,,,,,,,Timothy,Vaughn,TRUE,2014-07-17,2019-09-20,,612-396-6917,tgvku91@gmail.com
+MN-EMP-00064,3060,Travis Wiegand,,,,,,,,Travis,Wiegand,TRUE,2024-02-26,,(612) 819-6853,(612) 819-6853,travis.wiegand@me.com
+MN-EMP-00065,2155,Trevor Isaacson,,,,,,,,Trevor,Isaacson,TRUE,2016-02-29,,,,
