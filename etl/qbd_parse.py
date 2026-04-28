@@ -304,7 +304,7 @@ def parse_customers(path: Path, prefix: str, office: str, output_dir: Path):
     for r in parent_rows:
         name = r['Customer'].strip()
 
-        company = r.get('Company', '').strip()
+        company = r.get('Company', '').strip() or r.get('Bill to 1', '').strip()
         if not company:
             company = re.sub(r'^\d+[\.\d]*\s*', '', name).strip() or name
 
@@ -312,11 +312,12 @@ def parse_customers(path: Path, prefix: str, office: str, output_dir: Path):
         firm_code = f"{prefix}CLI-{cli_seq:05d}"
         name_to_code[name] = firm_code
 
-        # Bill to 1 = billing name, Bill to 2 = street, Bill to 3 = suite
-        # City and State are now separate columns; Zip falls back to Bill to 5
-        bill_street1 = r.get('Bill to 1', '').strip()
-        bill_street2 = r.get('Bill to 2', '').strip()
-        bill_street3 = r.get('Bill to 3', '').strip()
+        # Bill to 1 = company name, Bill to 2 = attn, Bill to 3 = street
+        # Bill to 4 = suite/floor OR city-state-zip (skip if it contains a zip code)
+        bill_to_4    = r.get('Bill to 4', '').strip()
+        bill_street1 = r.get('Bill to 3', '').strip()
+        bill_street2 = bill_to_4 if bill_to_4 and not re.search(r'\b\d{5}\b', bill_to_4) else ''
+        bill_street3 = ''
         bill_city    = r.get('City', '').strip()
         bill_state   = r.get('State', '').strip()
         bill_zip     = r.get('Zip', r.get('Bill to 5', '')).strip()
