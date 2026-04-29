@@ -2,3 +2,5 @@ python-quickbooks>=0.9.4
 python-dotenv>=1.0.0
 openpyxl>=3.1.2
 flask>=3.0.0
+supabase>=2.0.0
+streamlit>=1.35.0
