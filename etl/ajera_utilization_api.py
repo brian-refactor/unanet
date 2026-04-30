@@ -78,6 +78,22 @@ def _trail_dates():
     return date(y, m, 1), cur, today
 
 
+def _last_quarter_dates():
+    """Last fully-completed calendar quarter: (lq_start, lq_end, label e.g. 'Q1 2026')."""
+    today   = date.today()
+    cur_q   = (today.month - 1) // 3 + 1   # 1-4
+    lq      = cur_q - 1 if cur_q > 1 else 4
+    lq_year = today.year if cur_q > 1 else today.year - 1
+    lq_start_month = (lq - 1) * 3 + 1
+    lq_end_month   = lq * 3
+    # last day of end month
+    import calendar
+    lq_end_day = calendar.monthrange(lq_year, lq_end_month)[1]
+    return (date(lq_year, lq_start_month, 1),
+            date(lq_year, lq_end_month, lq_end_day),
+            f'Q{lq} {lq_year}')
+
+
 def _parse_date(s):
     try:
         return datetime.fromisoformat(str(s)[:10]).date()
@@ -171,7 +187,7 @@ def _empty_hours():
             **{k: 0.0 for k in CAT_KEYS}}
 
 
-def parse_details(details, cur_month_start):
+def parse_details(details, cur_month_start, lq_start, lq_end):
     """Aggregate detail records into per-employee dicts matching old report format."""
     emps = {}
     unknown_overhead = defaultdict(float)  # label → total hours (unmapped categories)
@@ -184,6 +200,7 @@ def parse_details(details, cur_month_start):
         ts_dt  = _parse_date(ts.get('TimesheetDate', ''))
         in_cur = (ts_dt and ts_dt.year == cur_month_start.year
                   and ts_dt.month == cur_month_start.month)
+        in_lq  = (ts_dt and lq_start <= ts_dt <= lq_end)
 
         if ek not in emps:
             emps[ek] = {
@@ -193,6 +210,7 @@ def parse_details(details, cur_month_start):
                 'hire_date':       '',
                 'target_pct':      target,
                 'ytd_hours':       _empty_hours(),
+                'lq_hours':        _empty_hours(),
                 'current_hours':   _empty_hours(),
                 'ytd_amounts':     _empty_hours(),
                 'current_amounts': _empty_hours(),
@@ -208,6 +226,9 @@ def parse_details(details, cur_month_start):
                 emp['type'] = entry['Employee Type']
             emp['ytd_hours']['billable'] += h
             emp['ytd_hours']['total']    += h
+            if in_lq:
+                emp['lq_hours']['billable'] += h
+                emp['lq_hours']['total']    += h
             if in_cur:
                 emp['current_hours']['billable'] += h
                 emp['current_hours']['total']    += h
@@ -219,11 +240,15 @@ def parse_details(details, cur_month_start):
                 continue
             label = str(entry.get('Timesheet Overhead Group Detail', '')).lower().strip()
             cat   = OVERHEAD_CAT.get(label, 'other')
-            if cat == 'other' and label:
+            if cat == 'other' and label and label not in OVERHEAD_CAT:
                 unknown_overhead[label] += h
-            emp['ytd_hours'][cat]      += h
+            emp['ytd_hours'][cat]        += h
             emp['ytd_hours']['indirect'] += h
             emp['ytd_hours']['total']    += h
+            if in_lq:
+                emp['lq_hours'][cat]        += h
+                emp['lq_hours']['indirect'] += h
+                emp['lq_hours']['total']    += h
             if in_cur:
                 emp['current_hours'][cat]        += h
                 emp['current_hours']['indirect'] += h
@@ -346,7 +371,7 @@ def _widths(ws, d):
 # Excel report
 # ---------------------------------------------------------------------------
 
-def write_excel(employees, period_str, period_label, out_path,
+def write_excel(employees, period_str, period_label, lq_label, out_path,
                 pay_lookup, pay_fl, emp_rates, emp_fl, pos_rates):
 
     ytd_frac = 1.0   # trailing 12 months = full year window
@@ -357,9 +382,11 @@ def write_excel(employees, period_str, period_label, out_path,
         if e['ytd_hours']['total'] <= 0:
             continue
         ytd    = e['ytd_hours']
+        lq     = e['lq_hours']
         cur    = e['current_hours']
         target = e['target_pct'] or DEFAULT_TARGET
         ytd_pct = ytd['billable'] / ytd['total'] * 100 if ytd['total'] else 0.0
+        lq_pct  = lq['billable']  / lq['total']  * 100 if lq['total']  else 0.0
         cur_pct = cur['billable'] / cur['total'] * 100 if cur['total'] else 0.0
         vs_tgt  = ytd_pct - target
 
@@ -381,7 +408,8 @@ def write_excel(employees, period_str, period_label, out_path,
         rows.append({
             'name': e['name'], 'type': e['type'], 'status': e['status'],
             'target': target, 'ytd_h': ytd['total'], 'bill_h': ytd['billable'],
-            'bill_d': ytd_bil, 'ytd_pct': ytd_pct, 'cur_pct': cur_pct,
+            'bill_d': ytd_bil, 'ytd_pct': ytd_pct, 'lq_pct': lq_pct,
+            'lq_h': lq['billable'], 'lq_total_h': lq['total'], 'cur_pct': cur_pct,
             'vs_tgt': vs_tgt, 'annual': annual, 'hrly': hrly,
             'ytd_sal': ytd_sal, 'recovery': recovery, 'mult': mult,
             'bill_rate': br, 'ytd_rev': ytd_rev, 'margin_d': margin, 'margin_pct': margin_pct,
@@ -510,8 +538,9 @@ def write_excel(employees, period_str, period_label, out_path,
     _title(ws2, 1, 9, f'Employee Utilization  —  Trailing 12 Months  {period_str}')
 
     hdrs2 = ['Employee','Type','Status',
-             f'{period_label}\nBill %','Trailing 12m\nBill %','Target\n%',
-             'Gap vs\nTarget','Bill h\n(12m)','Total h\n(12m)']
+             f'{period_label}\nBill %', f'{lq_label}\nBill %', f'{lq_label}\nBill h',
+             'Trailing 12m\nBill %','Target\n%','Gap vs\nTarget',
+             'Bill h\n(12m)','Total h\n(12m)']
     ws2.row_dimensions[2].height = 28
     for ci, h in enumerate(hdrs2, 1): _hdr(ws2, 2, ci, h)
 
@@ -519,21 +548,23 @@ def write_excel(employees, period_str, period_label, out_path,
         ws2.row_dimensions[ri].height = 16
         fill = _GREEN if r['vs_tgt'] >= 0 else (_AMBER if r['vs_tgt'] >= -10 else _RED)
         for ci, (v, fmt, ha) in enumerate([
-            (r['name'],    None,               'left'),
-            (r['type'],    None,               'left'),
-            (r['status'],  None,               'center'),
-            (r['cur_pct'], '0.0"%"',           'center'),
-            (r['ytd_pct'], '0.0"%"',           'center'),
-            (r['target'],  '0"%"',             'center'),
-            (r['vs_tgt'],  '+0.0"%";-0.0"%"',  'center'),
-            (r['bill_h'],  '#,##0.0',          'right'),
-            (r['ytd_h'],   '#,##0.0',          'right'),
+            (r['name'],        None,               'left'),
+            (r['type'],        None,               'left'),
+            (r['status'],      None,               'center'),
+            (r['cur_pct'],     '0.0"%"',           'center'),
+            (r['lq_pct'],      '0.0"%"',           'center'),
+            (r['lq_h'],        '#,##0.0',          'right'),
+            (r['ytd_pct'],     '0.0"%"',           'center'),
+            (r['target'],      '0"%"',             'center'),
+            (r['vs_tgt'],      '+0.0"%";-0.0"%"',  'center'),
+            (r['bill_h'],      '#,##0.0',          'right'),
+            (r['ytd_h'],       '#,##0.0',          'right'),
         ], start=1):
             _xcell(ws2, ri, ci, v, fill=fill, fmt=fmt, halign=ha)
 
-    _widths(ws2, {1:26, 2:22, 3:10, 4:12, 5:15, 6:10, 7:12, 8:13, 9:13})
+    _widths(ws2, {1:26, 2:22, 3:10, 4:12, 5:12, 6:12, 7:15, 8:10, 9:12, 10:13, 11:13})
     leg = len(rows) + 4
-    ws2.merge_cells(f'A{leg}:I{leg}')
+    ws2.merge_cells(f'A{leg}:K{leg}')
     c = ws2.cell(row=leg, column=1,
                  value='Green = at/above target   |   Amber = within 10 pts below   |   Red = >10 pts below')
     c.font = Font(italic=True, color='595959', size=9, name='Calibri')
@@ -562,7 +593,7 @@ def write_excel(employees, period_str, period_label, out_path,
     if len(bar.series) > 1:
         bar.series[1].graphicalProperties.solidFill = 'BFBFBF'
         bar.series[1].graphicalProperties.line.solidFill = 'BFBFBF'
-    ws2.add_chart(bar, 'K3')
+    ws2.add_chart(bar, 'M3')
 
     # ── Tab 3: Salary & Cost Recovery ────────────────────────────────────────
     ws3 = wb.create_sheet('Salary & Cost Recovery')
@@ -783,19 +814,23 @@ def write_excel(employees, period_str, period_label, out_path,
 # Console report
 # ---------------------------------------------------------------------------
 
-def print_report(employees, period_str, pay_lookup, pay_fl):
+def print_report(employees, period_str, lq_label, pay_lookup, pay_fl):
     with_h = [e for e in employees if e['ytd_hours']['total'] > 0]
-    sep    = '=' * 72
+    sep    = '=' * 80
 
-    tot_h   = sum(e['ytd_hours']['total']    for e in with_h)
-    tot_b   = sum(e['ytd_hours']['billable'] for e in with_h)
-    firm_pct = tot_b / tot_h * 100 if tot_h else 0
+    tot_h    = sum(e['ytd_hours']['total']    for e in with_h)
+    tot_b    = sum(e['ytd_hours']['billable'] for e in with_h)
+    lq_tot_b = sum(e['lq_hours']['billable']  for e in with_h)
+    lq_tot_h = sum(e['lq_hours']['total']     for e in with_h)
+    firm_pct = tot_b    / tot_h    * 100 if tot_h    else 0
+    lq_pct   = lq_tot_b / lq_tot_h * 100 if lq_tot_h else 0
 
     print(f'\n{sep}')
-    print('REZTARK DESIGN STUDIO  —  EMPLOYEE UTILIZATION  (TRAILING 12 MONTHS)')
-    print(f'Period : {period_str}')
+    print('REZTARK DESIGN STUDIO  —  EMPLOYEE UTILIZATION')
+    print(f'Trailing 12m : {period_str}   |   Last full quarter : {lq_label}')
     print(f'{sep}')
-    print(f'\n  Total hours: {tot_h:,.1f}h   Billable: {tot_b:,.1f}h   Firm billable %: {firm_pct:.1f}%\n')
+    print(f'\n  Trailing 12m — Total: {tot_h:,.1f}h   Billable: {tot_b:,.1f}h   Firm: {firm_pct:.1f}%')
+    print(f'  {lq_label:<12} — Total: {lq_tot_h:,.1f}h   Billable: {lq_tot_b:,.1f}h   Firm: {lq_pct:.1f}%\n')
 
     targeted = sorted(
         [e for e in with_h if e['target_pct'] > 0],
@@ -803,25 +838,29 @@ def print_report(employees, period_str, pay_lookup, pay_fl):
                       if e['ytd_hours']['total'] else -999,
     )
     print(f'UTILIZATION vs TARGET  ({len(targeted)} employees)')
-    print(f'  {"Employee":<28}  {"Type":<22}  {"12m%":>5}  {"Tgt":>5}  {"Gap":>6}  {"Hours":>6}')
-    print(f'  {"-"*28}  {"-"*22}  {"-"*5}  {"-"*5}  {"-"*6}  {"-"*6}')
+    print(f'  {"Employee":<28}  {"Type":<22}  {"12m%":>5}  {lq_label:>7}  {"Tgt":>5}  {"Gap":>6}  {"12m h":>6}')
+    print(f'  {"-"*28}  {"-"*22}  {"-"*5}  {"-"*7}  {"-"*5}  {"-"*6}  {"-"*6}')
     for e in targeted:
-        ytd = e['ytd_hours']
-        pct = ytd['billable'] / ytd['total'] * 100 if ytd['total'] else 0
-        gap = pct - e['target_pct']
+        ytd  = e['ytd_hours']
+        lq   = e['lq_hours']
+        pct  = ytd['billable'] / ytd['total'] * 100 if ytd['total'] else 0
+        lqp  = lq['billable']  / lq['total']  * 100 if lq['total']  else 0
+        gap  = pct - e['target_pct']
         flag = ' !' if gap < -10 else (' ~' if gap < 0 else '  ')
-        print(f'{flag} {e["name"]:<28}  {e["type"]:<22}  {pct:>4.1f}%  '
+        print(f'{flag} {e["name"]:<28}  {e["type"]:<22}  {pct:>4.1f}%  {lqp:>6.1f}%  '
               f'{e["target_pct"]:>4.0f}%  {gap:>+5.1f}%  {ytd["total"]:>5.1f}h')
 
     no_target = sorted([e for e in with_h if e['target_pct'] == 0],
                        key=lambda e: -e['ytd_hours']['total'])
     if no_target:
         print(f'\nNO TARGET SET  ({len(no_target)} employees)')
-        print(f'  {"Employee":<28}  {"Type":<22}  {"12m%":>6}  {"Hours":>6}')
+        print(f'  {"Employee":<28}  {"Type":<22}  {"12m%":>5}  {lq_label:>7}  {"12m h":>6}')
         for e in no_target:
             ytd = e['ytd_hours']
+            lq  = e['lq_hours']
             pct = ytd['billable'] / ytd['total'] * 100 if ytd['total'] else 0
-            print(f'   {e["name"]:<28}  {e["type"]:<22}  {pct:>5.1f}%  {ytd["total"]:>5.1f}h')
+            lqp = lq['billable']  / lq['total']  * 100 if lq['total']  else 0
+            print(f'   {e["name"]:<28}  {e["type"]:<22}  {pct:>4.1f}%  {lqp:>6.1f}%  {ytd["total"]:>5.1f}h')
     print()
 
 
@@ -836,11 +875,12 @@ def main():
     password = os.environ['AJERA_PASSWORD']
 
     trail_start, cur_month_start, today = _trail_dates()
+    lq_start, lq_end, lq_label         = _last_quarter_dates()
     period_label = cur_month_start.strftime('%b%Y')
     period_str   = (f'{trail_start.strftime("%b %Y")} – '
                     f'{today.strftime("%b %Y")}')
 
-    print(f'Period: {period_str}')
+    print(f'Period: {period_str}   |   Last quarter: {lq_label} ({lq_start} – {lq_end})')
 
     token = _connect(api_url, username, password)
     try:
@@ -848,7 +888,7 @@ def main():
     finally:
         _disconnect(api_url, token)
 
-    employees = parse_details(details, cur_month_start)
+    employees = parse_details(details, cur_month_start, lq_start, lq_end)
     active    = sum(1 for e in employees if e['status'] == 'Active')
     print(f'  {len(employees)} employees ({active} active)')
 
@@ -856,10 +896,10 @@ def main():
     emp_rates, emp_fl, pos_rates = load_billing_rates(BILLING_RATES_CSV)
 
     out_path = OUTPUT_DIR / f'cincinnati_utilization_api_{period_label}.xlsx'
-    write_excel(employees, period_str, period_label, out_path,
+    write_excel(employees, period_str, period_label, lq_label, out_path,
                 pay_lookup, pay_fl, emp_rates, emp_fl, pos_rates)
 
-    print_report(employees, period_str, pay_lookup, pay_fl)
+    print_report(employees, period_str, lq_label, pay_lookup, pay_fl)
 
 
 if __name__ == '__main__':
