@@ -79,7 +79,8 @@ VENDORS_COLS = [
     "main_contact_first_name", "main_contact_last_name",
     "main_contact_work_phone", "main_contact_cell_phone",
     "main_contact_work_email", "main_contact_home_email",
-    # Unanet template has MainContact_HomeEmail twice — second is duplicate, skip
+    "enable_eft", "company_id", "company_name", "aba_routing",
+    "account_number", "savings", "ef_type_sec",
 ]
 
 PAY_HISTORY_COLS = [
