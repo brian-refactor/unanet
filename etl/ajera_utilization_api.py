@@ -418,13 +418,13 @@ def write_excel(employees, period_str, period_label, lq_label, out_path,
         })
 
     n          = len(rows)
-    tot_h      = sum(r['ytd_h']   for r in rows)
-    tot_bill_h = sum(r['bill_h']  for r in rows)
-    tot_bill_d = sum(r['bill_d']  for r in rows)
-    tot_sal    = sum(r['ytd_sal'] for r in rows if r['ytd_sal'])
-    tot_rev    = sum(r['ytd_rev'] for r in rows if r['ytd_rev'])
+    tot_h      = sum(r['ytd_h']      for r in rows)
+    tot_bill_h = sum(r['bill_h']     for r in rows)
+    tot_bill_d = sum(r['bill_d']     for r in rows)
+    tot_sal    = sum(r['ytd_sal']    for r in rows if r['ytd_sal'])
+    tot_rev    = sum(r['ytd_rev']    for r in rows if r['ytd_rev'])
     tot_margin = tot_rev - tot_bill_d if tot_rev else 0.0
-    firm_pct   = tot_bill_h / tot_h   * 100 if tot_h   else 0.0
+    firm_pct   = tot_bill_h / tot_h  * 100 if tot_h   else 0.0
     firm_rec   = tot_bill_d / tot_sal * 100 if tot_sal else 0.0
     firm_mult  = tot_bill_d / tot_sal       if tot_sal else 0.0
     firm_marg_pct = tot_margin / tot_rev * 100 if tot_rev else 0.0
@@ -437,6 +437,17 @@ def write_excel(employees, period_str, period_label, lq_label, out_path,
     tot_ind_d  = sum(cat_d.values())
     has_billing = tot_rev > 0
 
+    # Last-quarter aggregates
+    lq_bill_h  = sum(r['lq_h']       for r in rows)
+    lq_total_h = sum(r['lq_total_h'] for r in rows)
+    lq_bill_d  = sum(r['lq_h'] * (r['hrly'] or 0) for r in rows)
+    lq_rev     = sum(r['lq_h'] * r['bill_rate'] for r in rows if r['bill_rate'])
+    lq_margin  = lq_rev - lq_bill_d if lq_rev else 0.0
+    lq_pct_f   = lq_bill_h / lq_total_h * 100 if lq_total_h else 0.0
+    lq_sal_est = tot_sal / 4  # one quarter of annual payroll
+    lq_rec     = lq_bill_d / lq_sal_est * 100 if lq_sal_est else 0.0
+    lq_marg_pct = lq_margin / lq_rev * 100 if lq_rev else 0.0
+
     wb = Workbook()
 
     # ── Tab 1: Executive Summary ─────────────────────────────────────────────
@@ -445,49 +456,84 @@ def write_excel(employees, period_str, period_label, lq_label, out_path,
     ws.sheet_view.showGridLines = False
     _title(ws, 1, 11, f'Reztark Design Studio  —  Employee Utilization  |  {period_str}', height=34)
 
-    ws.row_dimensions[2].height = 8
-    ws.row_dimensions[3].height = 20
-    ws.row_dimensions[4].height = 44
-    ws.row_dimensions[5].height = 16
+    def _kpi_row(ws, label_row, val_row, note_row, kpis):
+        ws.row_dimensions[label_row].height = 20
+        ws.row_dimensions[val_row].height   = 44
+        ws.row_dimensions[note_row].height  = 16
+        for c1, c2, lbl, val, note in kpis:
+            ws.merge_cells(start_row=label_row, start_column=c1, end_row=label_row, end_column=c2)
+            _xcell(ws, label_row, c1, lbl, fill=_BLUE, bold=True, color=_WHITE)
+            ws.merge_cells(start_row=val_row, start_column=c1, end_row=val_row, end_column=c2)
+            c = _xcell(ws, val_row, c1, val, fill=_LBLUE, bold=True, color=_DARK, size=20)
+            c.alignment = Alignment(horizontal='center', vertical='center')
+            ws.merge_cells(start_row=note_row, start_column=c1, end_row=note_row, end_column=c2)
+            _xcell(ws, note_row, c1, note, fill=_LBLUE, italic=True, color='595959', size=9)
 
+    # Section label row helper
+    def _section_lbl(ws, row, text):
+        ws.row_dimensions[row].height = 16
+        ws.merge_cells(start_row=row, start_column=2, end_row=row, end_column=11)
+        c = ws.cell(row=row, column=2, value=text)
+        c.font = Font(bold=True, size=10, color=_WHITE, name='Calibri')
+        c.fill = _xf(_DARK)
+        c.alignment = Alignment(horizontal='left', vertical='center')
+
+    # ── Trailing 12-month KPIs (rows 2–6) ────────────────────────────────
+    ws.row_dimensions[2].height = 6
+    _section_lbl(ws, 3, f'  Trailing 12 Months  —  {period_str}')
     if has_billing:
-        kpis = [
-            (2,3,  'Active Staff',      str(n),                       period_label),
-            (4,5,  'Firm Billable %',   f'{firm_pct:.1f}%',           f'Target {avg_tgt:.0f}%'),
-            (6,7,  'Trailing 12m Rev',  f'${tot_rev:,.0f}',           f'{tot_bill_h:,.0f} billable hrs'),
-            (8,9,  'Gross Margin',      f'${tot_margin:,.0f}',        f'{firm_marg_pct:.1f}% margin'),
-            (10,11,'Cost Recovery',     f'{firm_rec:.1f}%',           f'${tot_bill_d:,.0f} / ${tot_sal:,.0f}'),
+        t12_kpis = [
+            (2,3,  'Active Staff',     str(n),                      period_label),
+            (4,5,  'Firm Billable %',  f'{firm_pct:.1f}%',          f'Target {avg_tgt:.0f}%'),
+            (6,7,  'Billing Revenue',  f'${tot_rev:,.0f}',          f'{tot_bill_h:,.0f} billable hrs'),
+            (8,9,  'Gross Margin',     f'${tot_margin:,.0f}',       f'{firm_marg_pct:.1f}% margin'),
+            (10,11,'Cost Recovery',    f'{firm_rec:.1f}%',          f'${tot_bill_d:,.0f} / ${tot_sal:,.0f}'),
         ]
     else:
-        kpis = [
-            (2,3,  'Active Staff',      str(n),                       period_label),
-            (4,5,  'Firm Billable %',   f'{firm_pct:.1f}%',           f'Target {avg_tgt:.0f}%'),
-            (6,7,  'Billable Hours',    f'{tot_bill_h:,.0f} h',       f'of {tot_h:,.0f} total'),
-            (8,9,  'Billable $ (est)',  f'${tot_bill_d:,.0f}',        'from pay rates'),
-            (10,11,'Cost Recovery',     f'{firm_rec:.1f}%',           f'est. vs ${tot_sal:,.0f} payroll'),
+        t12_kpis = [
+            (2,3,  'Active Staff',     str(n),                      period_label),
+            (4,5,  'Firm Billable %',  f'{firm_pct:.1f}%',          f'Target {avg_tgt:.0f}%'),
+            (6,7,  'Billable Hours',   f'{tot_bill_h:,.0f} h',      f'of {tot_h:,.0f} total'),
+            (8,9,  'Billable $ (est)', f'${tot_bill_d:,.0f}',       'from pay rates'),
+            (10,11,'Cost Recovery',    f'{firm_rec:.1f}%',          f'est. vs ${tot_sal:,.0f} payroll'),
         ]
-    for c1, c2, lbl, val, note in kpis:
-        ws.merge_cells(start_row=3, start_column=c1, end_row=3, end_column=c2)
-        _xcell(ws, 3, c1, lbl, fill=_BLUE, bold=True, color=_WHITE)
-        ws.merge_cells(start_row=4, start_column=c1, end_row=4, end_column=c2)
-        c = _xcell(ws, 4, c1, val, fill=_LBLUE, bold=True, color=_DARK, size=20)
-        c.alignment = Alignment(horizontal='center', vertical='center')
-        ws.merge_cells(start_row=5, start_column=c1, end_row=5, end_column=c2)
-        _xcell(ws, 5, c1, note, fill=_LBLUE, italic=True, color='595959', size=9)
+    _kpi_row(ws, 4, 5, 6, t12_kpis)
+
+    # ── Last-quarter KPIs (rows 7–11) ────────────────────────────────────
+    ws.row_dimensions[7].height = 6
+    _section_lbl(ws, 8, f'  {lq_label}  —  Last Full Quarter')
+    if has_billing:
+        lq_kpis = [
+            (2,3,  'Active Staff',     str(n),                      lq_label),
+            (4,5,  'Firm Billable %',  f'{lq_pct_f:.1f}%',         f'T12: {firm_pct:.1f}%'),
+            (6,7,  'Billing Revenue',  f'${lq_rev:,.0f}',           f'{lq_bill_h:,.0f} billable hrs'),
+            (8,9,  'Gross Margin',     f'${lq_margin:,.0f}',        f'{lq_marg_pct:.1f}% margin'),
+            (10,11,'Cost Recovery',    f'{lq_rec:.1f}%',            f'vs ~${lq_sal_est:,.0f} qtr payroll'),
+        ]
+    else:
+        lq_kpis = [
+            (2,3,  'Active Staff',     str(n),                      lq_label),
+            (4,5,  'Firm Billable %',  f'{lq_pct_f:.1f}%',         f'T12: {firm_pct:.1f}%'),
+            (6,7,  'Billable Hours',   f'{lq_bill_h:,.0f} h',       f'of {lq_total_h:,.0f} total'),
+            (8,9,  'Billable $ (est)', f'${lq_bill_d:,.0f}',        'from pay rates'),
+            (10,11,'Cost Recovery',    f'{lq_rec:.1f}%',            f'vs ~${lq_sal_est:,.0f} qtr payroll'),
+        ]
+    _kpi_row(ws, 9, 10, 11, lq_kpis)
 
     _widths(ws, {i: 16 for i in range(1, 12)})
     ws.column_dimensions['A'].width = 2
 
-    ws.row_dimensions[6].height = 10
-    ws.row_dimensions[7].height = 18
-    ws.merge_cells('B7:K7')
-    c = ws.cell(row=7, column=2, value='Executive Summary')
+    # ── Narrative (rows 12–14) ────────────────────────────────────────────
+    ws.row_dimensions[12].height = 10
+    ws.row_dimensions[13].height = 18
+    ws.merge_cells('B13:K13')
+    c = ws.cell(row=13, column=2, value='Executive Summary')
     c.font = Font(bold=True, size=13, color=_DARK, name='Calibri')
 
-    n_below  = len(below_10)
-    top3     = sorted(above_tgt, key=lambda r: -r['vs_tgt'])[:3]
+    n_below   = len(below_10)
+    top3      = sorted(above_tgt, key=lambda r: -r['vs_tgt'])[:3]
     top_names = ', '.join(r['name'].split()[0] for r in top3) if top3 else 'N/A'
-    watch_s  = (
+    watch_s   = (
         'All employees are meeting or exceeding their billable target.' if n_below == 0
         else (f'One employee warrants attention: {below_10[0]["name"]} '
               f'({below_10[0]["ytd_pct"]:.1f}% vs {below_10[0]["target"]:.0f}% target).' if n_below == 1
@@ -502,30 +548,33 @@ def write_excel(employees, period_str, period_label, lq_label, out_path,
         + (f'Billing revenue is ${tot_rev:,.0f} with a gross margin of ${tot_margin:,.0f} ({firm_marg_pct:.1f}%). '
            if has_billing else f'Billable cost (estimated from pay rates) is ${tot_bill_d:,.0f}. ')
         + f'Cost recovery against estimated annual payroll of ${tot_sal:,.0f} is {firm_rec:.1f}%. '
+        + f'In {lq_label}, the firm achieved {lq_pct_f:.1f}% billable ({lq_bill_h:,.0f} of {lq_total_h:,.0f} hours). '
         + f'{watch_s} Top performers above target: {top_names}.'
     )
-    ws.row_dimensions[8].height = 72
-    ws.merge_cells('B8:K8')
-    c = ws.cell(row=8, column=2, value=narrative)
+    ws.row_dimensions[14].height = 80
+    ws.merge_cells('B14:K14')
+    c = ws.cell(row=14, column=2, value=narrative)
     c.font = Font(size=11, name='Calibri')
     c.alignment = Alignment(horizontal='left', vertical='top', wrap_text=True)
 
+    # ── Watch list (row 15+) ──────────────────────────────────────────────
     if below_10:
-        ws.row_dimensions[9].height  = 10
-        ws.row_dimensions[10].height = 16
-        ws.merge_cells('B10:K10')
-        c = ws.cell(row=10, column=2,
+        ws.row_dimensions[15].height = 10
+        ws.row_dimensions[16].height = 16
+        ws.merge_cells('B16:K16')
+        c = ws.cell(row=16, column=2,
                     value=f'Watch List  —  {n_below} employee(s) more than 10 points below target')
         c.font = Font(bold=True, size=12, color=_RFONT, name='Calibri')
-        ws.row_dimensions[11].height = 20
-        for ci, h in enumerate(['Employee','Type','Trailing 12m Bill%','Target %','Gap','Hours'], start=2):
-            _hdr(ws, 11, ci, h)
-        for ri, r in enumerate(below_10, start=12):
+        ws.row_dimensions[17].height = 20
+        for ci, h in enumerate(['Employee','Type','T12 Bill%',f'{lq_label} Bill%','Target %','Gap','T12 Hours'], start=2):
+            _hdr(ws, 17, ci, h)
+        for ri, r in enumerate(below_10, start=18):
             ws.row_dimensions[ri].height = 16
             for ci, (v, fmt, ha) in enumerate([
                 (r['name'],    None,              'left'),
                 (r['type'],    None,              'left'),
                 (r['ytd_pct'],'0.0"%"',          'center'),
+                (r['lq_pct'], '0.0"%"',          'center'),
                 (r['target'], '0"%"',             'center'),
                 (r['vs_tgt'], '+0.0"%";-0.0"%"', 'center'),
                 (r['ytd_h'],  '#,##0.0',         'right'),
