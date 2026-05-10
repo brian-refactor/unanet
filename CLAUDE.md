@@ -4,48 +4,89 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Repository Is
 
-This is **not a software development project**. It is an Unanet AE (Advanced Edition) ERP implementation workspace containing data migration documentation and templates for a client onboarding engagement.
+This is an Unanet AE (Advanced Edition) ERP implementation workspace for a client onboarding engagement. It contains data migration documentation, Excel upload templates, and Python ETL scripts that extract data from source systems (QuickBooks Online, QuickBooks Desktop, Ajera) and transform it for loading into Unanet Fusion.
 
-There are no build commands, tests, linters, or source code files.
+## ETL Pipeline Architecture
 
-## Content Overview
+Data flows through four stages: **Extract → Normalize → Review → Load → Template**
 
-All working files live under `Documentation/OneDrive_1_4-24-2026/`:
+```
+Source Systems                Extract              Normalize         Review/Load         Templates
+─────────────────             ───────              ─────────         ───────────         ─────────
+QuickBooks Online (MN)   →  qbo_extract.py    →                →                  →
+QuickBooks Desktop (DAL) →  qbd_parse.py      →  normalize_    →  supabase_load  →  write_templates.py
+QuickBooks Desktop (ORL) →  qbd_parse.py      →  outputs.py    →  .py            →
+Ajera REST API (CIN)     →  ajera_extract.py  →                →  review_app.py  →  export_coa_preview.py
+```
 
-- **Data Upload Templates/** — Excel workbooks (`.xlsx`) used to load master data into Unanet Fusion. Each file maps to a specific data domain (org units, chart of accounts, clients, vendors, pay history, expense codes, etc.).
-- **01–04 Data Pass folders** — Checklists and artifacts for each migration phase: Initial Pass, Validation Pass, Readiness/Mock Go-Live Pass, and Go-Live Pass.
-- **Discovery & Metrics** — `AMPLIFY Discovery Guide` and `Project Metrics Data` workbooks track implementation scope.
-- **Data Validation Log** — Central log (`Data Validation Log v25.05.xlsx`) for recording and resolving data issues across passes.
-- **Supporting Docs** — Word/PDF guides describing what clients should expect during each validation phase.
+Each extract script produces 7 CSVs per office: COA, Clients, ClientContacts, Vendors, VendorContacts, Employees, ExpenseCodes — landing in `output/<office>/`.
+
+**Office prefixes** (`MN-`, `DAL-`, `ORL-`, `CIN-`) are applied to all FirmCode and ECCode values to prevent key collisions in the single shared Unanet instance.
+
+**Columns prefixed with `_`** in raw CSVs are source-system reference fields — they are stripped by `normalize_outputs.py` before loading.
+
+## Running the ETL Scripts
+
+**One-time setup:**
+```
+pip install -r etl/requirements.txt
+cp etl/.env.example etl/.env   # fill in credentials
+python etl/qbo_auth.py         # QBO OAuth flow — run once, saves etl/qbo_tokens.json
+```
+
+**Extract by source:**
+```
+python etl/qbo_extract.py                          # Minnesota (QBO)
+python etl/qbd_parse.py --office dallas            # Dallas (QBD CSV exports)
+python etl/qbd_parse.py --office orlando           # Orlando (QBD CSV exports)
+python etl/ajera_extract.py                        # Cincinnati master data (Ajera)
+```
+
+**QB Desktop live extraction** (requires QB Web Connector + `.qwc` file):
+```
+python etl/qbd_server.py --office dallas           # SOAP server on port 5150
+```
+
+**Post-extraction pipeline:**
+```
+python etl/normalize_outputs.py                    # standardize all CSVs to Unanet columns
+python etl/supabase_load.py [--office X] [--entity Y]   # upsert to Supabase
+streamlit run etl/review_app.py                    # browse/edit/validate data
+python etl/write_templates.py [--entity Y]         # write merged Excel upload templates
+python etl/export_coa_preview.py                   # stakeholder COA preview workbook
+```
+
+## Key Outputs
+
+| Script | Output |
+|---|---|
+| `qbo_extract.py` | `output/minnesota/*.csv` |
+| `qbd_parse.py` | `output/dallas/*.csv`, `output/orlando/*.csv` |
+| `ajera_extract.py` | `output/cincinnati/*.csv` |
+| `normalize_outputs.py` | overwrites CSVs in-place, stripped of `_` columns |
+| `write_templates.py` | `output/templates/<entity>_merged.xlsx` |
+| `export_coa_preview.py` | `output/COA_Preview.xlsx` |
+
+## Documentation & Templates
+
+All migration artifacts live under `Documentation/OneDrive_1_4-24-2026/`:
+
+- **Data Upload Templates/** — Excel workbooks loaded into Unanet Fusion. Prefixed with load-order sequence numbers (`00-SetupInformation`, `01-OrgUnits`, `02-COA`, `03a-Clients`, …). Order matters — later templates reference data created by earlier ones.
+- **01–04 Data Pass folders** — Checklists per migration phase.
+- **Data Validation Log** — `Data Validation Log v25.05.xlsx` tracks issues across all passes.
 
 ## Migration Phase Model
 
-The engagement follows four sequential data passes, each building on the previous:
-
-1. **Initial Pass** — First load of raw client data; major structural issues are identified.
-2. **Validation Pass** — Cleansed data reload; validation against Unanet business rules.
-3. **Readiness / Mock Go-Live Pass** — Near-final data; simulates go-live conditions.
+1. **Initial Pass** — First load; structural issues identified.
+2. **Validation Pass** — Cleansed reload; validated against Unanet business rules.
+3. **Readiness / Mock Go-Live Pass** — Near-final data; simulates go-live.
 4. **Go-Live Pass** — Final production load.
 
-## ETL Scripts (`etl/`)
+## Related Projects
 
-Python scripts that extract data from source systems and write CSVs for review before loading into Unanet templates.
+**Multi-office Time & Utilization Analyzer** — A standalone project for time extraction and utilization reporting across all four offices is being built separately. The design document and porting guide is at `time_project_kickoff.md` in this repo root.
 
-```
-etl/
-├── requirements.txt
-├── .env.example          # copy to .env, fill in credentials — never commit .env
-├── qbo_auth.py           # run once to authorize QBO and save tokens
-├── qbo_extract.py        # extract Minnesota (QBO) → output/minnesota/*.csv
-└── qbo_tokens.json       # auto-generated after auth — never commit
-```
+## Ajera-Specific Notes
 
-**Setup:** `pip install -r etl/requirements.txt`, copy `.env.example` to `.env`, run `python etl/qbo_auth.py` once, then `python etl/qbo_extract.py`.
-
-**Output convention:** CSVs land in `output/<office>/`. Columns prefixed with `_` are QBO reference fields — strip them before loading into Unanet templates. Pay rates are intentionally blank in the employee CSV (not available via standard QBO API).
-
-**Office prefixes:** `MN-` (Minnesota/QBO), `DAL-` (Dallas/QBD), `ORL-` (Orlando/QBD), `CIN-` (Cincinnati/Ajera) — applied to all FirmCode and ECCode values to prevent collisions in the single Unanet instance.
-
-## File Naming Conventions
-
-Upload templates are prefixed with a two-digit sequence number that reflects the recommended load order (e.g., `00-SetupInformation`, `01-OrgUnits`, `02-COA`, `03a-Clients`). This order matters because later templates reference data created by earlier ones.
+- Ajera API calls require `MethodArguments` in the request body (even when empty).
+- Activities in Ajera correspond to ExpenseCodes in Unanet.

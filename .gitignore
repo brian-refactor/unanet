@@ -20,8 +20,11 @@ output/
 # Excel lock files
 ~$*
 
-# Local Claude session data
-.claude/
+# Local Claude session data — allow memory and project settings, ignore the rest
+.claude/*
+!.claude/memory/
+!.claude/memory/*.md
+!.claude/settings.local.json
 
 # Streamlit local secrets (use Streamlit Cloud secrets UI for prod)
 .streamlit/secrets.toml
