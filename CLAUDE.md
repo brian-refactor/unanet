@@ -67,6 +67,51 @@ python etl/export_coa_preview.py                   # stakeholder COA preview wor
 | `write_templates.py` | `output/templates/<entity>_merged.xlsx` |
 | `export_coa_preview.py` | `output/COA_Preview.xlsx` |
 
+## Supabase Schema & Data Model
+
+Each entity maps to a Supabase table. All rows carry an `office` column (the partition key). Upsert conflict keys:
+
+| Entity | Table | Conflict Key |
+|---|---|---|
+| COA | `coa` | `office`, `base_code` |
+| Clients | `clients` | `firm_code` |
+| Vendors | `vendors` | `firm_code` |
+| Expense Codes | `expense_codes` | `ec_code` |
+| Client/Vendor Contacts, Employees | respective tables | delete-by-office + re-insert |
+
+The review app reads from **`_resolved` views** (e.g., `clients_resolved`), which merge base data with `field_overrides`. Never write directly to the resolved views — overrides are stored in a separate `field_overrides` table and applied at query time.
+
+Validation flags for required fields are tracked per entity in Supabase (not in CSVs). Required fields per entity are defined in `review_app.py:REQUIRED`.
+
+Boolean, integer, numeric, and date columns are coerced from CSV strings in `supabase_load.py:coerce()` — add new typed columns there when extending the schema.
+
+## Review App (`etl/review_app.py`)
+
+Three-tab Streamlit interface:
+1. **Browse & Edit** — inline cell editing; saves changes to `field_overrides` table (keyed on entity + office + record key + column name)
+2. **Duplicates** — fuzzy-matches firm names across offices; records merge decisions
+3. **Validation** — flags rows missing required fields; supports waiving issues
+
+Deployed at **https://fusionunanet.streamlit.app/** (Streamlit Community Cloud). Credentials fall back to `.streamlit/secrets.toml` when `etl/.env` is not present.
+
+## Template Writer (`etl/write_templates.py`)
+
+Reads from Supabase `_resolved` views (so overrides are included), copies the appropriate Unanet Excel template from `Documentation/OneDrive_1_4-24-2026/Data Upload Templates/`, and writes merged data starting at the template's data row. Output goes to `output/templates/<entity>_merged.xlsx`. The template files determine column order — the DB column order list in `write_templates.py` must match the template's physical column layout left-to-right.
+
+## QB Desktop Parsing Notes
+
+- Dallas input is `.xlsx`; Orlando input is `.csv` — `qbd_parse.py` detects format automatically.
+- QB Desktop names the vendor export `Vendor` (not `Vendors`).
+- Sub-jobs are filtered out (rows where the customer name contains `:` indicating a QB sub-job).
+- `Item Price List` → `ExpenseCodes` mapping: QB items become Unanet expense codes with `ECCode = <OFFICE_PREFIX>-<ItemName>`.
+
+## Ajera-Specific Notes
+
+- Ajera API calls require `MethodArguments` in the request body (even when empty).
+- Activities in Ajera correspond to ExpenseCodes in Unanet.
+- Time data is not accessible via the Ajera API — utilization data comes from the exported utilization report CSV (`TimeReport/cincinnati_utilization.csv`), not from API calls.
+- The `output/cincinnati/_activities_raw.json` and `_timesheets_raw.json` files are debug caches from probe scripts, not used by the main pipeline.
+
 ## Documentation & Templates
 
 All migration artifacts live under `Documentation/OneDrive_1_4-24-2026/`:
@@ -84,9 +129,4 @@ All migration artifacts live under `Documentation/OneDrive_1_4-24-2026/`:
 
 ## Related Projects
 
-**Multi-office Time & Utilization Analyzer** — A standalone project for time extraction and utilization reporting across all four offices is being built separately. The design document and porting guide is at `time_project_kickoff.md` in this repo root.
-
-## Ajera-Specific Notes
-
-- Ajera API calls require `MethodArguments` in the request body (even when empty).
-- Activities in Ajera correspond to ExpenseCodes in Unanet.
+**Multi-office Time & Utilization Analyzer** — A standalone project for time extraction and utilization reporting across all four offices is being built separately. The design document and porting guide is at `time_project_kickoff.md` in this repo root. The Cincinnati Ajera connector is the proven reference implementation; other offices will follow the same extractor interface pattern defined in `time_project_kickoff.md`.
