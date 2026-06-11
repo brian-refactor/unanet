@@ -25,20 +25,33 @@ Each extract script produces 7 CSVs per office: COA, Clients, ClientContacts, Ve
 
 **Columns prefixed with `_`** in raw CSVs are source-system reference fields — they are stripped by `normalize_outputs.py` before loading.
 
+## Directory Layout
+
+| Path | Purpose |
+|---|---|
+| `etl/` | All Python ETL scripts |
+| `input/` | Raw QB Desktop export files (`.xlsx` for Dallas, `.csv` for Orlando) |
+| `output/<office>/` | Normalized CSVs produced by extract scripts |
+| `output/templates/` | Final merged Excel files ready for Unanet upload |
+| `TimeReport/` | Cincinnati utilization CSV/XLSX exports from Ajera |
+| `Documentation/OneDrive_1_4-24-2026/` | Unanet Excel upload templates and migration checklists |
+
 ## Running the ETL Scripts
 
 **One-time setup:**
 ```
 pip install -r etl/requirements.txt
-cp etl/.env.example etl/.env   # fill in credentials
-python etl/qbo_auth.py         # QBO OAuth flow — run once, saves etl/qbo_tokens.json
+pip install pandas thefuzz        # not in requirements.txt but needed by review_app
+cp etl/.env.example etl/.env      # fill in QBO and Supabase credentials
+# Ajera credentials go in etl/ajera.env (separate file, same key=value format)
+python etl/qbo_auth.py            # QBO OAuth flow — run once, saves etl/qbo_tokens.json
 ```
 
 **Extract by source:**
 ```
 python etl/qbo_extract.py                          # Minnesota (QBO)
-python etl/qbd_parse.py --office dallas            # Dallas (QBD CSV exports)
-python etl/qbd_parse.py --office orlando           # Orlando (QBD CSV exports)
+python etl/qbd_parse.py --office dallas            # Dallas (reads input/Dallas_*.xlsx)
+python etl/qbd_parse.py --office orlando           # Orlando (reads input/Orlando_*.csv)
 python etl/ajera_extract.py                        # Cincinnati master data (Ajera)
 ```
 
@@ -55,6 +68,9 @@ streamlit run etl/review_app.py                    # browse/edit/validate data
 python etl/write_templates.py [--entity Y]         # write merged Excel upload templates
 python etl/export_coa_preview.py                   # stakeholder COA preview workbook
 ```
+
+Valid `--office` values: `minnesota`, `cincinnati`, `dallas`, `orlando`  
+Valid `--entity` values: `coa`, `clients`, `client_contacts`, `vendors`, `vendor_contacts`, `employees`, `expense_codes`
 
 ## Key Outputs
 
@@ -96,7 +112,7 @@ Deployed at **https://fusionunanet.streamlit.app/** (Streamlit Community Cloud).
 
 ## Template Writer (`etl/write_templates.py`)
 
-Reads from Supabase `_resolved` views (so overrides are included), copies the appropriate Unanet Excel template from `Documentation/OneDrive_1_4-24-2026/Data Upload Templates/`, and writes merged data starting at the template's data row. Output goes to `output/templates/<entity>_merged.xlsx`. The template files determine column order — the DB column order list in `write_templates.py` must match the template's physical column layout left-to-right.
+Reads from Supabase `_resolved` views (so overrides are included), copies the appropriate Unanet Excel template from `Documentation/OneDrive_1_4-24-2026/Data Upload Templates/`, and writes merged data starting at the template's data row. Output goes to `output/templates/<entity>_merged.xlsx`. The template files determine column order — the `*_COLS` list in `write_templates.py` must exactly match the template's physical column layout left-to-right (positional, not by header name).
 
 ## QB Desktop Parsing Notes
 
@@ -107,10 +123,23 @@ Reads from Supabase `_resolved` views (so overrides are included), copies the ap
 
 ## Ajera-Specific Notes
 
+- Ajera credentials live in `etl/ajera.env` (separate from `etl/.env`).
 - Ajera API calls require `MethodArguments` in the request body (even when empty).
 - Activities in Ajera correspond to ExpenseCodes in Unanet.
 - Time data is not accessible via the Ajera API — utilization data comes from the exported utilization report CSV (`TimeReport/cincinnati_utilization.csv`), not from API calls.
 - The `output/cincinnati/_activities_raw.json` and `_timesheets_raw.json` files are debug caches from probe scripts, not used by the main pipeline.
+
+## Diagnostic / One-Off Scripts
+
+These are not part of the main pipeline and should not be modified unless explicitly debugging:
+
+| Script | Purpose |
+|---|---|
+| `etl/qbo_qc.py` | QBO data quality checks |
+| `etl/ajera_probe_pipeline.py` | Ajera API probe / debug |
+| `etl/ajera_probe_activities.py` | Ajera activities probe |
+| `etl/ajera_test.py` | Ajera connection test |
+| `etl/qbo_save_tokens.py` | Manual token save helper |
 
 ## Documentation & Templates
 

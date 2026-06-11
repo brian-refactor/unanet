@@ -35,6 +35,7 @@ ENTITY_META = {
     "Vendor Contacts":  {"table": "vendor_contacts",  "view": "vendor_contacts_resolved",  "key": "record_key"},
     "Employees":        {"table": "employees",        "view": "employees_resolved",        "key": "record_key"},
     "Expense Codes":    {"table": "expense_codes",    "view": "expense_codes_resolved",    "key": "ec_code"},
+    "Projects":         {"table": "projects",         "view": "projects",                  "key": "project_code"},
 }
 
 # Fields that are required in Unanet templates
@@ -43,6 +44,7 @@ REQUIRED = {
     "vendors":      ["firm_name", "pay_to_street1", "pay_to_city", "pay_to_state", "pay_to_zip"],
     "coa":          ["base_code", "base_name", "financial_type"],
     "expense_codes":["ec_code", "ec_name", "show_in_es"],
+    "projects":     ["project_code", "project_name", "client_firm_code", "charge_type", "start_date"],
 }
 
 # Columns to hide in the editor (internal / not editable)
@@ -53,31 +55,39 @@ HIDE_COLS = {"id", "source_id", "has_overrides"}
 # Supabase helpers
 # ---------------------------------------------------------------------------
 
-@st.cache_resource
+@st.cache_resource(ttl=300)
 def get_sb() -> Client:
     return create_client(SUPABASE_URL, SUPABASE_KEY)
 
 
 def fetch(view: str, offices: list[str]) -> pd.DataFrame:
-    sb = get_sb()
-    page, offset, rows = 1000, 0, []
-    while True:
-        q = sb.table(view).select("*").order("office")
-        if offices:
-            q = q.in_("office", offices)
-        batch = q.range(offset, offset + page - 1).execute().data
-        rows.extend(batch)
-        if len(batch) < page:
-            break
-        offset += page
-    return pd.DataFrame(rows) if rows else pd.DataFrame()
+    for attempt in range(2):
+        try:
+            sb = get_sb()
+            page, offset, rows = 1000, 0, []
+            while True:
+                q = sb.table(view).select("*").order("office")
+                if offices:
+                    q = q.in_("office", offices)
+                batch = q.range(offset, offset + page - 1).execute().data
+                rows.extend(batch)
+                if len(batch) < page:
+                    break
+                offset += page
+            return pd.DataFrame(rows) if rows else pd.DataFrame()
+        except Exception as e:
+            if attempt == 0 and "disconnected" in str(e).lower():
+                st.cache_resource.clear()
+                continue
+            raise
+    return pd.DataFrame()
 
 
 def record_key(row: dict, entity_label: str) -> str:
     meta = ENTITY_META[entity_label]
     k = meta["key"]
-    if k == "coa_key":
-        return f"{row.get('office', '')}::{row.get('base_code', '')}"
+    if k == "coa_key" or entity_label == "Projects":
+        return f"{row.get('office', '')}::{row.get('project_code' if entity_label == 'Projects' else 'base_code', '')}"
     return str(row.get(k, ""))
 
 
@@ -126,11 +136,13 @@ def fetch_overrides_summary() -> dict:
 # ---------------------------------------------------------------------------
 
 def tab_edit():
-    st.subheader("Browse & Edit")
-
     c1, c2 = st.columns([2, 3])
     entity_label = c1.selectbox("Entity", list(ENTITY_META.keys()))
-    office_sel = c2.multiselect("Office", OFFICES, default=OFFICES)
+    with c2:
+        st.caption("Office")
+        off_cols = st.columns(len(OFFICES))
+        office_sel = [o for i, o in enumerate(OFFICES)
+                      if off_cols[i].checkbox(o.capitalize(), value=True, key=f"edit_off_{o}")]
 
     meta = ENTITY_META[entity_label]
     load_key = f"df_{entity_label}_{'_'.join(office_sel)}"
@@ -245,7 +257,6 @@ def normalize(name: str) -> str:
 
 
 def tab_duplicates():
-    st.subheader("Duplicate Detection")
 
     entity_label = st.radio("Entity", ["Clients", "Vendors"], horizontal=True)
     meta = ENTITY_META[entity_label]
@@ -356,7 +367,6 @@ def _show_merge_decisions(entity_type: str):
 # ---------------------------------------------------------------------------
 
 def tab_validation():
-    st.subheader("Data Validation")
 
     run_col, _ = st.columns([1, 3])
     if run_col.button("Run validation checks", type="primary"):
@@ -535,7 +545,6 @@ def best_master_match(source_name: str, master_df: pd.DataFrame, threshold: floa
 
 def tab_coa_mapping():
     st.subheader("Chart of Accounts — Master Mapping")
-
     subtab_master, subtab_map, subtab_crosswalk = st.tabs(
         ["Master COA Editor", "Mapping Workbench", "Crosswalk Export"]
     )
@@ -629,8 +638,8 @@ def tab_coa_mapping():
         m1, m2, m3 = st.columns(3)
         m1.metric("Total", total)
         m2.metric("Mapped", mapped)
-        m3.metric("Unmapped", total - mapped)
-        st.progress(mapped / total if total else 0)
+        m3.metric("Unmapped", max(0, total - mapped))
+        st.progress(min(mapped / total, 1.0) if total else 0)
         st.divider()
 
         # Apply filters
@@ -888,6 +897,25 @@ TEMPLATE_COLS: dict[str, dict] = {
                     "billed_markup_base_name","unbilled_base_code","unbilled_base_name",
                     "currency_code","pm_cmt_required","int_cmt_required","is_non_reim"],
     },
+    "Projects": {
+        "sheet": "Projects",
+        "headers": ["ClientCode","OwningOrg","ProjectCode","ProjectName","ChargeTypeName",
+                    "StartDate","EndDate","ContractTypeName","ProjectNote","PONumber",
+                    "ProjectManagerEmpCode","PICEmpCode","ProjectAccountEmpCode",
+                    "BillingTermType","NetDays","NextInvNum","InvoiceEmail",
+                    "ProjectLocationStreet1","ProjectLocationStreet2","ProjectLocationCity",
+                    "ProjectLocationState","ProjectLocationZip","ProjectLocationCountry",
+                    "UseClientBillTo","BillToStreet1","BillToStreet2","BillToCity",
+                    "BillToState","BillToZip","BillToCountry"],
+        "db_cols": ["client_firm_code","owning_org","project_code","project_name","charge_type",
+                    "start_date","end_date","contract_type","project_note","po_number",
+                    "pm_emp_code","pic_emp_code","pa_emp_code",
+                    "billing_term_type","net_days",None,"invoice_email",
+                    "location_street1","location_street2","location_city",
+                    "location_state","location_zip","location_country",
+                    "use_client_bill_to","bill_to_street1","bill_to_street2","bill_to_city",
+                    "bill_to_state","bill_to_zip","bill_to_country"],
+    },
 }
 
 HEADER_FILL = PatternFill("solid", fgColor="1F4E79")
@@ -926,6 +954,99 @@ def build_template_excel(entity_label: str, df: pd.DataFrame) -> bytes:
 
 
 # ---------------------------------------------------------------------------
+# Tab 5 — Projects
+# ---------------------------------------------------------------------------
+
+def tab_projects():
+    c1, c2 = st.columns([3, 2])
+    with c1:
+        st.caption("Office")
+        off_cols = st.columns(len(OFFICES))
+        office_sel = [o for i, o in enumerate(OFFICES)
+                      if off_cols[i].checkbox(o.capitalize(), value=True, key=f"proj_off_{o}")]
+    status_sel = c2.radio("Status", ["Active only", "All", "Inactive only"],
+                          horizontal=True, index=0, key="proj_status")
+
+    cache_key = f"proj_df_{'_'.join(sorted(office_sel))}"
+
+    if st.button("Load / Refresh", key="proj_load") or cache_key in st.session_state:
+        if cache_key not in st.session_state:
+            with st.spinner("Loading from Supabase..."):
+                df = fetch("projects", office_sel)
+            st.session_state[cache_key] = df
+
+        df = st.session_state[cache_key]
+
+        if df.empty:
+            st.info("No projects found.")
+            return
+
+        # Per-office summary tiles
+        off_list = sorted(df["office"].unique().tolist()) if "office" in df.columns else []
+        if off_list:
+            m_cols = st.columns(len(off_list))
+            for i, off in enumerate(off_list):
+                sub = df[df["office"] == off]
+                active = int(sub["is_active"].sum()) if "is_active" in sub.columns else len(sub)
+                no_cli = int(
+                    (sub["client_firm_code"].isna() | sub["client_firm_code"].eq("")).sum()
+                ) if "client_firm_code" in sub.columns else 0
+                no_pm = int(sub["pm_emp_code"].isna().sum()) if "pm_emp_code" in sub.columns else 0
+                m_cols[i].metric(off[:3].upper(), f"{active} active / {len(sub)} total")
+                m_cols[i].caption(f"No client: {no_cli}  |  No PM: {no_pm}")
+
+        st.divider()
+
+        # Apply status filter
+        view_df = df.copy()
+        if "is_active" in view_df.columns:
+            if status_sel == "Active only":
+                view_df = view_df[view_df["is_active"] == True]
+            elif status_sel == "Inactive only":
+                view_df = view_df[view_df["is_active"] == False]
+
+        sf1, sf2, sf3 = st.columns([3, 1, 1])
+        search = sf1.text_input("Search code / name / client", key="proj_search")
+        missing_cli = sf2.checkbox("No client code", key="proj_no_cli")
+        missing_pm  = sf3.checkbox("No PM code", key="proj_no_pm")
+
+        if search:
+            mask = view_df.apply(
+                lambda col: col.astype(str).str.contains(search, case=False, na=False)
+            ).any(axis=1)
+            view_df = view_df[mask]
+        if missing_cli and "client_firm_code" in view_df.columns:
+            view_df = view_df[
+                view_df["client_firm_code"].isna() | (view_df["client_firm_code"] == "")
+            ]
+        if missing_pm and "pm_emp_code" in view_df.columns:
+            view_df = view_df[view_df["pm_emp_code"].isna()]
+
+        st.caption(f"Showing {len(view_df):,} of {len(df):,} projects")
+
+        display_cols = [c for c in view_df.columns if c not in HIDE_COLS]
+        st.dataframe(
+            view_df[display_cols].reset_index(drop=True),
+            use_container_width=True,
+            column_config={
+                "is_active":          st.column_config.CheckboxColumn("Active"),
+                "use_client_bill_to": st.column_config.CheckboxColumn("Use Client Bill-To"),
+            },
+            hide_index=True,
+        )
+
+        offices_label = "_".join(sorted(office_sel)) if office_sel else "all"
+        st.download_button(
+            label="Download 07a upload template",
+            data=build_template_excel("Projects", view_df),
+            file_name=f"projects_{offices_label}.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            key="proj_dl",
+        )
+        st.caption("Phases & Tasks sheet will be blank until WBS data is loaded.")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -943,41 +1064,12 @@ def main():
         if entered != _app_pw:
             st.stop()
 
-    st.title("Unanet Data Review")
+    st.markdown("### Unanet Migration — Data Review")
+    st.divider()
 
-    # Sidebar summary
-    with st.sidebar:
-        st.header("Summary")
-        try:
-            counts = fetch_overrides_summary()
-            if counts:
-                st.markdown("**Field overrides by table:**")
-                for t, n in sorted(counts.items()):
-                    st.write(f"- {t}: {n}")
-            else:
-                st.write("No overrides yet.")
-
-            sb = get_sb()
-            open_flags = sb.table("validation_flags").select("id", count="exact").eq("status", "open").execute()
-            st.metric("Open validation flags", open_flags.count or 0)
-
-            merges = sb.table("merge_decisions").select("id", count="exact").eq("status", "approved").execute()
-            st.metric("Approved merges", merges.count or 0)
-
-            st.divider()
-            st.markdown("**COA Mapping coverage:**")
-            try:
-                for off in OFFICES:
-                    total = sb.table("coa").select("id", count="exact").eq("office", off).execute().count or 0
-                    mapped = sb.table("coa_crosswalk").select("id", count="exact").eq("office", off).execute().count or 0
-                    pct = int(100 * mapped / total) if total else 0
-                    st.progress(pct / 100, text=f"{off[:3].upper()} {mapped}/{total} ({pct}%)")
-            except Exception:
-                pass
-        except Exception as e:
-            st.error(f"Could not load summary: {e}")
-
-    tab1, tab2, tab3, tab4 = st.tabs(["Browse & Edit", "Duplicates", "Validation", "COA Mapping"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(
+        ["Browse & Edit", "Duplicates", "Validation", "COA Mapping", "Projects"]
+    )
     with tab1:
         tab_edit()
     with tab2:
@@ -986,6 +1078,8 @@ def main():
         tab_validation()
     with tab4:
         tab_coa_mapping()
+    with tab5:
+        tab_projects()
 
 
 if __name__ == "__main__":
