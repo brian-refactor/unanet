@@ -25,7 +25,8 @@ load_dotenv(Path(__file__).parent / ".env")
 SUPABASE_URL = os.environ.get("SUPABASE_URL") or st.secrets.get("SUPABASE_URL", "")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY") or st.secrets.get("SUPABASE_KEY", "")
 
-OFFICES = ["minnesota", "cincinnati", "dallas", "orlando"]
+OFFICES = ["minnesota", "cincinnati", "dallas", "orlando", "corporate"]
+SOURCE_OFFICES = ["minnesota", "cincinnati", "dallas", "orlando"]  # offices with COA/project data
 
 ENTITY_META = {
     "COA":              {"table": "coa",             "view": "coa_resolved",              "key": "coa_key"},
@@ -33,9 +34,10 @@ ENTITY_META = {
     "Client Contacts":  {"table": "client_contacts",  "view": "client_contacts_resolved",  "key": "record_key"},
     "Vendors":          {"table": "vendors",          "view": "vendors_resolved",          "key": "firm_code"},
     "Vendor Contacts":  {"table": "vendor_contacts",  "view": "vendor_contacts_resolved",  "key": "record_key"},
-    "Employees":        {"table": "employees",        "view": "employees_resolved",        "key": "record_key"},
+    "Employees":        {"table": "employees",        "view": "employees",                 "key": "record_key"},
     "Expense Codes":    {"table": "expense_codes",    "view": "expense_codes_resolved",    "key": "ec_code"},
     "Projects":         {"table": "projects",         "view": "projects",                  "key": "project_code"},
+    "Project Phases":   {"table": "project_phases",   "view": "project_phases",            "key": "id"},
 }
 
 # Fields that are required in Unanet templates
@@ -55,32 +57,36 @@ HIDE_COLS = {"id", "source_id", "has_overrides"}
 # Supabase helpers
 # ---------------------------------------------------------------------------
 
-@st.cache_resource(ttl=300)
 def get_sb() -> Client:
     return create_client(SUPABASE_URL, SUPABASE_KEY)
 
 
-def fetch(view: str, offices: list[str]) -> pd.DataFrame:
+def sb_exec(fn):
+    """Run a Supabase callable, retrying once on any connection error."""
     for attempt in range(2):
         try:
-            sb = get_sb()
-            page, offset, rows = 1000, 0, []
-            while True:
-                q = sb.table(view).select("*").order("office")
-                if offices:
-                    q = q.in_("office", offices)
-                batch = q.range(offset, offset + page - 1).execute().data
-                rows.extend(batch)
-                if len(batch) < page:
-                    break
-                offset += page
-            return pd.DataFrame(rows) if rows else pd.DataFrame()
+            return fn()
         except Exception as e:
-            if attempt == 0 and "disconnected" in str(e).lower():
-                st.cache_resource.clear()
+            if attempt == 0 and any(w in str(e).lower() for w in ("disconnected", "connection", "timeout")):
                 continue
             raise
-    return pd.DataFrame()
+
+
+def fetch(view: str, offices: list[str]) -> pd.DataFrame:
+    page, offset, rows = 1000, 0, []
+    while True:
+        def _q(o=offset):
+            sb = get_sb()  # fresh client each call — no stale connections
+            q = sb.table(view).select("*").order("office")
+            if offices:
+                q = q.in_("office", offices)
+            return q.range(o, o + page - 1).execute().data
+        batch = sb_exec(_q)
+        rows.extend(batch)
+        if len(batch) < page:
+            break
+        offset += page
+    return pd.DataFrame(rows) if rows else pd.DataFrame()
 
 
 def record_key(row: dict, entity_label: str) -> str:
@@ -236,7 +242,7 @@ def tab_edit():
     # Override audit log
     with st.expander("Override history (all entities)"):
         sb = get_sb()
-        rows = (sb.table("field_overrides")
+        rows = sb_exec(lambda: sb.table("field_overrides")
                   .select("*")
                   .order("changed_at", desc=True)
                   .limit(200)
@@ -613,7 +619,7 @@ def tab_coa_mapping():
     # ------------------------------------------------------------------
     with subtab_map:
         c1, c2, c3 = st.columns([2, 2, 2])
-        office      = c1.selectbox("Office", OFFICES, key="coa_office")
+        office      = c1.selectbox("Office", SOURCE_OFFICES, key="coa_office")
         fin_filter  = c2.selectbox("Account type", ["All","Asset","Liability","Equity","Revenue","Expense"], key="coa_fin_filter")
         unmapped_only = c3.checkbox("Unmapped only", key="coa_unmapped_only")
 
@@ -755,7 +761,7 @@ def tab_coa_mapping():
     # ------------------------------------------------------------------
     with subtab_crosswalk:
         st.caption("Full crosswalk — every source account and its master assignment.")
-        office_filter = st.multiselect("Offices", OFFICES, default=OFFICES, key="xwalk_offices")
+        office_filter = st.multiselect("Offices", SOURCE_OFFICES, default=SOURCE_OFFICES, key="xwalk_offices")
         sb = get_sb()
         rows = []
         for off in office_filter:
@@ -786,7 +792,7 @@ def tab_coa_mapping():
 
             st.divider()
             st.markdown("**Unmapped accounts by office**")
-            for off in office_filter:
+            for off in [o for o in office_filter if o in SOURCE_OFFICES]:
                 mapped_codes = set(xwalk_df[xwalk_df["office"] == off]["source_base_code"])
                 all_src = sb.table("coa_resolved").select("base_code,base_name,financial_type").eq("office", off).execute().data
                 unmapped = [r for r in all_src if r["base_code"] not in mapped_codes]
@@ -897,6 +903,17 @@ TEMPLATE_COLS: dict[str, dict] = {
                     "billed_markup_base_name","unbilled_base_code","unbilled_base_name",
                     "currency_code","pm_cmt_required","int_cmt_required","is_non_reim"],
     },
+    "Project Phases": {
+        "sheet": "Phases and Tasks",
+        "headers": ["LevelOneProjectCode","ContractType","Level2ProjectName","Level2ProjectCode",
+                    "Level3ProjectName","Level3ProjectCode","StartDate","EndDate","OrgPath",
+                    "FixedFee","LaborContractCap","ODContractCap","OCCContractCap",
+                    "ICCFixedFeePortion","LaborBudget","ODCBudget","OCCBudget","ICCBudget","HoursBudget"],
+        "db_cols": ["project_code","contract_type","level2_name","level2_code",
+                    "level3_name","level3_code","start_date","end_date","org_path",
+                    "fixed_fee","labor_contract_cap","odc_contract_cap","occ_contract_cap",
+                    "icc_fixed_fee","labor_budget","odc_budget","occ_budget","icc_budget","hours_budget"],
+    },
     "Projects": {
         "sheet": "Projects",
         "headers": ["ClientCode","OwningOrg","ProjectCode","ProjectName","ChargeTypeName",
@@ -953,6 +970,33 @@ def build_template_excel(entity_label: str, df: pd.DataFrame) -> bytes:
     return buf.getvalue()
 
 
+def build_open_projects_excel(projects_df: pd.DataFrame, phases_df: pd.DataFrame) -> bytes:
+    """Build 07a-OpenProjects workbook with Projects tab + Phases and Tasks tab."""
+    wb = openpyxl.Workbook()
+
+    def write_sheet(ws, config, df):
+        ws.title = config["sheet"]
+        for c, h in enumerate(config["headers"], 1):
+            cell = ws.cell(row=1, column=c, value=h)
+            cell.font = HEADER_FONT
+            cell.fill = HEADER_FILL
+        for r_idx, (_, row) in enumerate(df.iterrows(), start=2):
+            for c_idx, col in enumerate(config["db_cols"], 1):
+                val = row.get(col) if col else None
+                if val is None or (isinstance(val, float) and pd.isna(val)):
+                    val = None
+                ws.cell(row=r_idx, column=c_idx, value=val)
+
+    ws_proj = wb.active
+    write_sheet(ws_proj, TEMPLATE_COLS["Projects"], projects_df)
+    ws_phases = wb.create_sheet()
+    write_sheet(ws_phases, TEMPLATE_COLS["Project Phases"], phases_df)
+
+    buf = io.BytesIO()
+    wb.save(buf)
+    return buf.getvalue()
+
+
 # ---------------------------------------------------------------------------
 # Tab 5 — Projects
 # ---------------------------------------------------------------------------
@@ -967,11 +1011,15 @@ def tab_projects():
     status_sel = c2.radio("Status", ["Active only", "All", "Inactive only"],
                           horizontal=True, index=0, key="proj_status")
 
+    if not office_sel:
+        st.info("Select at least one office.")
+        return
+
     cache_key = f"proj_df_{'_'.join(sorted(office_sel))}"
 
     if st.button("Load / Refresh", key="proj_load") or cache_key in st.session_state:
         if cache_key not in st.session_state:
-            with st.spinner("Loading from Supabase..."):
+            with st.spinner(f"Loading projects for {', '.join(office_sel)}..."):
                 df = fetch("projects", office_sel)
             st.session_state[cache_key] = df
 
@@ -1047,6 +1095,198 @@ def tab_projects():
 
 
 # ---------------------------------------------------------------------------
+# Tab 6 — Project Phases
+# ---------------------------------------------------------------------------
+
+def tab_phases():
+    c1, c2 = st.columns([3, 2])
+    with c1:
+        st.caption("Office")
+        off_cols = st.columns(len(SOURCE_OFFICES))
+        office_sel = [o for i, o in enumerate(SOURCE_OFFICES)
+                      if off_cols[i].checkbox(o.capitalize(), value=True, key=f"ph_off_{o}")]
+
+    if not office_sel:
+        st.info("Select at least one office.")
+        return
+
+    cache_key = f"phases_df_{'_'.join(sorted(office_sel))}"
+
+    if st.button("Load / Refresh", key="ph_load") or cache_key in st.session_state:
+        if cache_key not in st.session_state:
+            with st.spinner("Loading phases from Supabase..."):
+                df = fetch("project_phases", office_sel)
+            st.session_state[cache_key] = df
+
+        df = st.session_state[cache_key]
+        if df.empty:
+            st.info("No phase data found.")
+            return
+
+        # Contract type filter — built dynamically from actual data values
+        all_contract_types = sorted(df["contract_type"].dropna().unique()) if "contract_type" in df.columns else []
+        contract_sel = c2.multiselect("Contract Type", all_contract_types,
+                                      default=all_contract_types, key="ph_contract")
+
+        # Apply contract type filter
+        view_df = df.copy()
+        if contract_sel and "contract_type" in view_df.columns:
+            view_df = view_df[view_df["contract_type"].isin(contract_sel)]
+
+        # Summary metrics
+        offices_in_data = sorted(view_df["office"].unique()) if "office" in view_df.columns else []
+        if offices_in_data:
+            m_cols = st.columns(len(offices_in_data))
+            for i, off in enumerate(offices_in_data):
+                sub = view_df[view_df["office"] == off]
+                proj_count = sub["project_code"].nunique() if "project_code" in sub.columns else 0
+                m_cols[i].metric(off[:3].upper(), f"{len(sub):,} phases")
+                m_cols[i].caption(f"{proj_count} projects")
+
+        st.divider()
+
+        # Phase distribution
+        if "level2_name" in view_df.columns:
+            with st.expander("Phase distribution", expanded=False):
+                dist = (view_df.groupby(["level2_name", "contract_type"])
+                               .size()
+                               .reset_index(name="count")
+                               .sort_values("count", ascending=False))
+                st.dataframe(dist, use_container_width=True, hide_index=True)
+
+        # Search
+        sf1, sf2 = st.columns([3, 2])
+        search     = sf1.text_input("Search project code / phase name", key="ph_search")
+        has_l3     = sf2.checkbox("L3 sub-phases only", key="ph_has_l3")
+
+        if search:
+            mask = view_df.apply(
+                lambda col: col.astype(str).str.contains(search, case=False, na=False)
+            ).any(axis=1)
+            view_df = view_df[mask]
+        if has_l3:
+            view_df = view_df[view_df["level3_name"].notna() & (view_df["level3_name"] != "")]
+
+        hide = {"id", "office"}
+        display_cols = [c for c in view_df.columns if c not in hide]
+
+        st.caption(f"Showing {len(view_df):,} phase rows")
+        st.dataframe(
+            view_df[display_cols].reset_index(drop=True),
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "fixed_fee":          st.column_config.NumberColumn("Fixed Fee", format="$%.2f"),
+                "labor_contract_cap": st.column_config.NumberColumn("Labor Cap", format="$%.2f"),
+                "icc_fixed_fee":      st.column_config.NumberColumn("ICC Fee", format="$%.2f"),
+                "labor_budget":       st.column_config.NumberColumn("Labor Budget", format="$%.2f"),
+                "hours_budget":       st.column_config.NumberColumn("Hours Budget", format="%.1f"),
+            },
+        )
+
+        dl1, dl2, _ = st.columns([2, 2, 3])
+        dl1.download_button(
+            label="Download phases CSV",
+            data=view_df[display_cols].to_csv(index=False),
+            file_name=f"project_phases_{'_'.join(sorted(office_sel))}.csv",
+            mime="text/csv",
+            key="ph_dl_csv",
+        )
+        dl2.download_button(
+            label="Download phases Excel",
+            data=build_template_excel("Project Phases", view_df),
+            file_name=f"project_phases_{'_'.join(sorted(office_sel))}.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            key="ph_dl_xlsx",
+        )
+
+
+# ---------------------------------------------------------------------------
+# Tab 7 — Export
+# ---------------------------------------------------------------------------
+
+def tab_export():
+    st.markdown("Generate Unanet upload-ready Excel files. Each download pulls live data from Supabase.")
+    st.divider()
+
+    with st.expander("Office filter", expanded=True):
+        off_cols = st.columns(len(OFFICES))
+        office_sel = [o for i, o in enumerate(OFFICES)
+                      if off_cols[i].checkbox(o.capitalize(), value=True, key=f"exp_off_{o}")]
+    if not office_sel:
+        st.warning("Select at least one office.")
+        return
+
+    offices_label = "_".join(sorted(office_sel))
+
+    # Helper: fetch + build + return bytes
+    def _fetch_bytes(entity_label: str) -> bytes:
+        meta = ENTITY_META[entity_label]
+        df = fetch(meta["view"], office_sel)
+        if entity_label == "Projects":
+            df = df[df.get("is_active", pd.Series([True]*len(df)))==True] if "is_active" in df.columns else df
+        return build_template_excel(entity_label, df)
+
+    # ── 07a Open Projects (combined) ─────────────────────────────────────────
+    st.subheader("07a — Open Projects")
+    st.caption("Generates a two-tab workbook: Projects + Phases and Tasks")
+
+    if st.button("Build 07a export", type="primary", key="exp_07a_build"):
+        with st.spinner("Fetching projects and phases..."):
+            proj_df   = fetch("projects", office_sel)
+            phases_df = fetch("project_phases", office_sel)
+            if "is_active" in proj_df.columns:
+                proj_df = proj_df[proj_df["is_active"] == True]
+            proj_df   = proj_df.sort_values(["office", "project_code"])
+            phases_df = phases_df.sort_values(["office", "project_code", "level2_code"])
+            data = build_open_projects_excel(proj_df, phases_df)
+        st.session_state["export_07a_data"] = data
+        st.session_state["export_07a_label"] = offices_label
+        st.success(f"Built: {len(proj_df):,} projects, {len(phases_df):,} phase rows.")
+
+    if "export_07a_data" in st.session_state:
+        st.download_button(
+            label="Download 07a-OpenProjects_merged.xlsx",
+            data=st.session_state["export_07a_data"],
+            file_name=f"07a-OpenProjects_{st.session_state['export_07a_label']}.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            key="exp_07a_dl",
+        )
+
+    st.divider()
+
+    # ── All other entities ───────────────────────────────────────────────────
+    EXPORT_ENTITIES = [
+        ("02 — Chart of Accounts",  "COA",             "02-COA"),
+        ("03a — Clients",           "Clients",          "03a-Clients"),
+        ("03c — Client Contacts",   "Client Contacts",  "03c-ClientContacts"),
+        ("04a — Vendors",           "Vendors",          "04a-Vendors"),
+        ("04c — Vendor Contacts",   "Vendor Contacts",  "04c-VendorContacts"),
+        ("06 — Expense Codes",      "Expense Codes",    "06-ExpenseCodes"),
+    ]
+
+    st.subheader("Other Upload Templates")
+    cols = st.columns(2)
+    for i, (label, entity_label, file_prefix) in enumerate(EXPORT_ENTITIES):
+        with cols[i % 2]:
+            st.markdown(f"**{label}**")
+            if st.button(f"Build {file_prefix}", key=f"exp_build_{entity_label}"):
+                with st.spinner(f"Fetching {entity_label}..."):
+                    data = _fetch_bytes(entity_label)
+                st.session_state[f"export_{entity_label}"] = (data, offices_label)
+            if f"export_{entity_label}" in st.session_state:
+                d, lbl = st.session_state[f"export_{entity_label}"]
+                st.download_button(
+                    label=f"Download {file_prefix}_{lbl}.xlsx",
+                    data=d,
+                    file_name=f"{file_prefix}_{lbl}.xlsx",
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    key=f"exp_dl_{entity_label}",
+                )
+            st.divider()
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -1067,8 +1307,8 @@ def main():
     st.markdown("### Unanet Migration — Data Review")
     st.divider()
 
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(
-        ["Browse & Edit", "Duplicates", "Validation", "COA Mapping", "Projects"]
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(
+        ["Browse & Edit", "Duplicates", "Validation", "COA Mapping", "Projects", "Project Phases", "Export"]
     )
     with tab1:
         tab_edit()
@@ -1080,6 +1320,10 @@ def main():
         tab_coa_mapping()
     with tab5:
         tab_projects()
+    with tab6:
+        tab_phases()
+    with tab7:
+        tab_export()
 
 
 if __name__ == "__main__":

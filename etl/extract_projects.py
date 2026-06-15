@@ -473,6 +473,104 @@ def extract_cincinnati():
 
 
 # ---------------------------------------------------------------------------
+# Orlando — QB Desktop transaction detail export
+# ---------------------------------------------------------------------------
+
+_ORL_CODE_RE = re.compile(r"^(\d{4,5}(?:\.\d+)?)\s+(.+)$")
+
+
+def extract_orlando():
+    """
+    Parse input/Orlando_Projects.CSV — a QB Desktop transaction detail export.
+
+    Format: project header row (col 0 = "YYNN ProjectName", rest NaN)
+            followed by transaction rows (col 0 = NaN, Date/Type/Amount populated).
+
+    Derives start_date/end_date from first/last Invoice date in each block.
+    Entries without a numeric YYNN prefix are skipped (client/retainer names).
+    """
+    import pandas as pd
+
+    INPUT_FILE = HERE.parent / "input" / "Orlando_Projects.CSV"
+    if not INPUT_FILE.exists():
+        print(f"[SKIP] orlando: {INPUT_FILE} not found")
+        return
+
+    print("Extracting Orlando projects (QB Desktop transaction export)...")
+
+    df = pd.read_csv(INPUT_FILE, header=0)
+    name_col = df.columns[0]  # 'Unnamed: 0'
+
+    # Find project header row indices (non-blank first column)
+    hdr_mask = df[name_col].notna() & (df[name_col].str.strip() != "")
+    hdr_indices = df[hdr_mask].index.tolist()
+
+    rows = []
+    placeholder_seq = 0
+
+    for i, idx in enumerate(hdr_indices):
+        raw_name = str(df.at[idx, name_col]).strip()
+        m = _ORL_CODE_RE.match(raw_name)
+        if m:
+            raw_code  = m.group(1)   # e.g. "1901", "2020.16", "25008"
+            proj_name = m.group(2).strip()
+            proj_code = f"ORL-{raw_code}"
+        else:
+            # No numeric prefix — create a placeholder code
+            placeholder_seq += 1
+            raw_code  = f"MISC{placeholder_seq:03d}"
+            proj_name = raw_name
+            proj_code = f"ORL-{raw_code}"
+            print(f"  [PLACEHOLDER] {proj_code} = {proj_name}")
+
+        # Transaction rows for this project
+        next_idx = hdr_indices[i + 1] if i + 1 < len(hdr_indices) else len(df)
+        block = df.iloc[idx + 1 : next_idx]
+        invoices = block[block["Type"] == "Invoice"]
+
+        start_date, end_date = "", ""
+        if not invoices.empty:
+            dates = pd.to_datetime(invoices["Date"], errors="coerce").dropna()
+            if not dates.empty:
+                start_date = dates.min().date().isoformat()
+                end_date   = dates.max().date().isoformat()
+
+        # Active if any invoice in last 18 months (or no date info — assume active)
+        is_active = "TRUE"
+        if end_date:
+            from datetime import date, timedelta
+            cutoff = (date.today() - timedelta(days=548)).isoformat()
+            is_active = "TRUE" if end_date >= cutoff else "FALSE"
+
+        rows.append({
+            "office":            "orlando",
+            "project_code":      proj_code,
+            "project_name":      proj_name,
+            "client_firm_code":  "",
+            "owning_org":        "",
+            "charge_type":       "Billable",
+            "start_date":        start_date,
+            "end_date":          end_date,
+            "contract_type":     "",
+            "project_note":      "",
+            "po_number":         "",
+            "pm_emp_code":       "",
+            "pic_emp_code":      "",
+            "pa_emp_code":       "",
+            "billing_term_type": "",
+            "net_days":          "",
+            "invoice_email":     "",
+            "use_client_bill_to":"TRUE",
+            "is_active":         is_active,
+            "_source_id":        raw_code,
+        })
+
+    print(f"  {len(rows)} projects extracted ({placeholder_seq} with placeholder codes)")
+
+    write_csv(OUTPUT_DIR / "orlando" / "orlando_Projects.csv", rows)
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -480,11 +578,10 @@ EXTRACTORS = {
     "minnesota":  extract_minnesota,
     "dallas":     extract_dallas,
     "cincinnati": extract_cincinnati,
+    "orlando":    extract_orlando,
 }
 
-UNSUPPORTED = {
-    "orlando": "QB Desktop export uses a flat customer list; projects = clients — requires manual input",
-}
+UNSUPPORTED = {}
 
 
 def main():
@@ -493,15 +590,10 @@ def main():
     args = parser.parse_args()
 
     if args.office:
-        if args.office in UNSUPPORTED:
-            print(f"[SKIP] {args.office}: {UNSUPPORTED[args.office]}")
-        else:
-            EXTRACTORS[args.office]()
+        EXTRACTORS[args.office]()
     else:
-        for office, fn in EXTRACTORS.items():
+        for fn in EXTRACTORS.values():
             fn()
-        for office, reason in UNSUPPORTED.items():
-            print(f"[SKIP] {office}: {reason}")
 
 
 

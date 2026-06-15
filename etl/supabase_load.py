@@ -27,7 +27,7 @@ SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_KEY = os.environ["SUPABASE_KEY"]
 
 OFFICES = ["minnesota", "cincinnati", "dallas", "orlando"]
-ENTITIES = ["coa", "clients", "client_contacts", "vendors", "vendor_contacts", "employees", "expense_codes"]
+ENTITIES = ["coa", "clients", "client_contacts", "vendors", "vendor_contacts", "employees", "expense_codes", "projects"]
 
 OUTPUT_DIR = Path(__file__).parent.parent / "output"
 
@@ -193,6 +193,29 @@ EXPENSE_CODES_MAP = {
     "_IsActive": "is_active",
 }
 
+PROJECTS_MAP = {
+    "office":            "office",
+    "project_code":      "project_code",
+    "project_name":      "project_name",
+    "client_firm_code":  "client_firm_code",
+    "owning_org":        "owning_org",
+    "charge_type":       "charge_type",
+    "start_date":        "start_date",
+    "end_date":          "end_date",
+    "contract_type":     "contract_type",
+    "project_note":      "project_note",
+    "po_number":         "po_number",
+    "pm_emp_code":       "pm_emp_code",
+    "pic_emp_code":      "pic_emp_code",
+    "pa_emp_code":       "pa_emp_code",
+    "billing_term_type": "billing_term_type",
+    "net_days":          "net_days",
+    "invoice_email":     "invoice_email",
+    "use_client_bill_to":"use_client_bill_to",
+    "is_active":         "is_active",
+    "_source_id":        "source_id",
+}
+
 ENTITY_CONFIG = {
     "coa":             ("coa",             COA_MAP,           "upsert", ["office", "base_code"]),
     "clients":         ("clients",         CLIENTS_MAP,       "upsert", ["firm_code"]),
@@ -201,6 +224,7 @@ ENTITY_CONFIG = {
     "vendor_contacts": ("vendor_contacts", CONTACTS_MAP,      "replace", None),
     "employees":       ("employees",       EMPLOYEES_MAP,     "replace", None),
     "expense_codes":   ("expense_codes",   EXPENSE_CODES_MAP, "upsert", ["ec_code"]),
+    "projects":        ("projects",        PROJECTS_MAP,      "upsert", ["office", "project_code"]),
 }
 
 CSV_NAMES = {
@@ -211,12 +235,13 @@ CSV_NAMES = {
     "vendor_contacts": "VendorContacts",
     "employees":       "Employees",
     "expense_codes":   "ExpenseCodes",
+    "projects":        "Projects",
 }
 
 BOOLEAN_COLS = {
     "is_active", "is_1099", "is_subcontractor", "is_consultant", "is_hourly",
     "show_in_es", "is_unit", "pm_cmt_required", "int_cmt_required", "is_non_reim",
-    "enable_eft", "savings",
+    "enable_eft", "savings", "use_client_bill_to",
 }
 INTEGER_COLS = {"pay_days", "net_days"}
 NUMERIC_COLS = {

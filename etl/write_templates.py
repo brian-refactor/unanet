@@ -32,7 +32,7 @@ load_dotenv(Path(__file__).parent / ".env")
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_KEY = os.environ["SUPABASE_KEY"]
 
-TEMPLATE_DIR = Path("Documentation/OneDrive_1_4-24-2026/Data Upload Templates")
+TEMPLATE_DIR = Path("Unanet-Migration-Files/Data Upload Templates")
 OUTPUT_DIR = Path("output/templates")
 
 OFFICES = ["minnesota", "cincinnati", "dallas", "orlando"]
@@ -98,6 +98,61 @@ EXPENSE_CODES_COLS = [
     "billed_markup_base_code", "billed_markup_base_name",
     "unbilled_base_code", "unbilled_base_name",
     "currency_code", "pm_cmt_required", "int_cmt_required", "is_non_reim",
+]
+
+PROJECTS_COLS = [
+    "client_firm_code",   # 1  ClientCode
+    "owning_org",         # 2  OwningOrg
+    "project_code",       # 3  ProjectCode
+    "project_name",       # 4  ProjectName
+    "charge_type",        # 5  ChargeTypeName
+    "start_date",         # 6  StartDate
+    "end_date",           # 7  EndDate
+    "contract_type",      # 8  ContractTypeName
+    "project_note",       # 9  ProjectNote
+    "po_number",          # 10 PONumber
+    "pm_emp_code",        # 11 ProjectManagerEmpCode
+    "pic_emp_code",       # 12 PICEmpCode
+    "pa_emp_code",        # 13 ProjectAccountEmpCode
+    "billing_term_type",  # 14 BillingTermType
+    "net_days",           # 15 NetDays
+    None,                 # 16 NextInvNum (not tracked)
+    "invoice_email",      # 17 InvoiceEmail
+    "location_street1",   # 18 ProjectLocationStreet1
+    "location_street2",   # 19 ProjectLocationStreet2
+    "location_city",      # 20 ProjectLocationCity
+    "location_state",     # 21 ProjectLocationState
+    "location_zip",       # 22 ProjectLocationZip
+    "location_country",   # 23 ProjectLocationCountry
+    "use_client_bill_to", # 24 UseClientBillTo
+    "bill_to_street1",    # 25 BillToStreet1
+    "bill_to_street2",    # 26 BillToStreet2
+    "bill_to_city",       # 27 BillToCity
+    "bill_to_state",      # 28 BillToState
+    "bill_to_zip",        # 29 BillToZip
+    "bill_to_country",    # 30 BillToCountry
+]
+
+PHASES_COLS = [
+    "project_code",        # 1  LevelOneProjectCode
+    "contract_type",       # 2  ContractType
+    "level2_name",         # 3  Level2ProjectName
+    "level2_code",         # 4  Level2ProjectCode
+    "level3_name",         # 5  Level3ProjectName
+    "level3_code",         # 6  Level3ProjectCode
+    "start_date",          # 7  StartDate
+    "end_date",            # 8  EndDate
+    "org_path",            # 9  OrgPath
+    "fixed_fee",           # 10 FixedFee
+    "labor_contract_cap",  # 11 LaborContractCap
+    "odc_contract_cap",    # 12 ODContractCap
+    "occ_contract_cap",    # 13 OCCContractCap
+    "icc_fixed_fee",       # 14 ICCFixedFeePortion
+    "labor_budget",        # 15 LaborBudget
+    "odc_budget",          # 16 ODCBudget
+    "occ_budget",          # 17 OCCBudget
+    "icc_budget",          # 18 ICCBudget
+    "hours_budget",        # 19 HoursBudget
 ]
 
 ENTITY_CONFIG = {
@@ -195,17 +250,89 @@ def write_entity(sb: Client, entity: str) -> None:
     print(f"          -> saved {dst}")
 
 
+def write_open_projects(sb: Client) -> None:
+    """Write 07a-OpenProjects — both Projects tab and Phases and Tasks tab."""
+    template_file = "07a-OpenProjects_Fusion.xlsx"
+    out_name = "open_projects_merged.xlsx"
+    src = TEMPLATE_DIR / template_file
+    dst = OUTPUT_DIR / out_name
+
+    # ── Projects tab ─────────────────────────────────────────────────────────
+    proj_cols = [c for c in PROJECTS_COLS if c is not None]
+    select_cols = ",".join(["office"] + proj_cols)
+    page, offset, proj_rows = 1000, 0, []
+    while True:
+        batch = (
+            sb.table("projects")
+            .select(select_cols)
+            .eq("is_active", True)
+            .order("office")
+            .order("project_code")
+            .range(offset, offset + page - 1)
+            .execute()
+        ).data
+        proj_rows.extend(batch)
+        if len(batch) < page:
+            break
+        offset += page
+    print(f"  open_projects (Projects tab): {len(proj_rows)} rows")
+
+    # ── Phases tab ────────────────────────────────────────────────────────────
+    phase_cols = ",".join(["office"] + PHASES_COLS)
+    page, offset, phase_rows = 1000, 0, []
+    while True:
+        batch = (
+            sb.table("project_phases")
+            .select(phase_cols)
+            .order("office")
+            .order("project_code")
+            .order("level2_code")
+            .order("level3_code", nullsfirst=True)
+            .range(offset, offset + page - 1)
+            .execute()
+        ).data
+        phase_rows.extend(batch)
+        if len(batch) < page:
+            break
+        offset += page
+    print(f"  open_projects (Phases tab):   {len(phase_rows)} rows")
+
+    # ── Write workbook ────────────────────────────────────────────────────────
+    shutil.copy2(src, dst)
+    wb = openpyxl.load_workbook(dst)
+    DATA_ROW = 4
+
+    def clear_and_write(ws, cols, rows):
+        if ws.max_row >= DATA_ROW:
+            for row in ws.iter_rows(min_row=DATA_ROW, max_row=ws.max_row):
+                for cell in row:
+                    cell.value = None
+        for r_idx, row in enumerate(rows, start=DATA_ROW):
+            for c_idx, col in enumerate(cols, start=1):
+                ws.cell(row=r_idx, column=c_idx, value=coerce_val(row.get(col) if col else None))
+
+    clear_and_write(wb["Projects"], PROJECTS_COLS, proj_rows)
+    clear_and_write(wb["Phases and Tasks"], PHASES_COLS, phase_rows)
+
+    wb.save(dst)
+    print(f"          -> saved {dst}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Write Unanet upload templates from Supabase")
-    parser.add_argument("--entity", choices=ENTITIES, help="Write one entity only")
+    parser.add_argument("--entity", choices=ENTITIES + ["open_projects"], help="Write one entity only")
     args = parser.parse_args()
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     sb: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-    entities = [args.entity] if args.entity else ENTITIES
+    all_entities = ENTITIES + ["open_projects"]
+    entities = [args.entity] if args.entity else all_entities
     for entity in entities:
-        write_entity(sb, entity)
+        if entity == "open_projects":
+            write_open_projects(sb)
+        else:
+            write_entity(sb, entity)
 
     print("\nDone. Files in output/templates/")
 

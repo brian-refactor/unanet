@@ -3,6 +3,7 @@ etl/.env
 etl/ajera.env
 etl/qbo_tokens.json
 etl/*.qwc
+etl/monograph_cookies.json
 
 # Python cache
 etl/__pycache__/
