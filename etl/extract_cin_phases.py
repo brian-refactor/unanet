@@ -129,69 +129,103 @@ def flatten_phases(project: dict, org_path: str) -> list[dict]:
     """
     Walk InvoiceGroups → Phases → sub-Phases and produce flat rows.
 
-    Unanet supports two levels (L2 + optional L3). For deeper nesting
-    (L2 billing group → L3 sub-group → L4 leaf) we promote the sub-group
-    children directly to L3 under the top-level billing group, logging a
-    warning. The L2 code is globally sequential across all InvoiceGroups.
+    Unanet supports two levels (L2 + optional L3). Fee fields live on the L2
+    parent row only — L3 child rows carry null fees so Unanet doesn't sum them
+    multiple times. When L3 sub-phases exist an explicit L2 parent row is
+    inserted (level3_code=None) to hold the fee, then L3 rows follow.
+
+    For deeper nesting (L2 → L3 → L4 leaf) the grandchildren are promoted
+    directly to L3 under the L2. The L2 code is globally sequential across
+    all InvoiceGroups.
     """
     project_code = project.get("ID", "")
     rows = []
     l2_counter = 0
 
+    # Fee/budget keys that belong only on the L2 parent row
+    FEE_KEYS = (
+        "fixed_fee", "labor_contract_cap", "odc_contract_cap", "occ_contract_cap",
+        "icc_fixed_fee", "labor_budget", "odc_budget", "occ_budget",
+        "icc_budget", "hours_budget",
+    )
+
     for ig in project.get("InvoiceGroups", []):
         for l2 in ig.get("Phases", []):
             l2_counter += 1
-            l2_code = f"{l2_counter:03d}"
-            l2_name = l2.get("Description", "")
-            billing = BILLING_TYPE_MAP.get(l2.get("BillingType", ""), "Billable")
-            l2_start = clean_date(l2.get("ActualStartDate") or l2.get("EstimatedStartDate"))
-            l2_end   = clean_date(l2.get("ActualCompletionDate") or l2.get("EstimatedCompletionDate"))
+            l2_code   = f"{l2_counter:03d}"
+            l2_name   = l2.get("Description", "")
+            billing   = BILLING_TYPE_MAP.get(l2.get("BillingType", ""), "Billable")
+            l2_start  = clean_date(l2.get("ActualStartDate") or l2.get("EstimatedStartDate"))
+            l2_end    = clean_date(l2.get("ActualCompletionDate") or l2.get("EstimatedCompletionDate"))
+            l2_status = (l2.get("Status") or "").upper() or None
 
-            base = {
-                "office":            OFFICE,
-                "project_code":      project_code,
-                "contract_type":     billing,
-                "level2_name":       l2_name,
-                "level2_code":       l2_code,
-                "start_date":        l2_start,
-                "end_date":          l2_end,
-                "org_path":          org_path,
-                "fixed_fee":         coerce_amount(l2.get("TotalContractAmount")),
-                "labor_contract_cap":coerce_amount(l2.get("LaborContractAmount")),
-                "odc_contract_cap":  coerce_amount(l2.get("ExpenseContractAmount")),
-                "occ_contract_cap":  None,
-                "icc_fixed_fee":     coerce_amount(l2.get("ConsultantContractAmount")),
-                "labor_budget":      coerce_amount(l2.get("LaborCostBudget")),
-                "odc_budget":        coerce_amount(l2.get("ExpenseCostBudget")),
-                "occ_budget":        None,
-                "icc_budget":        coerce_amount(l2.get("ConsultantCostBudget")),
-                "hours_budget":      coerce_amount(l2.get("HoursCostBudget")),
+            l2_row = {
+                "office":             OFFICE,
+                "project_code":       project_code,
+                "contract_type":      billing,
+                "level2_name":        l2_name,
+                "level2_code":        l2_code,
+                "level3_name":        None,
+                "level3_code":        None,
+                "start_date":         l2_start,
+                "end_date":           l2_end,
+                "phase_status":       l2_status,
+                "org_path":           org_path,
+                "fixed_fee":          coerce_amount(l2.get("TotalContractAmount")),
+                "labor_contract_cap": coerce_amount(l2.get("LaborContractAmount")),
+                "odc_contract_cap":   coerce_amount(l2.get("ExpenseContractAmount")),
+                "occ_contract_cap":   None,
+                "icc_fixed_fee":      coerce_amount(l2.get("ConsultantContractAmount")),
+                "labor_budget":       coerce_amount(l2.get("LaborCostBudget")),
+                "odc_budget":         coerce_amount(l2.get("ExpenseCostBudget")),
+                "occ_budget":         None,
+                "icc_budget":         coerce_amount(l2.get("ConsultantCostBudget")),
+                "hours_budget":       coerce_amount(l2.get("HoursCostBudget")),
             }
 
             sub = l2.get("Phases", [])
             if not sub:
-                rows.append({**base, "level3_name": None, "level3_code": None})
+                # No L3 sub-phases — single L2 row carries the fee
+                rows.append(l2_row)
                 continue
 
-            # Collect leaf L3 rows — handling up to one extra nesting level
+            # Has L3 sub-phases — insert L2 parent row with fee, then L3
+            # child rows with fee fields nulled out
+            rows.append(l2_row)
+
             l3_counter = 0
             for l3 in sub:
+                l3_start  = clean_date(l3.get("ActualStartDate") or l3.get("EstimatedStartDate"))
+                l3_end    = clean_date(l3.get("ActualCompletionDate") or l3.get("EstimatedCompletionDate"))
+                l3_status = (l3.get("Status") or "").upper() or None
+
                 grandchildren = l3.get("Phases", [])
                 if grandchildren:
                     # Promote grandchildren as L3 under this L2
                     for gc in grandchildren:
                         l3_counter += 1
+                        gc_start  = clean_date(gc.get("ActualStartDate") or gc.get("EstimatedStartDate"))
+                        gc_end    = clean_date(gc.get("ActualCompletionDate") or gc.get("EstimatedCompletionDate"))
+                        gc_status = (gc.get("Status") or "").upper() or None
                         rows.append({
-                            **base,
-                            "level3_name": gc.get("Description", ""),
-                            "level3_code": f"{l3_counter:04d}",
+                            **l2_row,
+                            **{k: None for k in FEE_KEYS},
+                            "level3_name":  gc.get("Description", ""),
+                            "level3_code":  f"{l3_counter:04d}",
+                            "start_date":   gc_start,
+                            "end_date":     gc_end,
+                            "phase_status": gc_status,
                         })
                 else:
                     l3_counter += 1
                     rows.append({
-                        **base,
-                        "level3_name": l3.get("Description", ""),
-                        "level3_code": f"{l3_counter:04d}",
+                        **l2_row,
+                        **{k: None for k in FEE_KEYS},
+                        "level3_name":  l3.get("Description", ""),
+                        "level3_code":  f"{l3_counter:04d}",
+                        "start_date":   l3_start,
+                        "end_date":     l3_end,
+                        "phase_status": l3_status,
                     })
 
     return rows

@@ -45,7 +45,9 @@
       "Bash(cp C:/Users/Brian/.claude/projects/E--unanet/memory/*.md E:/unanet/.claude/memory/)",
       "Bash(git -C E:/unanet check-ignore .claude/settings.local.json .mcp.json .claude/memory/MEMORY.md)",
       "Bash(git -C E:/unanet add .gitignore CLAUDE.md .mcp.json time_project_kickoff.md .claude/settings.local.json \".claude/memory/\")",
-      "Bash(git -C E:/unanet add -u etl/ajera_probe_timesheets.py etl/ajera_time_probe.py etl/ajera_time_probe2.py etl/ajera_time_probe3.py etl/ajera_utilization.py etl/ajera_utilization_api.py)"
+      "Bash(git -C E:/unanet add -u etl/ajera_probe_timesheets.py etl/ajera_time_probe.py etl/ajera_time_probe2.py etl/ajera_time_probe3.py etl/ajera_utilization.py etl/ajera_utilization_api.py)",
+      "Bash(pip3 install *)",
+      "Bash(open *)"
     ]
   },
   "enableAllProjectMcpServers": true,

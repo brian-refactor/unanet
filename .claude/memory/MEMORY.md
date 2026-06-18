@@ -1,11 +1,8 @@
-# MEMORY.md
+# Memory Index
 
-- [ETL Extraction Status](project_etl_status.md) — All 4 offices fully extracted; row counts per entity per office
-- [Time Analyzer — Spun Out](project_cincinnati_time.md) — Time scripts removed 2026-05-03; new multi-office project being built; kickoff doc at time_project_kickoff.md
-- [Cincinnati Billing Rates File](project_cincinnati_billing_rates.md) — Location, structure, and lookup logic for billing rates CSV
-- [ETL Script Inventory](project_etl_scripts.md) — What each script does and how to run it (time/utilization scripts removed)
-- [Architecture Rethink](project_architecture_rethink.md) — Railway/Celery app exists; pending meeting transcript to decide ETL pipeline architecture
-- [Ajera API Key Technical Facts](feedback_ajera_api.md) — Activities=ExpenseCodes, MethodArguments required, time data not accessible via API
-- [Ajera Utilization Report Technical Facts](feedback_ajera_utilization_report.md) — Amounts are at COST, 6-row block structure, 85% default target, YTD fraction from period end date
-- [Excel Report Best Practices (openpyxl)](feedback_excel_output.md) — Store numbers as numbers, number_format patterns, chart requirements, merged cell rules
-- [QB Desktop Export Parsing Behaviors](feedback_qbd_parse.md) — Orlando vs Dallas format differences, FirmCode schemes, sub-job filtering
+- [Migration State](project_migration_state.md) — Projects & phases pipeline status for MN/CIN/DAL/ORL as of 2026-06-16
+- [CIN Dates TODO](todo_cin_dates.md) — CIN project dates missing; ask Andrew for Ajera report at 2026-06-24 check-in
+- [Phase Fee Rule](feedback_phase_fees.md) — Fee fields on L2 parent rows only, never replicated to L3 children
+- [API Notes](reference_api_notes.md) — Monograph GraphQL, Ajera v1/v2 capabilities and limitations, employee code formats
+- [Credentials Rule](feedback_credentials.md) — Never ask user to paste credentials in chat; always use .env files
+- [New Scripts](reference_new_scripts.md) — Scripts added 2026-06-15/16: extract_monograph_roles.py, extract_dal_phases.py, and updates to CIN/Monograph extractors

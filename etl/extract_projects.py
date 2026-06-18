@@ -33,6 +33,10 @@ from dotenv import load_dotenv
 HERE = Path(__file__).parent
 OUTPUT_DIR = HERE.parent / "output"
 
+# QBO sub-customers that are not real projects — excluded from MN extraction.
+# These failed the YY-NNN code pattern and were confirmed as junk entries.
+MN_PROJECT_EXCLUDE = {"1", "City-of-Andover-Cust", "Omni-Hotel", "Snyder-Attorneys,-PA"}
+
 # Columns written to the CSV — matches Unanet Projects tab field names
 PROJECT_COLS = [
     "office",
@@ -156,6 +160,9 @@ def extract_minnesota():
             unmatched += 1
 
         project_code, project_name = _parse_mn_project_code(c.DisplayName or "")
+
+        if project_code in MN_PROJECT_EXCLUDE:
+            continue
 
         term_obj = terms.get(getattr(getattr(c, "SalesTermRef", None), "value", None))
         billing_term = getattr(term_obj, "Name", "") if term_obj else ""

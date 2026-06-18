@@ -77,8 +77,8 @@ pip install -r etl/requirements.txt
 pip install pandas thefuzz playwright requests   # extras needed by various scripts
 python -m playwright install chromium            # for Monograph extraction
 cp etl/.env.example etl/.env                    # fill in QBO + Supabase credentials
-# Ajera credentials go in etl/ajera.env (same key=value format)
-# Monograph credentials: MONOGRAPH_EMAIL and MONOGRAPH_PASSWORD in etl/.env
+# Also add MONOGRAPH_EMAIL and MONOGRAPH_PASSWORD to etl/.env (not in .env.example)
+# Ajera credentials go in etl/ajera.env: AJERA_API_URL, AJERA_USERNAME, AJERA_PASSWORD
 python etl/qbo_auth.py                          # QBO OAuth — run once, saves etl/qbo_tokens.json
 ```
 
@@ -117,6 +117,20 @@ python etl/export_coa_preview.py                 # stakeholder COA preview workb
 Valid `--office` values: `minnesota`, `cincinnati`, `dallas`, `orlando`  
 Valid `--entity` values: `coa`, `clients`, `client_contacts`, `vendors`, `vendor_contacts`, `employees`, `expense_codes`, `projects`, `open_projects`
 
+### Write projects + phases template (preferred for 07a)
+```bash
+python etl/write_projects_template.py                                          # all offices
+python etl/write_projects_template.py --office dallas                          # one office
+python etl/write_projects_template.py --org-units input/OrgUnits.xlsx --emp-codes input/EmployeeCodes.xlsx
+```
+`write_projects_template.py` is the dedicated projects template writer — it supports optional lookup files to populate `owning_org` and `pm_emp_code` columns. Without lookup files those columns are left blank. Prefer this over `write_templates.py --entity open_projects` when Andrew/Chandler have provided the org/employee reference files.
+
+### Load employees from Unanet HR file
+```bash
+python etl/load_employees.py          # reads Unanet-Migration-Files/01. Data - Initial Pass/05a-Employees_Fusion6.11.2026.xlsx
+python etl/load_employees.py --dry-run
+```
+
 ### QB Desktop live extraction (requires QB Web Connector + `.qwc` file)
 ```bash
 python etl/qbd_server.py --office dallas         # SOAP server on port 5150
@@ -137,6 +151,7 @@ python etl/qbd_server.py --office dallas         # SOAP server on port 5150
 | `normalize_outputs.py` | Overwrites CSVs in-place, stripped of `_` columns |
 | `write_templates.py` | `output/templates/<entity>_merged.xlsx` |
 | `write_templates.py --entity open_projects` | `output/templates/open_projects_merged.xlsx` (07a two-tab: Projects + Phases) |
+| `write_projects_template.py` | `output/templates/projects_merged.xlsx` (07a two-tab; supports org/emp lookup) |
 | `export_coa_preview.py` | `output/COA_Preview.xlsx` |
 
 ---
@@ -159,10 +174,16 @@ Each entity maps to a Supabase table. All rows carry an `office` column (enum: `
 | Project Phases | `project_phases` | `office`, `project_code`, `level2_code`, `level3_code` |
 | Client/Vendor Contacts, Employees | respective tables | delete-by-office + re-insert |
 
+### Additional tables
+- `org_units` — org hierarchy (`org_code`, `org_name`, `parent_org_code`, `org_path` UNIQUE); `org_path` values are used as the lookup key in `write_projects_template.py`
+
 ### COA master tables
 - `coa_master` — 389 consolidated master accounts (source of truth for merged COA)
 - `coa_crosswalk` — 843 source-to-master mappings; FK to `coa_master.master_code`
 - Run `python etl/export_coa_upload.py` to regenerate the Unanet upload file from Supabase
+
+### Schema migrations
+SQL migration files live in `etl/migrations/` (e.g., `005_projects.sql`, `006_org_units.sql`, `007_employees_rebuild.sql`). Apply them manually via the Supabase SQL editor — there is no migration runner.
 
 ### Resolved views
 The review app reads from **`_resolved` views** (e.g., `clients_resolved`), which merge base data with `field_overrides`. Never write directly to resolved views — overrides are stored in `field_overrides` and applied at query time.
@@ -307,6 +328,16 @@ Not part of the main pipeline — do not modify unless explicitly debugging:
 | `SubledgerType` | `AP`, `AR`, `Bank`, `None` |
 | `charge_type` | `billable`, `indirect`, `opportunity`, `projection`, `plan` |
 | `contract_type` (project) | `Fixed Fee`, `Hourly`, `Not-to-Exceed`, `Retainer`, `Percent of Construction` |
+
+---
+
+## Deployment
+
+The review app runs on Railway (and Streamlit Cloud). `Procfile` starts it via `streamlit run etl/review_app.py`. The root `requirements.txt` is for Railway; `etl/requirements.txt` is for local development. Credentials on Streamlit Cloud come from `.streamlit/secrets.toml` (gitignored — configure via the Streamlit Cloud UI).
+
+## Git & Output Files
+
+`output/` and `input/` are gitignored by default. Add generated CSVs or templates explicitly when they need to be committed (`git add output/...`). Credential files gitignored: `etl/.env`, `etl/ajera.env`, `etl/qbo_tokens.json`, `etl/monograph_cookies.json`, `etl/*.qwc`.
 
 ---
 

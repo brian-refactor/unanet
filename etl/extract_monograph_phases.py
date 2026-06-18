@@ -8,12 +8,16 @@ Strategy:
 3. Intercept every `ganttChart` response; if pagination (hasNextPage), scroll down
    to trigger the next page load.
 4. Aggregate all rows and upsert into Supabase `project_phases`.
+5. Also updates `projects.start_date` / `projects.end_date` from the project-level
+   dates Monograph returns (these are more reliable than QBO-derived dates).
 
 The `ganttChart` response shape (per project):
     {
       "id": "244310",
       "number": "23-053",
       "name": "3570 Lexington",
+      "startDate": "2023-01-15",
+      "endDate": "2024-06-30",
       "phases": [
         { "type": { "name": "Pre-Design", "feeType": "FIXED", "budget": 4500.0 },
           "startDate": "2023-06-28", "endDate": "2023-12-12",
@@ -281,6 +285,28 @@ def build_phase_rows(project_rows: list[dict], proj_df=None) -> list[dict]:
     return rows
 
 
+def build_project_date_updates(project_rows: list[dict]) -> list[dict]:
+    """
+    Extract project-level start/end dates from Monograph ganttChart rows.
+    Returns one dict per project that has a valid number and at least one date.
+    """
+    updates = []
+    for proj in project_rows:
+        mon_number = proj.get("number", "").strip()
+        if not mon_number:
+            continue
+        start = proj.get("startDate")
+        end   = proj.get("endDate")
+        if not start and not end:
+            continue
+        updates.append({
+            "project_code": mon_number,
+            "start_date":   start,
+            "end_date":     end,
+        })
+    return updates
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run",      action="store_true",
@@ -332,6 +358,13 @@ def main():
             print(f"  {count:4d}  {name}")
         projects_with_phases = len({r["project_code"] for r in rows})
         print(f"\nProjects with phases: {projects_with_phases}")
+
+        date_updates = build_project_date_updates(project_rows)
+        has_start = sum(1 for d in date_updates if d["start_date"])
+        has_end   = sum(1 for d in date_updates if d["end_date"])
+        print(f"\nProject date updates available: {len(date_updates)} projects")
+        print(f"  with start_date: {has_start}")
+        print(f"  with end_date:   {has_end}")
         print("[DRY RUN] — no DB writes.")
         return
 
@@ -357,6 +390,24 @@ def main():
               .select("id", count="exact") \
               .eq("office", OFFICE).execute()
     print(f"\nDone. {final.count} MN phase rows in Supabase.")
+
+    # ── Update project-level start/end dates from Monograph ───────────────────
+    date_updates = build_project_date_updates(project_rows)
+    print(f"\nUpdating start/end dates for up to {len(date_updates)} MN projects...")
+    updated = 0
+    for item in date_updates:
+        data = {}
+        if item["start_date"]:
+            data["start_date"] = item["start_date"]
+        if item["end_date"]:
+            data["end_date"] = item["end_date"]
+        if data:
+            sb.table("projects").update(data) \
+              .eq("office", OFFICE) \
+              .eq("project_code", item["project_code"]) \
+              .execute()
+            updated += 1
+    print(f"Done. {updated} projects updated with Monograph dates.")
 
 
 if __name__ == "__main__":
