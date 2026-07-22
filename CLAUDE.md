@@ -6,24 +6,38 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is an Unanet AE (Advanced Edition) ERP implementation workspace for a client onboarding engagement across four offices: **Minnesota (MN)**, **Cincinnati (CIN)**, **Dallas (DAL)**, and **Orlando (ORL)**. It contains Python ETL scripts that extract data from source systems, transform it, and load it into Supabase for review before final export to Unanet Fusion load templates.
 
-## Current State (as of 2026-06-15)
+## Current State (as of 2026-07-22)
 
 ### Production Import Status
 Core data is **live in Unanet production** (demo data was wiped before load):
 - Org units, COA (385 accounts), Clients (~1,200), Vendors (~2,300), Expense Codes ✓
 - Employees: **BLOCKED** — code mismatch between pay history file and HR file; blocked on client follow-up
 - **Projects & Phases: active workstream** — extracted and in Supabase, pending final load to Unanet
+- **Timesheets: COMPLETE** — 84,922 rows generated to `output/templates/timesheets_merged.xlsx`, pending `ProjectPath` format confirmation from Andrew
+- **Open AP / Open AR: MN, CIN, DAL complete** (as of 2026-07-12); **Orlando not started** — QB Desktop exports still needed
 
 ### Projects & Phases in Supabase
 | Office | Projects | Phases | Source |
 |--------|----------|--------|--------|
 | Minnesota | 897 | 1,777 | Projects from QBO; phases from **Monograph** GraphQL API |
 | Cincinnati | ~1,224 | 13,872 | Ajera v1 API (`GetProjects`) |
-| Dallas | ~500 | 0 | QBO/QB Desktop; phases not yet extracted |
+| Dallas | ~500 | extracted | QB Desktop estimates (`input/DAL_Estimates.xlsx`); use `extract_dal_phases.py` — one L2 phase per estimate line item, no L3 |
 | Orlando | 39 | 0 | `input/Orlando_Projects.CSV` (QB Desktop export); phases not yet extracted |
 
+### Open AP / Open AR Workstream
+New workstream from the 2026-06-18 meeting, alongside Timesheets, Project Metrics, and Trial Balance. GL codes and BillStatus logic differ by office — see "Open AP/AR Extraction" below.
+
+| Office | AR GL | AP GL | Org | Status |
+|--------|-------|-------|-----|--------|
+| Minnesota | 11002 | 20002 | FUS-MSP | Complete |
+| Cincinnati | 11003 | 20003 | FUS-CIN | Complete |
+| Dallas | 11001 | 20001 | FUS-DAL | Complete |
+| Orlando | 11004 | 20004 | FUS-ORL | Not started |
+
+Project Metrics and Trial Balance are blocked on templates/direction from Andrew.
+
 ### Next Check-in
-2026-06-24 or 06-25 at 1 PM Mountain / 2 PM Central with Andrew — projects migration progress review.
+2026-07-14 (Andrew + Karen) covered Open AP/AR and Timesheets status. No further check-in currently scheduled — confirm next date with Andrew.
 
 ---
 
@@ -43,7 +57,16 @@ QB Desktop (DAL/ORL)  →   extract_projects.py   →  projects
 Ajera (CIN)           →   extract_projects.py   →  projects
 Monograph GraphQL(MN) →   extract_monograph_    →  project_phases
                            phases.py
+Monograph GraphQL(MN) →   extract_monograph_    →  projects.pm_emp_code / pic_emp_code
+                           roles.py
 Ajera v1 API (CIN)    →   extract_cin_phases.py →  project_phases
+QBO (MN)              →   extract_mn_open_ap.py →  output/templates/open_ap_mn.xlsx
+QBO (MN)              →   extract_mn_open_ar.py →  output/templates/open_ar_mn.xlsx
+Ajera exports (CIN)   →   extract_cin_open_ap.py→  output/templates/open_ap_cin.xlsx
+Ajera exports (CIN)   →   extract_cin_open_ar.py→  output/templates/open_ar_cin.xlsx
+QB Desktop (DAL)      →   extract_dal_open_ap.py→  output/templates/open_ap_dal.xlsx
+QB Desktop (DAL)      →   extract_dal_open_ar.py→  output/templates/open_ar_dal.xlsx
+Time analyzer DB      →   export_timesheets.py  →  output/templates/timesheets_merged.xlsx
 ```
 
 **Office prefixes** (`MN-`, `DAL-`, `ORL-`, `CIN-`) are applied to FirmCode and ECCode values to prevent key collisions. Project codes retain their native format (e.g., MN uses `YY-NNN`, CIN uses numeric Ajera keys).
@@ -103,6 +126,39 @@ python etl/extract_projects.py --office orlando      # from input/Orlando_Projec
 python etl/extract_monograph_phases.py           # MN phases from Monograph (uses saved cookies)
 python etl/extract_monograph_phases.py --from-cache  # reprocess last raw pull, no network call
 python etl/extract_cin_phases.py                 # CIN phases from Ajera v1 GetProjects
+python etl/extract_dal_phases.py                 # DAL phases from QB Desktop estimates export
+python etl/extract_dal_phases.py --dry-run       # preview without writing to Supabase
+python etl/extract_dal_phases.py --file /path/to/estimates.xlsx  # custom file path
+```
+
+### Extract MN PM / Principal-In-Charge roles from Monograph
+```bash
+python etl/extract_monograph_roles.py            # writes pm_emp_code / pic_emp_code to projects
+python etl/extract_monograph_roles.py --dry-run  # preview matches without writing
+```
+
+### Extract Open AP / Open AR
+```bash
+python etl/extract_mn_open_ap.py                 # MN AP from QBO (Bills, cutoff TxnDate <= 2026-07-07)
+python etl/extract_mn_open_ar.py                 # MN AR from QBO (Invoices, same cutoff)
+python etl/extract_mn_open_ap.py --dry-run
+python etl/extract_cin_open_ap.py                 # CIN AP from Ajera Vendor Invoice Aging export (input/CINN - AP.xls)
+python etl/extract_cin_open_ar.py                 # CIN AR from Ajera Client Invoice Aging export (input/MINN - AR.xls; naming is wrong, it's CIN data)
+python etl/extract_dal_open_ap.py                 # DAL AP from QB Desktop Unpaid Bills Detail (input/DAL - Open AP.CSV)
+python etl/extract_dal_open_ar.py                 # DAL AR from QB Desktop Open Invoices (input/DAL - Open AR.csv)
+python etl/build_cin_ap_ar_guide.py                # builds output/templates/CIN_AP_AR_Guide.xlsx — mapping guide for the CIN team since Ajera API can't pull financials
+```
+Orlando AP/AR extractors do not exist yet — no QB Desktop exports obtained.
+
+### Export timesheets
+```bash
+python etl/export_timesheets.py                  # reads live from Supabase via etl/.env, writes output/templates/timesheets_merged.xlsx
+```
+`etl/_generate_timesheets.py` is a one-shot script from the original 84,922-row run (hardcoded project sets, no `.env` needed) — superseded by `export_timesheets.py` for future runs.
+
+### Export missing employees
+```bash
+python etl/export_missing_employees.py            # active time-DB employees not present in the Unanet employee file → output/Missing_Employees_For_Review.xlsx
 ```
 
 ### Post-extraction pipeline
@@ -148,6 +204,13 @@ python etl/qbd_server.py --office dallas         # SOAP server on port 5150
 | `extract_projects.py` | `output/<office>/<office>_Projects.csv` |
 | `extract_monograph_phases.py` | Supabase `project_phases` (minnesota); `output/monograph_phases_raw.json` |
 | `extract_cin_phases.py` | Supabase `project_phases` (cincinnati) |
+| `extract_dal_phases.py` | Supabase `project_phases` (dallas) |
+| `extract_mn_open_ap.py` / `extract_mn_open_ar.py` | `output/templates/open_ap_mn.xlsx` / `open_ar_mn.xlsx` |
+| `extract_cin_open_ap.py` / `extract_cin_open_ar.py` | `output/templates/open_ap_cin.xlsx` / `open_ar_cin.xlsx` |
+| `extract_dal_open_ap.py` / `extract_dal_open_ar.py` | `output/templates/open_ap_dal.xlsx` / `open_ar_dal.xlsx` |
+| `build_cin_ap_ar_guide.py` | `output/templates/CIN_AP_AR_Guide.xlsx` |
+| `export_timesheets.py` | `output/templates/timesheets_merged.xlsx` |
+| `export_missing_employees.py` | `output/Missing_Employees_For_Review.xlsx` |
 | `normalize_outputs.py` | Overwrites CSVs in-place, stripped of `_` columns |
 | `write_templates.py` | `output/templates/<entity>_merged.xlsx` |
 | `write_templates.py --entity open_projects` | `output/templates/open_projects_merged.xlsx` (07a two-tab: Projects + Phases) |
@@ -247,6 +310,51 @@ Uses the **Ajera v1 SOAP API** (`GetProjects` with `RequestedProjects: [keys]`).
 
 ---
 
+## Dallas Phase Extraction (`etl/extract_dal_phases.py`)
+
+Reads `input/DAL_Estimates.xlsx` (QB Desktop estimates export) and writes L2/L3 phase rows to Supabase `project_phases` for `office=dallas`.
+
+- **Source structure:** Each estimate becomes an L2 phase (`fixed_fee` = estimate total, `start_date`/`end_date` from estimate dates). Each line item within an estimate becomes an L3 phase (`name` = memo field).
+- **Project date update:** Also updates `start_date`/`end_date` on the parent project row in Supabase (`MIN`/`MAX` across all estimates for that project).
+- **Prerequisite:** Projects must already exist in Supabase `projects` table for `office=dallas` — runs `extract_projects.py --office dallas` first if needed.
+- **Active marker:** Uses `Ö` character (QB Desktop active estimate marker) to detect active estimates.
+
+---
+
+## Monograph Role Extraction (`etl/extract_monograph_roles.py`)
+
+Pulls PM and Principal-In-Charge assignments from Monograph GraphQL and writes to `projects.pm_emp_code` / `projects.pic_emp_code` in Supabase for `office=minnesota`.
+
+- **Role matching:** Substring match on `rolesSentence` (case-insensitive): "Project Manager" → PM; "Principal" or "Studio Director" → Principal. First match wins when multiple people share a role.
+- **Auth:** Reuses saved cookies from `etl/monograph_cookies.json` (same as `extract_monograph_phases.py`). Falls back to Playwright login if expired.
+- **Prerequisite:** `output/monograph_phases_raw.json` cache must exist (run `extract_monograph_phases.py` first).
+
+---
+
+## Open AP/AR Extraction (`etl/extract_<office>_open_ap.py` / `_open_ar.py`)
+
+Writes flat rows to the `08-OutstandingAP_Fusion.xlsx` / `09-OutstandingAR_Fusion.xlsx` templates. All header-level fields (InvoiceDate, InvoiceAmount, GLBaseCode, Org, GLPeriod) repeat on every GL distribution line — templates expect self-contained rows, not a header + detail structure.
+
+- **BillStatus:** MN uses QBO's native `BillableStatus` field directly (Billable→`Ready To Bill`, HasBeenBilled→`Billed`, NotBillable→`Never bill`). CIN/DAL exports lack this field — has a project code → `Billed`, no project (overhead) → `Never bill`. DAL AP is all `Billed` (subconsultant invoices only, no project field in export).
+- **GL defaults (no line-item detail in aging exports):** AR revenue → `40001` (Design Income); AP expense → `60101` (Subconsultant Costs - In-Contract). Flag for review if revenue/expense mix is material.
+- **Unmatched clients/vendors are dropped**, not flagged with placeholder codes — likely new records added since the first data pass, not worth including with FirmCodes that would fail validation.
+- **Fuzzy matching:** exact match only (threshold=100) for client/vendor lookups — fuzzy scoring produced wrong matches (e.g. "Little Caesars Pizza" → "hideaway pizza").
+- **CIN exports:** Ajera "Client Invoice Aging" (AR) / "Vendor Invoice Aging" (AP) reports, aging date set to the cutoff date. One export is misnamed `MINN - AR.xls` (it is CIN data, not Minneapolis — check content, not filename). CIN intercompany vendors ("Fusion-MSP", "Fusion-Orlando") need special handling, not standard vendor-bill treatment.
+- **DAL exports:** header-level only (no line-item GL detail); DAL AR has 9 partially-paid invoices needing manually-filled check numbers (not present in the export).
+- `build_cin_ap_ar_guide.py` produces a standalone mapping workbook for the CIN team, since the Ajera REST API's migration user can't pull financial data — only master data is accessible via API.
+
+---
+
+## Timesheet Export (`etl/export_timesheets.py`)
+
+Reads time entries from the separate **time analyzer** Supabase project (a different project ref than this repo's migration DB — see `etl/.env` for `TIME_URL`/`TIME_KEY`) and writes to the `11_OpenProjectALLTimesheets_Fusion.xlsx` template.
+
+- **Employee matching:** per-office fuzzy match (≥90 score) time-DB name → Unanet EmpCode. Unmatched active employees fall back to office placeholder codes (`FORMER-MN`, `FORMER-CIN`, `FORMER-DAL`, `FORMER-ORL` — must exist as inactive employees in Unanet before running). Dummy/internal accounts are skipped entirely.
+- **Project matching:** only includes entries mapping to a project already loaded in the migration DB; overhead/indirect entries (`project_external_id` null) are skipped. Per-office code extraction differs — CIN fuzzy-matches on project name after stripping the leading display code; MN extracts `YY-NNN`; DAL extracts the code before `' - '`; ORL extracts the 4–5 digit prefix.
+- **Known gaps:** `ProjectPath` format is unconfirmed with Andrew (currently uses `project_code` only). Rate/amount fields default to placeholder values — real billing rates are not available in the time DB.
+
+---
+
 ## Project Extraction (`etl/extract_projects.py`)
 
 | Office | Source | Notes |
@@ -307,6 +415,12 @@ Not part of the main pipeline — do not modify unless explicitly debugging:
 | `etl/probe_mn_phases.py` | QBO invoice item diagnostic (found 82 unique items, 683 projects) |
 | `etl/probe_mn_estimates.py` | QBO estimate diagnostic (found 764 estimates, 312 with phase fees) |
 | `etl/extract_mn_phases.py` | QBO-based MN phase extractor (dry-run reference only; Monograph is now authoritative) |
+| `etl/probe_mn_categories.py` | Monograph GraphQL probe for project category fields |
+| `etl/probe_mn_no_pm.py` | Checks whether MN projects missing a PM have any Monograph team members at all |
+| `etl/probe_mn_roles.py` | Samples Monograph `rolesSentence` values for projects missing `pm_emp_code` |
+| `etl/probe_one_project.py` | One-off Monograph team/role lookup for a single project slug |
+| `etl/probe_time_db.py` | Diagnostic for matching time-DB employees against the Unanet employee file |
+| `etl/_generate_timesheets.py` | One-shot hardcoded timesheet generator from the original 84,922-row run; superseded by `export_timesheets.py` — delete after confirming no further use |
 
 ---
 
