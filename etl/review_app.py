@@ -146,8 +146,8 @@ def tab_edit():
     entity_label = c1.selectbox("Entity", list(ENTITY_META.keys()))
     with c2:
         st.caption("Office")
-        off_cols = st.columns(len(OFFICES))
-        office_sel = [o for i, o in enumerate(OFFICES)
+        off_cols = st.columns(len(SOURCE_OFFICES))
+        office_sel = [o for i, o in enumerate(SOURCE_OFFICES)
                       if off_cols[i].checkbox(o.capitalize(), value=True, key=f"edit_off_{o}")]
 
     meta = ENTITY_META[entity_label]
@@ -1005,8 +1005,8 @@ def tab_projects():
     c1, c2 = st.columns([3, 2])
     with c1:
         st.caption("Office")
-        off_cols = st.columns(len(OFFICES))
-        office_sel = [o for i, o in enumerate(OFFICES)
+        off_cols = st.columns(len(SOURCE_OFFICES))
+        office_sel = [o for i, o in enumerate(SOURCE_OFFICES)
                       if off_cols[i].checkbox(o.capitalize(), value=True, key=f"proj_off_{o}")]
     status_sel = c2.radio("Status", ["Active only", "All", "Inactive only"],
                           horizontal=True, index=0, key="proj_status")
@@ -1210,8 +1210,8 @@ def tab_export():
     st.divider()
 
     with st.expander("Office filter", expanded=True):
-        off_cols = st.columns(len(OFFICES))
-        office_sel = [o for i, o in enumerate(OFFICES)
+        off_cols = st.columns(len(SOURCE_OFFICES))
+        office_sel = [o for i, o in enumerate(SOURCE_OFFICES)
                       if off_cols[i].checkbox(o.capitalize(), value=True, key=f"exp_off_{o}")]
     if not office_sel:
         st.warning("Select at least one office.")
