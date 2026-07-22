@@ -1299,9 +1299,12 @@ def main():
 
     # Password gate — set APP_PASSWORD in .streamlit/secrets.toml or Streamlit Cloud secrets
     _app_pw = st.secrets.get("APP_PASSWORD", "") if hasattr(st, "secrets") else ""
-    if _app_pw:
+    if _app_pw and not st.session_state.get("_authed"):
         entered = st.text_input("Enter password to continue", type="password", key="_gate_pw")
-        if entered != _app_pw:
+        if entered == _app_pw:
+            st.session_state["_authed"] = True
+            st.rerun()
+        else:
             st.stop()
 
     st.markdown("### Unanet Migration — Data Review")
